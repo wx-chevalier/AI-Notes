@@ -9,4 +9,4 @@ $$
 
 The quadratic formula is $$-b \pm \sqrt{b^2 - 4ac} \over 2a$$
 
-常用的语言模型都是在近似地求 $P(w_t | w_1, w_2, …, w_{t-1})$。比如 n-gram 模型就是用 $P(w_t | w_{t-n+1}, …, w_{t-1})$ 近似表示前者。
+常用的语言模型都是在近似地求 $$P(w_t | w_1, w_2, …, w_{t-1})$$。比如 n-gram 模型就是用 $$P(w_t | w_{t-n+1}, …, w_{t-1})$$ 近似表示前者。
