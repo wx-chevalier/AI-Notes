@@ -1,5 +1,5 @@
 {
-    "plugins": ["mathjax","toc"],
+    "plugins": ["toc"],
     "pluginsConfig": {
         "mathjax":{
             "forceSVG": true
