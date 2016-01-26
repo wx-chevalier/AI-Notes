@@ -1,0 +1,12 @@
+{
+    "plugins": ["mathjax","toc"],
+    "pluginsConfig": {
+        "mathjax":{
+            "forceSVG": true
+        },
+        "toc": {
+            "addClass": true,
+            "className": "toc"
+        }
+    }
+}
