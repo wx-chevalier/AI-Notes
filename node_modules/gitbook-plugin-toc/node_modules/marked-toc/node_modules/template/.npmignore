@@ -1,0 +1,15 @@
+# Always-ignore files
+*.sublime-*
+.idea
+*.zip
+*.rar
+TODO.md
+
+# node.js
+node_modules
+npm-debug.log
+
+# Always-ignore folders
+tmp
+temp
+vendor
