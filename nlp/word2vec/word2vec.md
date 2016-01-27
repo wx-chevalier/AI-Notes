@@ -139,11 +139,11 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
 ## CBOW
 
-CBOW 是 Continuous Bag-of-Words Model 的缩写，是一种与前向 NNLM 类似 的模型，不同点在于CBOW去掉了最耗时的非线性隐层且所有词共享隐层。如 下图所示。可以看出，CBOW模型是预测$P(w_t|w_{t-k},w_{t-(k-1)},\dots,w_{t-1},w_{t+1},\dots,w_{t+k})$。
+CBOW 是 Continuous Bag-of-Words Model 的缩写，是一种与前向 NNLM 类似 的模型，不同点在于CBOW去掉了最耗时的非线性隐层且所有词共享隐层。如 下图所示。可以看出，CBOW模型是预测$$P(w_t|w_{t-k},w_{t-(k-1)},\dots,w_{t-1},w_{t+1},\dots,w_{t+k})$$。
 
 ![](http://7xlgth.com1.z0.glb.clouddn.com/1424C789-5B58-43BA-952C-EACDF43E2AEB.png)
 
-从输入层到隐层所进行的操作实际就是上下文向量的加和，具体的代码如下。 其中sentence_position为当前word在句子中的下标。以一个具体的句子A B C D 为例，第一次进入到下面代码时当前word为A，sentence_position为0。b是一 个随机生成的0到$window-1$的词，整个窗口的大小为$2*window + 1 - 2*b$，相当于左右各看$window-b$个词。可以看出随着窗口的从左往右滑动，其大小也 是随机的$3 (b=window-1)$到$2*window+1(b=0)$之间随机变通，即随机值b的大小决定了当前窗口的大小。代码中的neu1即为隐层向量，也就是上下文（窗口 内除自己之外的词）对应vector之和。
+从输入层到隐层所进行的操作实际就是上下文向量的加和，具体的代码如下。 其中sentence_position为当前word在句子中的下标。以一个具体的句子A B C D 为例，第一次进入到下面代码时当前word为A，sentence_position为0。b是一 个随机生成的0到$$window-1$$的词，整个窗口的大小为$$2*window + 1 - 2*b$$，相当于左右各看$$window-b$$个词。可以看出随着窗口的从左往右滑动，其大小也 是随机的$$3 (b=window-1)$$到$$2*window+1(b=0)$$之间随机变通，即随机值b的大小决定了当前窗口的大小。代码中的neu1即为隐层向量，也就是上下文（窗口 内除自己之外的词）对应vector之和。
 
 ![](http://7xlgth.com1.z0.glb.clouddn.com/36F89DA8-F3A0-4C6C-84F8-C31BB19CEEC1.png)
 
@@ -151,25 +151,25 @@ CBOW 是 Continuous Bag-of-Words Model 的缩写，是一种与前向 NNLM 类�
 
 ![](http://7xlgth.com1.z0.glb.clouddn.com/F0E76FE8-7B78-4E4C-BB6A-8FB47A67645C.png)
 
-Skip-Gram模型的图与CBOW正好方向相反，从图中看应该Skip-Gram应该预测概率$p(w_i,|w_t)$，其中$t - c \le i \le t + c$且$i \ne t,c$是决定上下文窗口大小的常数，$c$越大则需要考虑的pair就越多，一般能够带来更精确的结果，但是训练时间也 会增加。假设存在一个$w_1,w_2,w_3,…,w_T$的词组序列，Skip-gram的目标是最大化：
+Skip-Gram模型的图与CBOW正好方向相反，从图中看应该Skip-Gram应该预测概率$$p(w_i,|w_t)$$，其中$$t - c \le i \le t + c$$且$$i \ne t,c$$是决定上下文窗口大小的常数，$$c$$越大则需要考虑的pair就越多，一般能够带来更精确的结果，但是训练时间也 会增加。假设存在一个$$w_1,w_2,w_3,…,w_T$$的词组序列，Skip-gram的目标是最大化：
 
-$\frac{1}{T}\sum^{T}_{t=1}\sum_{-c \le j \le c, j \ne 0}log p(w_{t+j}|w_t)$
+$$\frac{1}{T}\sum^{T}_{t=1}\sum_{-c \le j \le c, j \ne 0}log p(w_{t+j}|w_t)$$
 
-基本的Skip-Gram模型定义$p(w_o|w_I)$为：
+基本的Skip-Gram模型定义$$p(w_o|w_I)$$为：
 
-$P(w_o | w_I) = \frac{e^{v_{w_o}^{T_{V_{w_I}}}}}{\Sigma_{w=1}^{W}e^{V_w^{T_{V_{w_I}}}}}$
+$$P(w_o | w_I) = \frac{e^{v_{w_o}^{T_{V_{w_I}}}}}{\Sigma_{w=1}^{W}e^{V_w^{T_{V_{w_I}}}}}$$
 
-从公式不难看出，Skip-Gram是一个对称的模型，如果$w_t$为中心词时$w_k$在其窗口内，则$w_t$也必然在以$w_k$为中心词的同样大小的窗口内，也就是：
+从公式不难看出，Skip-Gram是一个对称的模型，如果$$w_t$$为中心词时$$w_k$$在其窗口内，则$$w_t$$也必然在以$$w_k$$为中心词的同样大小的窗口内，也就是：
 
-$\frac{1}{T}\sum^{T}_{t=1}\sum_{-c \le j \le c, j \ne 0}log p(w_{t+j}|w_t) = \\ \frac{1}{T}\sum^{T}_{t=1}\sum_{-c \le j \le c, j \ne 0}log p(w_{t}|w_{t+j})$
+$$\frac{1}{T}\sum^{T}_{t=1}\sum_{-c \le j \le c, j \ne 0}log p(w_{t+j}|w_t) = \\ \frac{1}{T}\sum^{T}_{t=1}\sum_{-c \le j \le c, j \ne 0}log p(w_{t}|w_{t+j})$$
 
 同时，Skip-Gram中的每个词向量表征了上下文的分布。Skip-Gram中的Skip是指在一定窗口内的词两两都会计算概率，就算他们之间隔着一些词，这样的好处是“白色汽车”和“白色的汽车”很容易被识别为相同的短语。
 
-与CBOW类似，Skip-Gram也有两种可选的算法：层次Softmax和Negative Sampling。层次Sofamax算法也结合了Huffman编码，每个词$w$都可以从树的根节点沿着唯一一条路径被访问到。假设$n(w,j)$为这条路径上的第$j$个结点，且$L(w)$为这条路径的长度，注意$j$从1开始编码，即$n(w,1)=root,n(w,L(w))=w$。层次Softmax定义的概率$p(w|w_I)$为：
+与CBOW类似，Skip-Gram也有两种可选的算法：层次Softmax和Negative Sampling。层次Sofamax算法也结合了Huffman编码，每个词$$w$$都可以从树的根节点沿着唯一一条路径被访问到。假设$$n(w,j)$$为这条路径上的第$$j$$个结点，且$$L(w)$$为这条路径的长度，注意$$j$$从1开始编码，即$$n(w,1)=root,n(w,L(w))=w$$。层次Softmax定义的概率$$p(w|w_I)$$为：
 
-$p(w|w_I)=\Pi_{j=1}^{L(w)-1}\sigma([n(w,j+1)=ch(n(w,j))]*v'^T_{n(w,j)}v_I)$
+$$p(w|w_I)=\Pi_{j=1}^{L(w)-1}\sigma([n(w,j+1)=ch(n(w,j))]*v'^T_{n(w,j)}v_I)$$
 
-$ch(n(w,j))$既可以是$n(w,j)$的左子结点也可以是$n(w,j)$的右子结点，word2vec源代码中采用的是左子节点(Label为$1-code[j]$)，其实此处改为右子节点也是可以的。
+$$ch(n(w,j))$$既可以是$$n(w,j)$$的左子结点也可以是$$n(w,j)$$的右子结点，word2vec源代码中采用的是左子节点(Label为$$1-code[j]$$)，其实此处改为右子节点也是可以的。
 
 # Tricks
 
@@ -177,7 +177,7 @@ $ch(n(w,j))$既可以是$n(w,j)$的左子结点也可以是$n(w,j)$的右子结�
 
 对于某些词语，经常出现在一起的，我们就判定他们是短语。那么如何衡量呢？用以下公式。
 
-$score(w_i,w_j)=\frac{count(w_iw_j) - \delta}{count(w_i) * count(w_j)}$
+$$score(w_i,w_j)=\frac{count(w_iw_j) - \delta}{count(w_i) * count(w_j)}$$
 
 输入两个词向量，如果算出的score大于某个阈值时，我们就认定他们是“在一起的”。为了考虑到更长的短语，我们拿2-4个词语作为训练数据，依次降低阈值。
 
