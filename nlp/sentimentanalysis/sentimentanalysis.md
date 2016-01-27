@@ -1,5 +1,5 @@
 
-[toc]
+<!-- toc -->
 
 # Sentiment Transfer/CrossDomain Sentiment Classification
 
