@@ -1,6 +1,6 @@
 # web-frontend-practice-handbook
 
-Awesome and Complete Practice Handbook For Web Frontend
+Awesome and Complete Practice Handbook For Data Science
 
 Github URL : https://github.com/wxyyxc1992/datascience-practice-handbook
 

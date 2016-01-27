@@ -2,7 +2,7 @@
 
 $$p(s)=p(w_1^T)=p(w_1,w_2,\dots,w_T)=\Pi^T_{t=1}p(w_t|Context) $$
 
-目标也可以是采用极大似然估计来求取最大化的Log概率的平均值，公式为$$\frac{1}{T}\sum^T_{t=1}\sum_{-c \le j\le c,j \ne0}log p(w_{t+j}|w_t)$$$$。
+目标也可以是采用极大似然估计来求取最大化的Log概率的平均值，公式为$$\frac{1}{T}\sum^T_{t=1}\sum_{-c \le j\le c,j \ne0}log p(w_{t+j}|w_t)$$。
 
 其中：
 
