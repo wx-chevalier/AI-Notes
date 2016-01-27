@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "mathjax"
+        "mathjax",
+        "toc"
     ],
     "pluginsConfig": {
         "mathjax": {
