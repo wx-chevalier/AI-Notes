@@ -113,10 +113,19 @@ class OnlineLDA:
             word = re.sub(r'[^a-z]', '', word)
             self._vocab[word] = len(self._vocab)
 
+        # 主题的数目
         self._K = K
+
+        # 词汇表中的词汇总数
         self._W = len(self._vocab)
+
+        # 文档的数目
         self._D = D
+
+        # 用于生成文档随机主题分布的前验条件
         self._alpha = alpha
+
+        # 用于生成主题词分布的前验值
         self._eta = eta
         self._tau0 = tau0 + 1
         self._kappa = kappa
