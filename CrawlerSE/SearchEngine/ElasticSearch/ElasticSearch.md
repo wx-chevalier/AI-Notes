@@ -1,4 +1,4 @@
-> 本文从属于笔者的[爬虫与搜索引擎 最佳实践]()系列文章
+> 本文从属于笔者的[爬虫与搜索引擎 最佳实践](https://github.com/wxyyxc1992/datascience-practice-handbook/blob/master/CrawlerSE/README.md)系列文章
 
 # Introduction
 
@@ -241,5 +241,5 @@ curl -XPOST "http://localhost:9200/_search" -d'
 ## [elasticsearch-head](https://github.com/mobz/elasticsearch-head)
 ![](http://mobz.github.io/elasticsearch-head/screenshots/clusterOverview.png)
 
-
+![](http://153.3.251.190:11900/ElasticSearch)
 
