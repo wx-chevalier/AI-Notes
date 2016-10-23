@@ -177,8 +177,10 @@ class LDAModel(object):
         # 将该文档中词汇总数减1
         self.ndsum[i] -= 1
 
+        # 主题在词上的分布
         Vbeta = self.dpre.words_count * self.beta
 
+        # 文档在主题上的分布
         Kalpha = self.K * self.alpha
 
         # p 的 尺寸为 1 * K
