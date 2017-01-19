@@ -1,0 +1,340 @@
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Muli|Open+Sans|Poppins:300" rel="stylesheet">
+<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://oij1ktv6u.bkt.clouddn.com/guide.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+<meta name="viewport" content="width=500, initial-scale=1">
+<a href="https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+<div class="container">
+	<h1 class="title">
+		来自 
+		<a href="yerevann.com">YerevaNN</a>
+		的深度学习指南（
+		<a href="https://github.com/wxyyxc1992">王下邀月熊</a>
+		整理）
+	</h1>
+
+	<section class="top">
+		<div class="left">
+		Deep learning is a fast-changing field at the intersection of computer science and mathematics. It is a relatively new branch of a wider field called machine learning. The goal of machine learning is to teach computers to perform various tasks based on the given data. This guide is for those who know some math, know some programming language and now want to dive deep into deep learning.
+		</div>
+		<div class="right">
+			This is <i>not</i> a guide to:<br/>
+				• general machine learning<br/>
+				• big data processing<br/>
+				• data science<br/>
+				• <a href="http://karpathy.github.io/2016/05/31/rl/">deep reinforcement learning</a><br/>
+				• 不过你可以在<a href="http://karpathy.github.io/2016/05/31/rl/">deep reinforcement learning</a>获取到更广泛的机器学习与数据挖掘资料
+		</div>
+	</section>
+	<div class="stripes">
+		<div class="c1">
+			<div class="stripe"></div>
+		</div>
+		<div class="c2">
+			<div class="stripe"></div>
+		</div>
+		<div class="c3">
+			<div class="stripe"></div>
+		</div>
+		<div class="c4">
+			<div class="stripe"></div>
+		</div>
+		
+		
+		<div class="theano">
+			<div class="stripe"></div>
+		</div>
+		<div class="torch">
+			<div class="stripe"></div>
+		</div>
+		<div class="tensorflow">
+			<div class="stripe"></div>
+		</div>
+	</div>
+</div>
+
+<div class="prerequisites container-fluid">
+	<div class="container">
+		<h2>Prerequisites</h2>
+		<div>
+			<div class="left">
+				<p>You must know standard university-level math. You can review those concepts in the first chapters of the book <a href="http://www.deeplearningbook.org/">Deep learning</a>:</p>
+				<ul>
+					<li><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/linear_algebra.html">Deep learning, chapter 2: Linear algebra</a></li>
+					<li><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/prob.html">Deep learning, chapter 3: Probability and information theory</a></li>
+					<li><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/numerical.html">Deep learning, chapter 4: Numerical computation</a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<p>You must know programming to develop and test deep learning models. We suggest using Python for machine learning. NumPy/SciPy libraries for scientific computing are required.</p>
+				<ul>
+					<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://cs231n.github.io/python-numpy-tutorial/">Justin Johnson's Python / NumPy / SciPy / Matplotlib tutorial for Stanford's CS231n</a> ★</li>
+					<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://www.scipy-lectures.org/">Scipy lecture notes</a> - cover commonly used libraries in more details and introduce more advanced topics ★★</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="well head">
+		<div class="content">
+			<p>When you are comfortable with the prerequisites, we suggest four options for studying deep learning. Choose any of them or any combination of them. The number of stars indicates the difficulty.</p>
+			<ul>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/playlist?list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH">Hugo Larochelle's video course</a> on YouTube. The videos were recorded in 2013 but most of the content is still fresh. The mathematics behind neural networks is explained in detail. <a href="http://info.usherbrooke.ca/hlarochelle/neural_networks/content.html">Slides and related materials</a> are available. ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="http://cs231n.stanford.edu/">Stanford's CS231n</a> (Convolutional Neural Networks for Visual Recognition) by Fei-Fei Li, Andrej Karpathy and Justin Johnson. The course is focused on image processing, but covers most of the important concepts in deep learning. <a href="https://www.youtube.com/playlist?list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA">Videos (2016)</a> and <a href="http://cs231n.github.io/">lecture notes</a> are available. ★★</li>
+				<li class="c3"><span class="glyphicon glyphicon-book"></span> Michael Nielsen's online book <a href="http://neuralnetworksanddeeplearning.com/">Neural networks and deep learning</a> is the easiest way to study neural networks. It doesn't cover all important topics, but contains intuitive explanations and code for the basic concepts. ★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/">Deep learning</a>, a book by Ian Goodfellow, Yoshua Bengio and Aaron Courville, is the most comprehensive resource for studying deep learning. It covers a lot more than all the other courses combined. ★★★</li>
+		</div>
+		<div class="right-content">
+			<p>There are many software frameworks that provide necessary functions, classes and modules for machine learning and for deep learning in particular. We suggest you <i>not</i> use these frameworks at the early stages of studying, instead we suggest you implement the basic algorithms from scratch. Most of the courses describe the maths behind the algorithms in enough detail, so they can be easily implemented.</p>
+			<ul>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/">Jupyter notebooks</a> are a convenient way to play with Python code. They are nicely integrated with matplotlib, a popular tool for visualizations. We suggest you implement algorithms in such environments. ★</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="well">
+		<h2>Machine learning basics</h2>
+		<div class="content">
+			<p>Machine learning is the art and science of teaching computers based on data. It is a relatively established field at the intersection of computer science and mathematics, while deep learning is just a small subfield of it. The concepts and tools of machine learning are important for understanding deep learning.</p>
+			<ul>
+				<li><span class="glyphicon glyphicon-eye-open"></span> <a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/">Visual introduction to machine learning</a> - decision trees ★</li>
+				<li><span class="glyphicon glyphicon-film"></span> <a href="https://www.coursera.org/learn/machine-learning">Andrew Ng's course on machine learning</a>, the most popular course on Coursera  ★★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> Larochelle's course doesn't have separate introductory lectures for general machine learning, but all required concepts are defined and explained whenever needed.</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=g-PvXUjD6qg&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA">1. Training and testing the models (kNN) ★★</a></li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=hAeos2TocJ8&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=2">2. Linear classification (SVM) ★★</a></li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=WjY57K9xX4s&index=3&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA">3. Optimization (stochastic gradient descent)</a> ★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/ml.html">5. Machine learning basics</a> ★★★</li>
+				<li><span class="glyphicon glyphicon-eye-open"></span> <a href="http://setosa.io/ev/principal-component-analysis/">Principal Component Analysis explained visually</a> ★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://distill.pub/2016/misread-tsne/">How to Use t-SNE Effectively</a> ★★</li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p>Most of the popular machine learning algorithms are implemented in the <a href="http://scikit-learn.org/stable/tutorial/basic/tutorial.html">Scikit-learn</a> Python library. Implementing some of them from scratch helps with understanding how machine learning works.</p>
+			<ul>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="https://pythonprogramming.net/machine-learning-tutorial-python-introduction/">Practical Machine Learning Tutorial with Python</a> covers linear regression, k-nearest-neighbors and support vector machines. First it shows how to use them from scikit-learn, then implements the algorithms from scratch. ★</li>
+				<li><span class="glyphicon glyphicon-film"></span> Andrew Ng's course on Coursera has many assignments in Octave language. The same algorithms can be implemented in Python. ★★</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="well">
+		<h2>Neural networks basics</h2>
+		<div class="content">
+			<p>Neural networks are powerful machine learning algorithms. They form the basis of deep learning.</p>
+			<ul>
+				<li><span class="glyphicon glyphicon-eye-open"></span> <a href="http://jalammar.github.io/visual-interactive-guide-basics-neural-networks/">A Visual and Interactive Guide to the Basics of Neural Networks</a> - shows how simple neural networks can do linear regression ★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/playlist?list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH">1. Feedforward neural network</a> ★★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=5adNQvSlF50&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=7">2. Training neural networks (up to 2.7)</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=GZTvxoSHZIo&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=4">4. Backpropagation</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=GUtlrDbHhJM&index=5&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA">5. Architecture of neural networks</a> ★★</li>
+				<li class="c3"><span class="glyphicon glyphicon-book"></span> <a href="http://neuralnetworksanddeeplearning.com/chap1.html">1. Using neural nets to recognize handwritten digits</a> ★</li>
+				<li class="c3"><span class="glyphicon glyphicon-book"></span> <a href="http://neuralnetworksanddeeplearning.com/chap2.html">2. How the backpropagation algorithm works</a>  ★</li>
+				<li class="c3"><span class="glyphicon glyphicon-book"></span> <a href="http://neuralnetworksanddeeplearning.com/chap4.html">4. A visual proof that neural nets can compute any function</a> ★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/mlp.html">6. Deep feedforward networks</a> ★★★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="https://medium.com/@karpathy/yes-you-should-understand-backprop-e2f06eab496b">Yes you should understand backprop</a> explains why it is important to implement backpropagation once from scratch ★★
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://colah.github.io/posts/2015-08-Backprop/">Calculus on computational graphs: backpropagation</a> ★★
+				</li>
+				<li><span class="glyphicon glyphicon-eye-open"></span> <a href="http://playground.tensorflow.org/">Play with neural networks!</a> ★</li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p>Try to implement a single layer neural network from scratch, including the training procedure.</p>
+			<ul>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://cs231n.github.io/neural-networks-case-study/">Implementing softmax classifier and a simple neural network in pure Python/NumPy</a> - Jupyter notebook available ★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> Andrej Karpathy implements backpropagation in Javascript in his <a href="http://karpathy.github.io/neuralnets/">Hacker's guide to Neural Networks</a>. ★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/">Implementing a neural network from scratch</a> in Python ★</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="well">
+		<h2>Improving the way neural networks learn</h2>
+		<div class="content">
+			<p>It's not very easy to train neural networks. Sometimes they don't learn at all (underfitting), sometimes they learn exactly what you give them and their "knowledge" does not generalize to new, unseen data (overfitting). There are many ways to handle these problems.</p>
+			<ul>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=JfkbyODyujw&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=14">2.8-2.11. Regularization, parameter initialization etc.</a> ★★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=UcKPdAM8cnI&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=55">7.5. Dropout</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=KaR4lIdI1MQ&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=6">6 (first half). Setting up the data and loss</a> ★★</li>
+				<li class="c3"><span class="glyphicon glyphicon-book"></span> <a href="http://neuralnetworksanddeeplearning.com/chap3.html">3. Improving the way neural networks learn</a>  ★</li>
+				<li class="c3"><span class="glyphicon glyphicon-book"></span> <a href="http://neuralnetworksanddeeplearning.com/chap5.html">5. Why are deep neural networks hard to train?</a>  ★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/regularization.html">7. Regularization for deep learning</a> ★★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/optimization.html">8. Optimization for training deep models</a> ★★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/guidelines.html">11. Practical methodology</a> ★★★</li>
+				<li><span class="glyphicon glyphicon-eye-open"></span> <a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/trainers.html">ConvNetJS Trainer demo on MNIST</a> - visualizes the performance of different optimization algorithms ★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://sebastianruder.com/optimizing-gradient-descent/">An overview of gradient descent optimization algorithms</a> ★★★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://colah.github.io/posts/2014-03-NN-Manifolds-Topology/">Neural Networks, Manifolds, and Topology</a> ★★★</li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p>There are many frameworks that provide the standard algorithms and are optimised for good performance on modern hardware. Most of these frameworks have interfaces for Python with the notable exception of Torch, which requires Lua. Once you know how basic learning algorithms are implemented under the hood, it's time to choose a framework to build on.</p>
+			<ul>
+				<li class="theano"><a href="http://deeplearning.net/software/theano/">Theano</a> provides low-level primitives for constructing all kinds of neural networks. It is maintained by <a href="https://mila.umontreal.ca/en/">a machine learning group at University of Montreal</a>. See also: <span class="glyphicon glyphicon-pencil"></span> <a href="http://www.wildml.com/2015/09/speeding-up-your-neural-network-with-theano-and-the-gpu/">Speeding up your neural network with Theano and the GPU</a> - Jupyter notebook available ★</li>
+				<li class="tensorflow"><a href="https://www.tensorflow.org/">TensorFlow</a> is another low-level framework. Its architecture is similar to Theano. It is maintained by the Google Brain team.</li>
+				<li class="torch"><a href="http://torch.ch/">Torch</a> is a popular framework that uses Lua language. The main disadvantage is that Lua's community is not as large as Python's. Torch is mostly maintained by Facebook and Twitter.</li>
+			</ul>
+			<p>There are also higher-level frameworks that run on top of these:</p>
+			<ul>
+				<li class="theano"><a href="http://lasagne.readthedocs.io/en/latest/user/tutorial.html">Lasagne</a> is a higher level framework built on top of Theano. It provides simple functions to create large networks with few lines of code.</li>
+				<li class="keras"><a href="https://keras.io/">Keras</a> is a higher level framework that works on top of either Theano or TensorFlow.</li>
+
+				<li><span class="glyphicon glyphicon-film"></span> If you need more guidance on which framework is right for you, see <a href="https://www.youtube.com/watch?v=XgFlBsl0Lq4&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=12">Lecture 12 of Stanford's CS231n</a>. ★★</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="well">
+		<h2>Convolutional neural networks</h2>
+		<div class="content">
+			<p>Convolutional networks ("CNNs") are a special kind of neural nets that use several clever tricks to learn faster and better. ConvNets essentially revolutionized computer vision and are heavily used in speech recognition and text classification as well.</p>
+			<ul>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=rxKrCa4bg1I&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=69">9. Computer vision (up to 9.9)</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=KaR4lIdI1MQ&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=6">6 (second half). Intro to ConvNets</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=V8JDMkARdfU&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=7">7. Convolutional neural networks</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=2xtx-gk3PqY&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=8">8. Localization and detection</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=N--YsFUyYnE&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=9">9. Visualization, Deep dream, Neural style, Adversarial examples</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=UFnO-ADC-k0&index=13&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA">13. Image segmentation (up to 38:00)</a> includes upconvolutions ★★</li>
+				<li class="c3"><span class="glyphicon glyphicon-book"></span> <a href="http://neuralnetworksanddeeplearning.com/chap6.html">6. Deep learning</a>  ★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/convnets.html">9. Convolutional networks</a> ★★★</li>
+				<li><span class="glyphicon glyphicon-eye-open"></span> <a href="http://setosa.io/ev/image-kernels/">Image Kernels explained visually</a> - shows how convolutional filters (also known as image kernels) transform the image ★</li>
+				<li><span class="glyphicon glyphicon-eye-open"></span> <a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/mnist.html">ConvNetJS MNIST demo</a> - live visualization of a convolutional network right in the browser ★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://colah.github.io/posts/2014-07-Conv-Nets-Modular/">Conv Nets: A Modular Perspective</a> ★★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://colah.github.io/posts/2014-07-Understanding-Convolutions/">Understanding Convolutions</a> ★★★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/">Understanding Convolutional neural networks for NLP</a> ★★</li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p>Convolutional networks are implemented in every major framework. It is usually easier to understand the code that is written using higher level libraries.</p>
+			<ul>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://deeplearning.net/tutorial/lenet.html">Theano: Convolutional Neural Networks (LeNet)</a> ★★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://luizgh.github.io/libraries/2015/12/08/getting-started-with-lasagne/">Using Lasagne for training Deep Neural Networks</a> ★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://jeffreydf.github.io/diabetic-retinopathy-detection/">Detecting diabetic retinopathy in eye images</a> - a blog post by one of the best performers of Diabetic retinopathy detection contest in Kaggle. Includes a good example of data augmentation. ★★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="https://deepsense.io/deep-learning-right-whale-recognition-kaggle/">Face recognition for right whales using deep learning</a> - the authors used different ConvNets for localization and classification. <a href="https://www.dropbox.com/s/rohrc1btslxwxzr/deepsense-whales.zip?dl=0">Code and models are available</a>. ★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="https://www.tensorflow.org/tutorials/deep_cnn/">Tensorflow: Convolutional neural networks</a> for image classification on CIFAR-10 dataset ★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/">Implementing a CNN for text classification in Tensorflow</a> ★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="https://nbviewer.jupyter.org/github/tensorflow/tensorflow/blob/master/tensorflow/examples/tutorials/deepdream/deepdream.ipynb">DeepDream implementation in TensorFlow</a> ★★★</li>
+				<li class="torch"><span class="glyphicon glyphicon-pencil"></span> <a href="http://torch.ch/blog/2015/07/30/cifar.html">92.45% on CIFAR-10 in Torch</a> - implements famous VGGNet network with batch normalization layers in Torch ★</li>
+				<li class="torch"><span class="glyphicon glyphicon-pencil"></span> <a href="http://torch.ch/blog/2016/02/04/resnets.html">Training and investigating Residual Nets</a> - Residual networks perform very well on image classification tasks. Two researchers from Facebook and CornellTech implemented these networks in Torch ★★★</li>
+				<li><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=ue4RJdI8yRA&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=11">ConvNets in practice</a> - lots of practical tips on using convolutional networks including data augmentation, transfer learning, fast implementations of convolution operation ★★</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="well">
+		<h2>Recurrent neural networks</h2>
+		<div class="content">
+			<p>Recurrent networks ("RNNs") are designed to work with sequences. Usually they are used for sentence classification (e.g. sentiment analysis) and speech recognition, but also for text generation and even image generation.</p>
+			<ul>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a> - describes how RNNs can generate text, math papers and C++ code ★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> Hugo Larochelle's course doesn't cover recurrent neural networks (although it covers many topics that RNNs are used for). We suggest watching <a href="https://www.youtube.com/watch?v=56TYLaQN4N8">Recurrent Neural Nets and LSTMs</a> by Nando de Freitas to fill the gap ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=cO0a0QYmFm8&list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&index=10">10. Recurrent Neural Networks, Image Captioning, LSTM</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://youtu.be/UFnO-ADC-k0?list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&t=2280">13. Soft attention (starting at 38:00)</a> ★★</li>
+				<li class="c3"><span class="glyphicon glyphicon-book"></span> Michael Nielsen's book stops at convolutional networks. In the <a href="http://neuralnetworksanddeeplearning.com/chap6.html#other_approaches_to_deep_neural_nets">Other approaches to deep neural nets</a> section there is just a brief review of simple recurrent networks and LSTMs. ★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/rnn.html">10. Sequence Modeling: Recurrent and Recursive Nets</a> ★★★</li>
+				<li><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=nwcJuGuG-0s&index=8&list=PLmImxx8Char9Ig0ZHSyTqGsdhb9weEGam">Recurrent neural networks</a> from Stanford's CS224d (2016) by Richard Socher ★★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a> ★★</li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p>Recurrent neural networks are also implemented in every modern framework.</p>
+			<ul>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://deeplearning.net/tutorial/rnnslu.html">Theano: Recurrent Neural Networks with Word Embeddings</a> ★★★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://deeplearning.net/tutorial/lstm.html">Theano: LSTM Networks for Sentiment Analysis</a> ★★★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/">Implementing a RNN with Python, Numpy and Theano</a> ★★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="https://github.com/Lasagne/Recipes/blob/master/examples/lstm_text_generation.py">Lasagne implementation of Karpathy's char-rnn</a> ★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="https://yerevann.github.io/2016/06/26/combining-cnn-and-rnn-for-spoken-language-identification/">Combining CNN and RNN for spoken language identification</a> in Lasagne ★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://yerevann.github.io/2016/09/09/automatic-transliteration-with-lstm/">Automatic transliteration with LSTM</a> using Lasagne ★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="https://www.tensorflow.org/tutorials/recurrent/">Tensorflow: Recurrent Neural Networks</a> for language modeling ★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="http://r2rt.com/recurrent-neural-networks-in-tensorflow-i.html">Recurrent Neural Networks in Tensorflow</a> ★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="http://blog.evjang.com/2016/06/understanding-and-implementing.html">Understanding and Implementing Deepmind's DRAW Model</a> ★★★</li>
+				<li class="torch"><span class="glyphicon glyphicon-pencil"></span> <a href="http://apaszke.github.io/lstm-explained.html">LSTM implementation explained</a> ★★</li>
+				<li class="torch"><span class="glyphicon glyphicon-pencil"></span> <a href="https://github.com/jcjohnson/torch-rnn">Torch implementation of Karpathy's char-rnn</a> ★★★</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="well">
+		<h2>Autoencoders</h2>
+		<div class="content">
+			<p>Autoencoders are neural networks designed for unsupervised learning, i.e. when the data is not labeled. They can be used for dimension reduction, pretraining of other neural networks, for data generation etc. Here we also include resources about an interesting hybrid of autoencoders and graphical models called variational autoencoders, although their mathematical basis is not introduced until the next section.</p>
+			<ul>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=FzS3tMl4Nsc&t=2s&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=44">6. Autoencoder</a> ★★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=z5ZYm_wJ37c&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=56">7.6. Deep autoencoder</a> ★★</li>
+				<li class="c2"><span class="glyphicon glyphicon-film"></span> <a href="https://youtu.be/I-i1KBuShCc?list=PLlJy-eBtNFt6EuMxFYRiNRS07MCWN5UIA&t=1949">14. Videos and unsupervised learning (from 32:29)</a> - this video also touches an exciting topic of generative adversarial networks. ★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/autoencoders.html">14. Autoencoders</a> ★★★</li>
+				<li><span class="glyphicon glyphicon-eye-open"></span> <a href="http://cs.stanford.edu/people/karpathy/convnetjs/demo/autoencoder.html">ConvNetJS Denoising Autoencoder demo</a> ★</li>
+				<li><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=P78QYjWh5sM&index=3&list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu">Karol Gregor on Variational Autoencoders and Image Generation</a> ★★</li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p>Most autoencoders are pretty easy to implement. We suggest you try to implement one before looking at complete examples.</p>
+			<ul>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://deeplearning.net/tutorial/dA.html">Theano: Denoising autoencoders</a> ★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="http://cmgreen.io/2016/01/04/tensorflow_deep_autoencoder.html">Diving Into TensorFlow With Stacked Autoencoders</a> ★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="https://jmetzen.github.io/2015-11-27/vae.html">Variational Autoencoder in TensorFlow</a> ★★</li>
+				<li class="torch"><span class="glyphicon glyphicon-pencil"></span> <a href="https://siavashk.github.io/2016/02/22/autoencoder-imagenet/">Training Autoencoders on ImageNet Using Torch 7</a> ★★</li>
+				<li class="keras"><span class="glyphicon glyphicon-pencil"></span> <a href="https://blog.keras.io/building-autoencoders-in-keras.html">Building autoencoders in Keras</a> ★</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="well">
+		<h2>Probabilistic graphical models</h2>
+		<div class="content">
+			<p>Probabilistic graphical models (“PGMs”) form a separate subfield at the intersection of statistics and machine learning. There are many books and courses on PGMs in general. Here we present how these models are applied in the context of deep learning. Hugo Larochelle's course describes a few famous models, while the book Deep Learning devotes four chapters (16-19) to the theory and describes more than a dozen models in the last chapter. These topics require a lot of mathematics.</p>
+			<ul>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=GF3iSJkgPbA&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=18">3. Conditional Random Fields</a> ★★★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=6dpGB60Q1Ts&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=28">4. Training CRFs</a> ★★★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=p4Vh_zMw-HQ&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=36">5. Restricted Boltzman machine</a> ★★★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=vkb6AWYXZ5I&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=57">7.7-7.9. Deep Belief Networks</a> ★★★</li>
+				<li class="c1"><span class="glyphicon glyphicon-film"></span> <a href="https://www.youtube.com/watch?v=y0SISi_T6s8&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH&index=78">9.10. Convolutional RBM</a> ★★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/linear_factors.html">13. Linear Factor Models</a> - first steps towards probabilistic models ★★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/graphical_models.html">16. Structured Probabilistic Models for Deep Learning</a> ★★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/monte_carlo.html">17. Monte Carlo Methods</a> ★★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/partition.html">18. Confronting the Partition Function</a> ★★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/inference.html">19. Approximate Inference</a> ★★★</li>
+				<li class="c4"><span class="glyphicon glyphicon-book"></span> <a href="http://www.deeplearningbook.org/contents/generative_models.html">20. Deep Generative Models</a> - includes Boltzmann machines (RBM, DBN, ...), variational autoencoders, generative adversarial networks, autoregressive models etc. ★★★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="https://openai.com/blog/generative-models/">Generative models</a> - a blog post on variational autoencoders, generative adversarial networks and their improvements by OpenAI. ★★★</li>
+				<li><span class="glyphicon glyphicon-pencil"></span> <a href="http://www.asimovinstitute.org/neural-network-zoo/">The Neural Network Zoo</a> attempts to organize lots of architectures using a single scheme. ★★</li>
+			</ul>
+		</div>
+		<div class="right-content">
+			<p>Higher level frameworks (Lasagne, Keras) do not implement graphical models. But there is a lot of code for Theano, Tensorflow and Torch.</p>
+			<ul>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://deeplearning.net/tutorial/rbm.html">Restricted Boltzmann Machines in Theano</a> ★★★</li>
+				<li class="theano"><span class="glyphicon glyphicon-pencil"></span> <a href="http://deeplearning.net/tutorial/DBN.html">Deep Belief Networks in Theano</a> ★★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="http://blog.otoro.net/2016/04/01/generating-large-images-from-latent-vectors/">Generating Large Images from Latent Vectors</a> - uses a combination of variational autoencoders and generative adversarial networks. ★★★</li>
+				<li class="tensorflow"><span class="glyphicon glyphicon-pencil"></span> <a href="https://bamos.github.io/2016/08/09/deep-completion/">Image Completion with Deep Learning in TensorFlow</a> - another application of generative adversarial networks. ★★★</li>
+				<li class="torch"><span class="glyphicon glyphicon-pencil"></span> <a href="http://torch.ch/blog/2015/11/13/gan.html">Generating Faces with Torch</a> - Torch implementation of Generative Adversarial Networks ★★</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="container">
+		<h2>The state of the art</h2>
+		<div class="left">
+			<p>Deep learning is a very active area of scientific research. To follow the state of the art one has to read new papers and follow important conferences. Usually every new idea is announced in a preprint paper on arxiv.org. Then some of them are submitted to conferences and are peer reviewed. The best of them are presented in the conferences and are published in journals. If the authors do not release code for their models, many people attempt to implement them and put them on GitHub. It takes a year or two before high quality blog posts, tutorials and videos appear on the web that properly explain the ideas and implementations.</p>
+			<ul>
+				<li><span class="glyphicon glyphicon-th-list"></span> <a href="https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap">Deep learning papers reading roadmap</a> contains a long list of important papers.</li>
+				<li><span class="glyphicon glyphicon-th-list"></span> <a href="http://www.arxiv-sanity.com/">Arxiv Sanity Preserver</a> is a nice UI for browsing papers from arXiv.</li>
+				<li><span class="glyphicon glyphicon-film"></span> <a href="http://videolectures.net/">Videolectures.net</a> contains lots of videos on advanced topics.</li>
+				<li><span class="glyphicon glyphicon-th-list"></span> <a href="https://www.reddit.com/r/MachineLearning/">/r/MachineLearning</a> is a very active subreddit. All major new papers are discussed there.</li>
+			</ul>
+		</div>
+		<div class="right">
+			<p>We are going to keep this guide up to date. </p>
+			<ul>
+				<li><span class="glyphicon glyphicon-flag"></span> If you find broken links or any other problems, please report an <a href="https://github.com/YerevaNN/A-Guide-to-Deep-Learning/issues">issue on GitHub</a>.</li>
+				<li><span class="glyphicon glyphicon-time"></span> Last updated on December 26, 2016</li>
+			</ul>
+
+		</div>
+	</div>
+</div>
