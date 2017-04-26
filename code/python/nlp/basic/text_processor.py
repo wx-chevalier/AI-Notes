@@ -3,13 +3,13 @@ import fire
 import logging
 import sys
 
-import jieba
 from gensim.corpora import WikiCorpus
 from gensim.models import word2vec
 
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from config import ENGLISH_STOP_WORDS
+
 
 class TextProcessor(object):
     """
@@ -67,8 +67,6 @@ class TextProcessor(object):
                 **dict(fontsize=10)
             )
         plt.show()
-
-
 
 
 if __name__ == '__main__':
