@@ -1,7 +1,4 @@
-
-![](http://nebula.wsimg.com/9231017c407c70957eb3f708365e7a49?AccessKeyId=05106B70AA8440180999&disposition=0&alloworigin=1)
-
-# Python 机器学习基础
+# 深度学习与自然语言处理实践
 
 Copyright © 2017 王下邀月熊
 
@@ -13,10 +10,11 @@ Copyright © 2017 王下邀月熊
 
 # 目录
 
-- 入门初窥
-    - [环境搭建]()
+- [Deep Learning Specialization 课程笔记](https://www.coursera.org/specializations/deep-learning)
+    - [神经网络、监督学习与深度学习]()
 
-# 参考资料
+
+# 参考
 - [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-Reference.md)
 - [机器学习、深度学习与自然语言处理领域推荐的书籍列表](https://zhuanlan.zhihu.com/p/25612011) 
 - [数据科学与机器学习概述](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
