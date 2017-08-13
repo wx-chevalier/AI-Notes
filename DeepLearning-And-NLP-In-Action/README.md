@@ -1,3 +1,5 @@
+![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/8/1/Deep-learningheader.jpg)
+
 # 深度学习与自然语言处理实践
 
 Copyright © 2017 王下邀月熊
@@ -11,7 +13,7 @@ Copyright © 2017 王下邀月熊
 # 目录
 
 - [Deep Learning Specialization 课程笔记](https://www.coursera.org/specializations/deep-learning)
-    - [神经网络、监督学习与深度学习]()
+    - [神经网络、有监督学习与深度学习]()
 
 
 # 参考
