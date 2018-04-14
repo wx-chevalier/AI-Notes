@@ -1,6 +1,6 @@
 
 
-# Tensorflow
+#  TensorFlow
 
 ## Reference
 
@@ -12,7 +12,7 @@
 
 ![](http://1.bp.blogspot.com/-vDKYuCD8Gyg/Vj0B3BEQfXI/AAAAAAAAAyA/9tWmYUOxo0g/s1600/cifar10_2.gif)
 
-因为众所周知的原因，在国内搭建 Tensorflow 的环境又经历了一些波折。笔者习惯用 Docker 作为复杂依赖项目的开发环境，Google 提供的安装方式有如下几个。
+因为众所周知的原因，在国内搭建  TensorFlow 的环境又经历了一些波折。笔者习惯用 Docker 作为复杂依赖项目的开发环境，Google 提供的安装方式有如下几个。
 
 ### Binary Installation
 
