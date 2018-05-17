@@ -2,17 +2,17 @@
 
 词向量最直观的理解就是将每一个单词表征为
 
-深度学习（DeepLearning）在图像、语音、视频等多方应用中大放异彩，从本质而言，深度学习是表征学习（Representation Learning）的一种方法，可以看做对事物进行分类的不同过滤器的组成。
+深度学习(DeepLearning)在图像、语音、视频等多方应用中大放异彩，从本质而言，深度学习是表征学习(Representation Learning)的一种方法，可以看做对事物进行分类的不同过滤器的组成。
 
-Word2Vec 是 Google 在 2013 年年中开源的一款将词表征为实数值向量的高效 工具，采用的模型有 CBOW (Continuous Bag-Of-Words，即连续的词袋模型）和 Skip-Gram 两种。word2vec 代码链接为：https://code.google.com/p/word2vec/， 遵循 Apache License 2.0 开源协议，是一种对商业应用友好的许可，当然需要充分尊重原作者的著作权。Word2Vec 采用了所谓的 Distributed Representation 方式来表示词。Distributed representation 最早是 Hinton 在 1986 年的论文《Learning distributed representations of concepts》中提出的。虽然这篇文章没有说要将词做 Distributed representation，但至少这种先进的思想在那个时候就在人们的心中埋下了火种，到 2000 年之后开始逐渐被人重视。Distributed representation 用来表示词，通常被称为“Word Representation”或“Word Embedding”，中文俗称“词向量”。
+Word2Vec 是 Google 在 2013 年年中开源的一款将词表征为实数值向量的高效 工具，采用的模型有 CBOW (Continuous Bag-Of-Words，即连续的词袋模型)和 Skip-Gram 两种。word2vec 代码链接为：https://code.google.com/p/word2vec/， 遵循 Apache License 2.0 开源协议，是一种对商业应用友好的许可，当然需要充分尊重原作者的著作权。Word2Vec 采用了所谓的 Distributed Representation 方式来表示词。Distributed representation 最早是 Hinton 在 1986 年的论文《Learning distributed representations of concepts》中提出的。虽然这篇文章没有说要将词做 Distributed representation，但至少这种先进的思想在那个时候就在人们的心中埋下了火种，到 2000 年之后开始逐渐被人重视。Distributed representation 用来表示词，通常被称为“Word Representation”或“Word Embedding”，中文俗称“词向量”。
 
 ![](http://deeplearning4j.org/img/word2vec.png)
 
 Word2vec 是一个神经网络，它用来在使用深度学习算法之前预处理文本。它本身并没有实现深度学习，但是 Word2Vec 把文本变成深度学习能够理解的向量形式。
 
-Word2vec 在不需要人工干预的情况下创建特征，包括词的上下文特征。这些上下文来自于多个词的窗口。如果有足够多的数据，用法和上下文，Word2Vec 能够基于这个词的出现情况高度精确的预测一个词的词义（对于深度学习来说，一个词的词义只是一个简单的信号，这个信号能用来对更大的实体分类；比如把一个文档分类到一个类别中）。
+Word2vec 在不需要人工干预的情况下创建特征，包括词的上下文特征。这些上下文来自于多个词的窗口。如果有足够多的数据，用法和上下文，Word2Vec 能够基于这个词的出现情况高度精确的预测一个词的词义(对于深度学习来说，一个词的词义只是一个简单的信号，这个信号能用来对更大的实体分类；比如把一个文档分类到一个类别中)。
 
-Word2vec 需要一串句子做为其输入。每个句子，也就是一个词的数组，被转换成 n 维向量空间中的一个向量并且可以和其它句子（词的数组）所转换成向量进行比较。在这个向量空间里，相关的词语和词组会出现在一起。把它们变成向量之后，我们可以一定程度的计算它们的相似度并且对其进行聚类。这些类别可以作为搜索，情感分析和推荐的基础。
+Word2vec 需要一串句子做为其输入。每个句子，也就是一个词的数组，被转换成 n 维向量空间中的一个向量并且可以和其它句子(词的数组)所转换成向量进行比较。在这个向量空间里，相关的词语和词组会出现在一起。把它们变成向量之后，我们可以一定程度的计算它们的相似度并且对其进行聚类。这些类别可以作为搜索，情感分析和推荐的基础。
 
 Word2vec 神经网络的输出是一个词表，每个词由一个向量来表示，这个向量可以做为深度神经网络的输入来进行分类。
 
@@ -26,7 +26,7 @@ Word2vec 神经网络的输出是一个词表，每个词由一个向量来表�
 
 * [Google - Word2Vec](https://code.google.com/p/word2vec/)
 * [Deep Learning 实战之 word2vec](http://techblog.youdao.com/?p=915#LinkTarget_699)
-* [word2vector 学习笔记（一）](http://blog.csdn.net/lingerlanlan/article/details/38048335)
+* [word2vector 学习笔记(一)](http://blog.csdn.net/lingerlanlan/article/details/38048335)
 * [词向量和语言模型](http://licstar.net/archives/328#s20)
 
 ### Practice
@@ -98,7 +98,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
 * 分析
 
-（1）相似词计算
+(1)相似词计算
 
 ```
 ./distance vectors.bin
@@ -108,7 +108,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
 ![](http://img2.tuicool.com/vmYBrq.png!web)
 
-（2）潜在的语言学规律
+(2)潜在的语言学规律
 
       在对demo-analogy.sh修改后得到下面几个例子：
 
@@ -116,7 +116,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
 ![](http://img0.tuicool.com/FrmE73.png%21web)
 
-（3）聚类
+(3)聚类
 
     将经过分词后的语料resultbig.txt中的词聚类并按照类别排序：  
 
@@ -127,7 +127,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
 ![](http://img1.tuicool.com/j6FrAn.png%21web)
 
-（4）短语分析
+(4)短语分析
 
     先利用经过分词的语料resultbig.txt中得出包含词和短语的文件sogouca_phrase.txt，再训练该文件中词与短语的向量表示。  
 
@@ -152,7 +152,7 @@ CBOW 是 Continuous Bag-of-Words Model 的缩写，是一种与前向 NNLM 类�
 
 ![](http://7xlgth.com1.z0.glb.clouddn.com/1424C789-5B58-43BA-952C-EACDF43E2AEB.png)
 
-从输入层到隐层所进行的操作实际就是上下文向量的加和，具体的代码如下。 其中 sentence_position 为当前 word 在句子中的下标。以一个具体的句子 A B C D 为例，第一次进入到下面代码时当前 word 为 A，sentence_position 为 0。b 是一 个随机生成的 0 到$window-1$的词，整个窗口的大小为$2*window + 1 - 2*b$，相当于左右各看$window-b$个词。可以看出随着窗口的从左往右滑动，其大小也 是随机的$3 (b=window-1)$到$2\*window+1(b=0)$之间随机变通，即随机值 b 的大小决定了当前窗口的大小。代码中的 neu1 即为隐层向量，也就是上下文（窗口 内除自己之外的词）对应 vector 之和。
+从输入层到隐层所进行的操作实际就是上下文向量的加和，具体的代码如下。 其中 sentence_position 为当前 word 在句子中的下标。以一个具体的句子 A B C D 为例，第一次进入到下面代码时当前 word 为 A，sentence_position 为 0。b 是一 个随机生成的 0 到$window-1$的词，整个窗口的大小为$2*window + 1 - 2*b$，相当于左右各看$window-b$个词。可以看出随着窗口的从左往右滑动，其大小也 是随机的$3 (b=window-1)$到$2\*window+1(b=0)$之间随机变通，即随机值 b 的大小决定了当前窗口的大小。代码中的 neu1 即为隐层向量，也就是上下文(窗口 内除自己之外的词)对应 vector 之和。
 
 ![](http://7xlgth.com1.z0.glb.clouddn.com/36F89DA8-F3A0-4C6C-84F8-C31BB19CEEC1.png)
 

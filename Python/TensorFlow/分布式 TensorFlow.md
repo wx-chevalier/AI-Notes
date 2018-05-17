@@ -77,7 +77,7 @@ with tf.Session("grpc://worker7:2222") as sess:
   for _ in range(10000):
     sess.run(train_op)
 ```
-在上面的例子中，Variables在job `ps`的两个task上被创建，然后计算密集型的部分创建在job `work`上。TensorFlow会自动地在不同的job之间传输数据。（从`job`到`work`是前向传递，而从`worker`到`ps`是梯度应用）。
+在上面的例子中，Variables在job `ps`的两个task上被创建，然后计算密集型的部分创建在job `work`上。TensorFlow会自动地在不同的job之间传输数据。(从`job`到`work`是前向传递，而从`worker`到`ps`是梯度应用)。
 
 
 ## Replicated Computation
@@ -96,13 +96,13 @@ with tf.Session("grpc://worker7:2222") as sess:
 ## 术语
 
 **Client**
-一个典型的客户端一般会构建一个TensorFlow的图并且使用`tensorflow::Session`来完成与集群的交互。客户端一般会用Python或者C++编写，一般来说一个客户端可以同时与多个服务端进行交互（参考上文的重复训练），并且一个服务端也可以同时服务于多个客户端。
+一个典型的客户端一般会构建一个TensorFlow的图并且使用`tensorflow::Session`来完成与集群的交互。客户端一般会用Python或者C++编写，一般来说一个客户端可以同时与多个服务端进行交互(参考上文的重复训练)，并且一个服务端也可以同时服务于多个客户端。
 
 **Cluster**
 一个TensorFlow集群会包含一个或者多个TensorFlow的服务端，被切分为一系列命名的job，而每个job又会负责一系列的tasks。一个集群一般会专注于一个相对高层的目标，譬如用多台机器并行地训练一个神经网络。
 
 **Job**
-一个job会包含一系列的致力于某个相同目标的task。譬如，一个叫`ps`（意思是参数服务）的job会用于处理存储于更新Variables相关的工作。而一个叫`worker`的job会用于承载那些用于计算密集型的无状态节点。一般来说一个job中的tasks会运行在不同的机器中。
+一个job会包含一系列的致力于某个相同目标的task。譬如，一个叫`ps`(意思是参数服务)的job会用于处理存储于更新Variables相关的工作。而一个叫`worker`的job会用于承载那些用于计算密集型的无状态节点。一般来说一个job中的tasks会运行在不同的机器中。
 
 
 **Master service**

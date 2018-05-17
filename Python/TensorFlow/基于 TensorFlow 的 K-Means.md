@@ -157,4 +157,4 @@ for i in range(100):
     x = sess.run(tf.assign(variable1, placeholder))
 ```
 
-像上面那样看似无害地在每次执行的时候创建一个新的 OP（譬如 tf.assign 或者 tf.zeros 这样的），这样会一定的影响性能。作为替代的，你应该为每个任务定义一个特定的 OP，然后在循环中调用这个 OP。可以使用`len(graph.get_operations())`这个方法来检测是否有冗余的非必需的 OPs。准确来说，`sess.run`应该是在迭代中唯一会与 graph 产生交互的方法。在上述代码的 138~139 行中可以看出，一系列的 ops/Variables 可以组合在 sess.run 中使用。
+像上面那样看似无害地在每次执行的时候创建一个新的 OP(譬如 tf.assign 或者 tf.zeros 这样的)，这样会一定的影响性能。作为替代的，你应该为每个任务定义一个特定的 OP，然后在循环中调用这个 OP。可以使用`len(graph.get_operations())`这个方法来检测是否有冗余的非必需的 OPs。准确来说，`sess.run`应该是在迭代中唯一会与 graph 产生交互的方法。在上述代码的 138~139 行中可以看出，一系列的 ops/Variables 可以组合在 sess.run 中使用。

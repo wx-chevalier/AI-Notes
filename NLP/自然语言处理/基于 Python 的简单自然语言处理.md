@@ -46,7 +46,7 @@ print("目标分类", "->",[ twenty_train.target_names[t] for t in twenty_train.
 ```
 # 进行特征提取
 
-# 构建文档-词矩阵（Document-Term Matrix）
+# 构建文档-词矩阵(Document-Term Matrix)
 
 from sklearn.feature_extraction.text import CountVectorizer
 

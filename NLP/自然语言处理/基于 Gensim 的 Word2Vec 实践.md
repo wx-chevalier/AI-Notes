@@ -33,7 +33,7 @@ model = word2vec.Word2Vec(sentences, min_count=1)
 model.similarity('dogs','you')
 ```
 
-这里我们调用`Word2Vec`创建模型实际上会对数据执行两次迭代操作，第一轮操作会统计词频来构建内部的词典数结构，第二轮操作会进行神经网络训练，而这两个步骤是可以分步进行的，这样对于某些不可重复的流（譬如 Kafka 等流式数据中）可以手动控制：
+这里我们调用`Word2Vec`创建模型实际上会对数据执行两次迭代操作，第一轮操作会统计词频来构建内部的词典数结构，第二轮操作会进行神经网络训练，而这两个步骤是可以分步进行的，这样对于某些不可重复的流(譬如 Kafka 等流式数据中)可以手动控制：
 ```
 model = gensim.models.Word2Vec(iter=1)  # an empty model, no training yet
 model.build_vocab(some_sentences)  # can be a non-repeatable, 1-pass generator
