@@ -118,7 +118,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
 (3)聚类
 
-    将经过分词后的语料resultbig.txt中的词聚类并按照类别排序：  
+    将经过分词后的语料resultbig.txt中的词聚类并按照类别排序:  
 
 ```shell
 1 nohup ./word2vec -train resultbig.txt -output classes.txt -cbow 0 -size 200 -window 5 -negative 0 -hs 1 -sample 1e-3 -threads 12 -classes 500  &

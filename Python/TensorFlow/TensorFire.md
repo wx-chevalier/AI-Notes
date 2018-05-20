@@ -18,4 +18,4 @@ TensorFire 项目由多位 MIT 的毕业生协作而成。其中 Kevin Kwok 与 
 
 该项目 Style Transfer Neural Network Demo 链接：[https://tenso.rs/demos/fast-neural-style/](https://tenso.rs/demos/fast-neural-style/)
 
-查看英文原文： [TensorFire](https://tenso.rs/#wat)
+查看英文原文: [TensorFire](https://tenso.rs/#wat)

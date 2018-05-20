@@ -13,7 +13,7 @@
 > Data Mining is the use of efficient techniques for the analysis of very large collections of data and the extraction of useful and possibly unexpected patterns  in data。
 
 
-数据挖掘是一种通过分析海量数据，从数据中提取潜在的但是非常有用的模式的技术。数据挖掘的任务可以分为预测性任务和描述性任务，预测性任务主要是预测可能出现的情况；描述性任务则是发现一些人类可以解释的模式或者规律。数据挖掘中比较常见的任务包括分类、聚类、关联规则挖掘、时间序列挖掘、回归等，其中分类、回归属于预测性任务，聚类、关联规则挖掘、时间序列分析等则都是解释性任务。而什么又是机器学习呢？笔者在这里引用[有趣的机器学习概念纵览：从多元拟合，神经网络到深度学习，给每个感兴趣的人](https://segmentfault.com/a/1190000005746236)中的定义： 
+数据挖掘是一种通过分析海量数据，从数据中提取潜在的但是非常有用的模式的技术。数据挖掘的任务可以分为预测性任务和描述性任务，预测性任务主要是预测可能出现的情况；描述性任务则是发现一些人类可以解释的模式或者规律。数据挖掘中比较常见的任务包括分类、聚类、关联规则挖掘、时间序列挖掘、回归等，其中分类、回归属于预测性任务，聚类、关联规则挖掘、时间序列分析等则都是解释性任务。而什么又是机器学习呢？笔者在这里引用[有趣的机器学习概念纵览：从多元拟合，神经网络到深度学习，给每个感兴趣的人](https://segmentfault.com/a/1190000005746236)中的定义: 
 > Machine learning is the idea that there are generic algorithms that can tell you something interesting about a set of data without you having to write any custom code specific to the problem. Instead of writing code, you feed data to the generic algorithm and it builds its own logic based on the data.
 
 
