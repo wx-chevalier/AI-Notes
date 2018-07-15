@@ -1,4 +1,4 @@
-原文地址：[这里](https://codesachin.wordpress.com/2015/11/14/k-means-clustering-with-tensorflow/)
+# 基于 TensorFlow 的 K-Means
 
 Google 最近开源了它的第二代人工智能与数值计算库 TensorFlow。TensorFlow 由 Google 大脑团队开发，并且能够灵活地运行在多个平台上——包括 GPU 平台与移动设备中。
 

@@ -2,17 +2,17 @@
 
 本仓库存放了笔者数据科学、人工智能、机器学习、深度学习、自然语言处理等相关的内容：
 
-* [数学原理篇](./Mathematics)
+- [数学原理篇](./Mathematics)
 
-* [机器学习篇](./MachineLearning)
+- [机器学习篇](./MachineLearning)
 
-* [深度学习篇](./DeepLearning)
+- [深度学习篇](./DeepLearning)
 
-* [深度学习课程篇](./DeepLearning-Specialization)
+- [深度学习课程篇](./DeepLearning-Specialization)
 
-* [自然语言篇](./NLP)
+- [自然语言篇](./NLP)
 
-* [Python 实践篇](./Python)
+- [工程实践篇](./Python)
 
 # 关于
 

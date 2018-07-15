@@ -1,5 +1,5 @@
 
-# Distributed TensorFlow
+# 分布式 TensorFlow
 
 本目录包括了运行时分布式TensorFlow的实现，其底层使用了[gRPC](http://grpc.io) 作为进程内通信的支持库。
 
@@ -38,10 +38,10 @@ $ python
 
 命令行参数 `grpc_tensorflow_server` 定义了集群之间的关系. 参数 `--cluster_spec` 决定了集群中工作对象的多少, 譬如有一系列的 *jobs*, 而每个*jobs*又包含了多个*task* 终端。 所有集群中的处理过程都必须设置相同的 `--cluster_spec`参数， 例子如下:
 
-| `--cluster_spec='...'`                   | Available tasks                          |
-| ---------------------------------------- | ---------------------------------------- |
-| `local\|localhost:2222`                  | `/job:local/task:0`                      |
-| `local\|localhost:2222;localhost:2223`   | `/job:local/task:0``/job:local/task:1`   |
+| `--cluster_spec='...'`                                                   | Available tasks                                                                              |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| `local\|localhost:2222`                                                  | `/job:local/task:0`                                                                          |
+| `local\|localhost:2222;localhost:2223`                                   | `/job:local/task:0``/job:local/task:1`                                                       |
 | `worker\|worker0:2222;worker1:2222;worker2:2222,``ps\|ps0:2222;ps1:2222` | `/job:worker/task:0``/job:worker/task:1``/job:worker/task:2``/job:ps/task:0``/job:ps/task:1` |
 
 还有 `--job_name` 与 `--task_index` 标志位指明了哪些任务会运行在当前处理过程上。 具体而言,
