@@ -16,6 +16,8 @@
 
 # 关于
 
+本系列使用的参考资料请前往 [Awesome-Links/DataScienceAI](https://github.com/wxyyxc1992/Awesome-Links)，本系列的精华缩略版可以参考 [Awesome-CheatSheet/DataScienceAI](https://github.com/wxyyxc1992/Awesome-CheatSheet)。
+
 ## 规划
 
 ## 致谢
