@@ -1,6 +1,6 @@
-﻿>原文地址 :[machine-learning-is-fun-part-1](https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471#.dniejuowp)，原文共分三个部分，笔者在这里合并到一篇文章中，并且对内容进行了重新排版以方便阅读。
+﻿> 原文地址 :[machine-learning-is-fun-part-1](https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471#.dniejuowp)，原文共分三个部分，笔者在这里合并到一篇文章中，并且对内容进行了重新排版以方便阅读。
 
-* [笔者的数据科学 / 机器学习知识图谱以及系列文章在 Github 的 Repo，欢迎关注与点赞](https://github.com/wxyyxc1992/datascience-practice-handbook)，笔者之前攒了很多零散的笔记，打算拾掇拾掇整理出来
+- [笔者的数据科学 / 机器学习知识图谱以及系列文章在 Github 的 Repo，欢迎关注与点赞](https://github.com/wxyyxc1992/datascience-practice-handbook)，笔者之前攒了很多零散的笔记，打算拾掇拾掇整理出来
 
 > 笔者自大学以来一直断断续续的学过机器学习啊、自然语言处理啊等等方面的内容，相信基本上每个本科生或者研究生都会接触过这方面，毕竟是一个如此大的 Flag。不过同样的，在机器学习，或者更大的一个概念，数据科学这个领域中，同样是学了忘忘了学。不可否认，数学是机器学习的一个基石，但是也是无数人，包括笔者学习机器学习的一个高的门槛，毕竟数学差。而在这篇文章中，原作者并没有讲很多的数学方面的东西，而是以一个有趣实用的方式来介绍机器学习。另一方面，其实很多数学原理也是很有意思的，笔者记得当年看完数学之美有一个不小的感触，就是知道了 TF-IDF 的计算公式是怎么来的 ~
 
@@ -30,9 +30,9 @@
 
 > 这里的算法分类还是很粗浅的，如果要了解更多的细致的分类可以参考：
 
-* [维基百科](https://en.wikipedia.org/wiki/Machine_learning#Algorithm_types)
+- [维基百科](https://en.wikipedia.org/wiki/Machine_learning#Algorithm_types)
   >
-* [笔者的数据科学与机器学习算法分类](https://github.com/wxyyxc1992/datascience-practice-handbook/blob/master/datascience-machinelearning-algorithms.md)
+- [笔者的数据科学与机器学习算法分类](https://github.com/wxyyxc1992/datascience-practice-handbook/blob/master/datascience-machinelearning-algorithms.md)
 
 # House Price Estimation With Supervised Learning: 利用监督学习进行房屋价格估计
 
@@ -121,10 +121,10 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
 
 不断测试不同的权重的组合，从而找出其中最靠近零的一组。 ## Mind Blowage Time 很简单，不是吗？让我们再回顾下你刚才做了啥，拿了一些数据，通过三个泛化的简单的步骤获取一个预测值，不过在进一步优化之前，我们先来讨论一些小小的思考：
 
-* 过去 40 年来，包括语言学、翻译等等在内的很多领域都证明了通用的学习算法也能表现出色，尽管这些算法本身看上去毫无意义。
-* 刚才咱写的那个函数也是所谓的无声的，即函数中，并不知道卧室数目 bedrooms、客厅大小 square_feet 这些变量到底是啥意思，它只知道输入某些数字然后得出一个值。这一点就很明显地和那些面向特定的业务逻辑的处理程序有很大区别。
-* 估计你是猜不到哪些权重才是最合适的，或许你连自己为啥要这么写函数都不能理解，虽然你能证明这么写就是有用的。
-* 如果我们把参数`sqft`改成了图片中的像素的敏感度，那么原来输出的值是所谓的价格，而现在的值就是所谓的图片的类型，输入的不同，输出值的意义也就可以不一样。
+- 过去 40 年来，包括语言学、翻译等等在内的很多领域都证明了通用的学习算法也能表现出色，尽管这些算法本身看上去毫无意义。
+- 刚才咱写的那个函数也是所谓的无声的，即函数中，并不知道卧室数目 bedrooms、客厅大小 square_feet 这些变量到底是啥意思，它只知道输入某些数字然后得出一个值。这一点就很明显地和那些面向特定的业务逻辑的处理程序有很大区别。
+- 估计你是猜不到哪些权重才是最合适的，或许你连自己为啥要这么写函数都不能理解，虽然你能证明这么写就是有用的。
+- 如果我们把参数`sqft`改成了图片中的像素的敏感度，那么原来输出的值是所谓的价格，而现在的值就是所谓的图片的类型，输入的不同，输出值的意义也就可以不一样。
 
 ## Try every number?
 
@@ -140,9 +140,9 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
 
 可能看完了这些，觉着 ML 好简单啊，那这么简单的东西又是如何应用到图片识别等等复杂的领域的呢？你可能会觉得可以用机器学习来解决任何问题，只要你有足够多的数据。不过还是要泼点冷水，千万记住，机器学习的算法只在你有足够的解决某个特定的问题的数据的时候才能真正起作用。譬如，如果你想依靠某个屋子内盆栽的数目来预测某个屋子的价格，呵呵。这是因为房屋的价格和里面的盆栽数目没啥必然联系，不管你怎么尝试，输入怎么多的数据，可能都不能如你所愿。 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-N6pxRoVoEoedFELL2HdxbA.png) 所以，总结而言，如果是能够手动解决的问题，那计算机可能解决的更快，但是它也无法解决压根解决不了的问题。在原作者看来，目前机器学习存在的一个很大的问题就是依然如阳春白雪般，只是部分科研人员或者商业分析人员的关注对象，其他人并不能简单地理解或者使用，在本节的最后也推荐一些公开的课程给对机器学习有兴趣的朋友：
 
-* [Machine Learning class on Coursera](https://www.coursera.org/course/ml)
+- [Machine Learning class on Coursera](https://www.coursera.org/course/ml)
 
-* [scikit-learn](http://scikit-learn.org/stable/)
+- [scikit-learn](http://scikit-learn.org/stable/)
 
 # Neural Network: 神经网络上文中，我们通过一个简单的房价预测的例子了解了机器学习的基本含义，在本节，我们将会继续用一些泛化的算法搭配上一些特定的数据做些有趣的事情。本节的例子大概如下图所示，一个很多人的童年必备的游戏：马里奥，让我们用神经网络帮你设计一些新奇的关卡吧。 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/1-pJ2mc_79M544T9mg19XIGA.gif) 在正文之前，还是要强调下，本文是面向所有对机器学习有兴趣的朋友，所以大牛们看到了勿笑。
 
@@ -168,8 +168,8 @@ return price
 
 我们将上文提到的两个步骤合并起来，大概如下图所示: ![](http://7u2q25.com1.z0.glb.clouddn.com/1-Lt8RZaeQ6f6B_eA1oD32JQ.png) 咳咳，没错，这就是一个典型的神经网络，每个节点接收一系列的输入，为每个输入分配权重，然后计算输出值。通过连接这一系列的节点，我们就能够为复杂的函数建模。同样为了简单起见，我在这里也跳过了很多概念，譬如 [feature scaling](https://en.wikipedia.org/wiki/Feature_scaling) 以及 [activation function](https://en.wikipedia.org/wiki/Activation_function)，不过核心的概念是：
 
-* 每个能够接收一系列的输入并且能够按权重求和的估值函数被称为 Neuron( 神经元 )
-* 多个简单的神经元的连接可以用来构造处理复杂问题的模型
+- 每个能够接收一系列的输入并且能够按权重求和的估值函数被称为 Neuron( 神经元 )
+- 多个简单的神经元的连接可以用来构造处理复杂问题的模型
 
 有点像乐高方块，单个的乐高方块非常简单，而大量的乐高方块却可以构建出任何形状的物体: ![](http://7u2q25.com1.z0.glb.clouddn.com/1-AcWzHbgnmiMYyv1_IXcY0w.png)
 
@@ -256,10 +256,10 @@ In 2015, Nintendo 宣布了 [Super Mario Maker™](http://supermariomaker.ninten
 
 其中：
 
-* `-` 代表空白
-* `=` 代表坚固的方块
-* `#` 代表那些可以被撞破的块
-* `?` 代表钱币块
+- `-` 代表空白
+- `=` 代表坚固的方块
+- `#` 代表那些可以被撞破的块
+- `?` 代表钱币块
 
 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-D9hjauyOBy9xGPFOiKCZuA.png)
 
@@ -334,10 +334,10 @@ LL+<&=------P-------------
 
 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-MSFyG2WgN_TdFPuQRIeOFA.png) 看上去像模像样了，其中有几个需要特别注意的地方：
 
-* Lakitu ，就是那个小怪兽被放到了半空中，跟 Mario 关卡一样一样的。
-* 它认知到了应该把管道插入大地
-* 并没有让玩家无路可走
-* 看起来风格非常像最传统的马里奥的版本
+- Lakitu ，就是那个小怪兽被放到了半空中，跟 Mario 关卡一样一样的。
+- 它认知到了应该把管道插入大地
+- 并没有让玩家无路可走
+- 看起来风格非常像最传统的马里奥的版本
 
 最后生成出来的游戏截图大概是这样的: ![](http://7u2q25.com1.z0.glb.clouddn.com/1-jrm6nO8BbKNUjOFWsITcxg.jpeg) 你可以在[这里](https://youtu.be/_-Gc6diodcY)观看完整的游戏视频。
 
@@ -349,9 +349,9 @@ LL+<&=------P-------------
 
 条条大道通罗马，在机器学习中解决问题的办法也永远不止一个。你可以有很多的选项来决定如何进行数据预处理以及应该用啥算法。[增强学习](https://en.wikipedia.org/wiki/Ensemble_learning)正是可以帮你将多个单一的方法组合起来的好途径。如果你想更深入的了解，你可以参考下面几篇较为专业的论文：
 
-* [Amy K. Hoover](http://amykhoover.com/)’s team used an approach that [represents each type of level object (pipes, ground, platforms, etc) as if it were single voice in an overall symphony](http://julian.togelius.com/Hoover2015Composing.pdf). Using a process called functional scaffolding, the system can augment levels with blocks of any given object type. For example, you could sketch out the basic shape of a level and it could add in pipes and question blocks to complete your design.
+- [Amy K. Hoover](http://amykhoover.com/)’s team used an approach that [represents each type of level object (pipes, ground, platforms, etc) as if it were single voice in an overall symphony](http://julian.togelius.com/Hoover2015Composing.pdf). Using a process called functional scaffolding, the system can augment levels with blocks of any given object type. For example, you could sketch out the basic shape of a level and it could add in pipes and question blocks to complete your design.
 
-* [Steve Dahlskog](http://forskning.mah.se/en/id/tsstda)’s team showed that modeling each column of level data as a series of n-gram “words” [makes it possible to generate levels with a much simpler algorithm](http://julian.togelius.com/Dahlskog2014Linear.pdf) than a large RNN.
+- [Steve Dahlskog](http://forskning.mah.se/en/id/tsstda)’s team showed that modeling each column of level data as a series of n-gram “words” [makes it possible to generate levels with a much simpler algorithm](http://julian.togelius.com/Dahlskog2014Linear.pdf) than a large RNN.
 
 # Object Recognition In Images With Deep Learning: 利用深度学习对于图片中对象进行识别
 
@@ -381,10 +381,10 @@ LL+<&=------P-------------
 
 人们在看图片的时候一般都会自带层次分割的眼光，譬如下面这张图: ![](http://7xiegq.com1.z0.glb.clouddn.com/1-v_06o9d5u4k2lp9cTHQUtg.jpeg) 你可以一眼看出图片中的不同的层次：
 
-* 地上覆盖着草皮与水泥
-* 有个宝宝
-* 宝宝坐在个木马上
-* 木马在草地上
+- 地上覆盖着草皮与水泥
+- 有个宝宝
+- 宝宝坐在个木马上
+- 木马在草地上
 
 更重要的是，不管宝宝坐在啥上面，我们都能一眼看到那嘎达有个宝宝。即使宝宝坐在汽车、飞机上，我们不经过重新的学习也可以一眼分辨出来。可惜现在我们的神经网络还做不到这一点，它会把不同图片里面的 8 当成不同的东西对待，并不能理解如果在图片中移动 8，对于 8 而言是没有任何改变的。也就意味着对于不同位置的图片仍然需要进行重新学习。我们需要赋予我们的神经网络能够理解平移不变性：不管 8 出现在图片的哪个地方，它还是那个 8。我们打算用所谓的卷积的方法来进行处理，这个概念部分来自于计算机科学，部分来自生物学，譬如神经学家教会猫如何去辨别图片。
 
@@ -412,9 +412,9 @@ LL+<&=------P-------------
 
 上面的图片处理过程可以总结为以下步骤：
 
-* Convolution: 卷积
-* Max-pooling: 特征各维最大汇总
-* Full-connected: 全连接网络
+- Convolution: 卷积
+- Max-pooling: 特征各维最大汇总
+- Full-connected: 全连接网络
 
 在真实的应用中，这几个步骤可以组合排列使用多次，你可以选择使用两个、三个甚至十个卷积层，也可以在任何时候使用 Max-pooling 来减少数据的大小。基本的思想就是将一个大图片不断地浓缩直到输出一个单一值。使用更多地卷积步骤，你的网络就可以处理学习更多地特征。举例而言，第一个卷积层可以用于识别锐边，第二个卷积层能够识别尖锐物体中的鸟嘴，而第三个卷积层可以基于其对于鸟嘴的知识识别整个鸟。下图就展示一个更现实点地深度卷积网络: ![](http://7xiegq.com1.z0.glb.clouddn.com/1-JSnKtzEgiHd4p6UlNv_C7w.png) 在这个例子中，最早地是输入一个 224\*224 像素的图片，然后分别使用两次卷积与 Max-pooling，然后再依次使用卷积与 Max-pooling，最后使用两个全连接层。最后的结果就是图片被分到哪一类。
 
@@ -535,7 +535,7 @@ print("Network trained and saved as bird-classifier.tfl!")
 
 我们可以使用如下脚本进行图片的分类预测：
 
-```
+```py
   # -*- coding: utf-8 -*-
 from __future__ import division, print_function, absolute_import
 
@@ -614,10 +614,10 @@ else:
 
 刚才有提到，我们的程序有 95% 的准确度，不过这并不意味着你拿张图片来，就肯定有 95% 的概率进行准确分类。举个栗子，如果我们的训练数据中有 5% 的图片是鸟类而其他 95% 的都不是鸟类，那么就意味着每次预测其实不是鸟类的准确度达到 95%。因此，我们不仅要关注整体的分类的准确度，还需要关注分类正确的数目，以及哪些图片分类失败，为啥失败的。这里我们假设预测结果并不是简单的正确或者错误，而是分到不同的类别中：
 
-* 首先，我们将正确被标识为鸟类的鸟类图片称为：True Positives ![](http://7xiegq.com1.z0.glb.clouddn.com/1-iuk7uONvXNfEDwAyED0HIQ.png)
-* 其次，对于标识为鸟类的非鸟类图片称为：True Negatives ![](http://7xiegq.com1.z0.glb.clouddn.com/1-QZWiJpImtlmohA-6TQPsEg.png)
-* 对于划分为鸟类的非鸟类图片称为：False Positives ![](http://7xiegq.com1.z0.glb.clouddn.com/1-UcKIK1Mxe29WB9Df1gembQ.png)
-* 对于划分为非鸟类的鸟类图片称为：False Negatives ![](http://7xiegq.com1.z0.glb.clouddn.com/1-Ac9OnpayukliEJchRKiKFQ.png)
+- 首先，我们将正确被标识为鸟类的鸟类图片称为：True Positives ![](http://7xiegq.com1.z0.glb.clouddn.com/1-iuk7uONvXNfEDwAyED0HIQ.png)
+- 其次，对于标识为鸟类的非鸟类图片称为：True Negatives ![](http://7xiegq.com1.z0.glb.clouddn.com/1-QZWiJpImtlmohA-6TQPsEg.png)
+- 对于划分为鸟类的非鸟类图片称为：False Positives ![](http://7xiegq.com1.z0.glb.clouddn.com/1-UcKIK1Mxe29WB9Df1gembQ.png)
+- 对于划分为非鸟类的鸟类图片称为：False Negatives ![](http://7xiegq.com1.z0.glb.clouddn.com/1-Ac9OnpayukliEJchRKiKFQ.png)
 
 最后的值可以用如下矩阵表示：
 
@@ -627,12 +627,12 @@ else:
 
 ## Further Reading
 
-* [https://segmentfault.com/a/1190000003984727](https://segmentfault.com/a/1190000003984727)
+- [https://segmentfault.com/a/1190000003984727](https://segmentfault.com/a/1190000003984727)
 
-* [TensorFlow 实战之 K-Means 聚类算法实践](https://segmentfault.com/a/1190000004006924)
+- [TensorFlow 实战之 K-Means 聚类算法实践](https://segmentfault.com/a/1190000004006924)
 
-* [TensorFlow 实战之 Scikit Flow 系列指导：Part 2 ](https://segmentfault.com/a/1190000004045926)
+- [TensorFlow 实战之 Scikit Flow 系列指导：Part 2 ](https://segmentfault.com/a/1190000004045926)
 
-* [TFLearn 的示例](https://github.com/tflearn/tflearn/tree/master/examples#tflearn-examples)
+- [TFLearn 的示例](https://github.com/tflearn/tflearn/tree/master/examples#tflearn-examples)
 
-* [how to use algorithms to train computers how to play Atari games](http://karpathy.github.io/2016/05/31/rl/) next?
+- [how to use algorithms to train computers how to play Atari games](http://karpathy.github.io/2016/05/31/rl/) next?
