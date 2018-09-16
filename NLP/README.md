@@ -1,6 +1,6 @@
 ![](http://nebula.wsimg.com/9231017c407c70957eb3f708365e7a49?AccessKeyId=05106B70AA8440180999&disposition=0&alloworigin=1)
 
-# 深入浅出 Python 机器学习与自然语言处理
+# 深入浅出 Python 机器学习与自然语言处理
 
 `Copyright © 王下邀月熊`
 
