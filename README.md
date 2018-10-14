@@ -16,6 +16,8 @@
 
 - [人工智能与深度学习课程篇](./Course-Notes)
 
+**建议前往 [xCompass](https://wxyyxc1992.github.io/home/#/search) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
+
 # 关于
 
 ![default](https://user-images.githubusercontent.com/5803001/44629091-c0c56180-a97c-11e8-8aff-52d51a8aec1f.jpg)
