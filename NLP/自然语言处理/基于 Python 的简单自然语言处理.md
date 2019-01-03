@@ -8,20 +8,20 @@
 
 20 Newsgroup 数据集包含了约 20000 篇来自于不同的新闻组的文档，最早由 Ken Lang 搜集整理。本部分包含了对于数据集的抓取、特征提取、简单分类器训练、主题模型训练等。本部分代码包括主要的处理代码[封装库](https://parg.co/b4M)与[基于 Notebook 的交互示范](https://parg.co/b4t)。我们首先需要进行数据抓取：
 
-```
-    def fetch_data(self, subset='train', categories=None):
-        """return data
-        执行数据抓取操作
-        Arguments:
-        subset -> string -- 抓取的目标集合 train / test / all
-        """
-        rand = np.random.mtrand.RandomState(8675309)
-        data = fetch_20newsgroups(subset=subset,
-                                  categories=categories,
-                                  shuffle=True,
-                                  random_state=rand)
+```python
+def fetch_data(self, subset='train', categories=None):
+    """return data
+    执行数据抓取操作
+    Arguments:
+    subset -> string -- 抓取的目标集合 train / test / all
+    """
+    rand = np.random.mtrand.RandomState(8675309)
+    data = fetch_20newsgroups(subset=subset,
+                                categories=categories,
+                                shuffle=True,
+                                random_state=rand)
 
-        self.data[subset] = data
+    self.data[subset] = data
 ```
 
 然后在 Notebook 中交互查看数据格式：
