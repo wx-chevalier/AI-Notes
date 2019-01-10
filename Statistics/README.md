@@ -4,36 +4,25 @@
 
 `Copyright © 王下邀月熊`
 
-# 前言
-
-# 目录
+# 导航
 
 - [机器学习综述]()
 
-- [数据科学与机器学习简史]()
+* [数据科学与机器学习简史]()
 
-* [机器学习算法简论]()
+- [机器学习算法简论]()
 
-- [机器学习与 Python]()
+* [机器学习与 Python]()
 
-- [语法速览与环境搭建]()
+* [语法速览与环境搭建]()
 
-# 参考资料
-
-- [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-Links.md)
-
-- [机器学习、深度学习与自然语言处理领域推荐的书籍列表](https://zhuanlan.zhihu.com/p/25612011)
-
-- [数据科学与机器学习概述](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
-
-# 狗粮
-
-如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮(支付宝扫码)~
-
-![](https://github.com/wxyyxc1992/OSS/blob/master/2017/8/1/Buding.jpg?raw=true)
+# 前言
 
 # 版权
 
 ![](https://parg.co/bDY) ![](https://parg.co/bDm)
 
 笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。
+如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮(支付宝扫码)~
+
+![](https://github.com/wxyyxc1992/OSS/blob/master/2017/8/1/Buding.jpg?raw=true)
