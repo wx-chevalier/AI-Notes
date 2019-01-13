@@ -18,21 +18,21 @@ Word2vec 神经网络的输出是一个词表，每个词由一个向量来表�
 
 ## Distributed Representation
 
-> * [Deep-Learning-What-is-meant-by-a-distributed-representation](https://www.quora.com/Deep-Learning/Deep-Learning-What-is-meant-by-a-distributed-representation)
+> - [Deep-Learning-What-is-meant-by-a-distributed-representation](https://www.quora.com/Deep-Learning/Deep-Learning-What-is-meant-by-a-distributed-representation)
 
 ## Reference
 
 ### Tutorials & Docs
 
-* [Google - Word2Vec](https://code.google.com/p/word2vec/)
-* [Deep Learning 实战之 word2vec](http://techblog.youdao.com/?p=915#LinkTarget_699)
-* [word2vector 学习笔记(一)](http://blog.csdn.net/lingerlanlan/article/details/38048335)
-* [词向量和语言模型](http://licstar.net/archives/328#s20)
+- [Google - Word2Vec](https://code.google.com/p/word2vec/)
+- [Deep Learning 实战之 word2vec](http://techblog.youdao.com/?p=915#LinkTarget_699)
+- [word2vector 学习笔记(一)](http://blog.csdn.net/lingerlanlan/article/details/38048335)
+- [词向量和语言模型](http://licstar.net/archives/328#s20)
 
 ### Practice
 
-* [关于多个词向量算法的实现对比](https://github.com/licstar/compare)
-* [斯坦福深度学习课程第二弹：词向量内部和外部任务评价](https://zhuanlan.zhihu.com/p/21391710)
+- [关于多个词向量算法的实现对比](https://github.com/licstar/compare)
+- [斯坦福深度学习课程第二弹：词向量内部和外部任务评价](https://zhuanlan.zhihu.com/p/21391710)
 
 # Quick Start
 
@@ -40,11 +40,11 @@ Word2vec 神经网络的输出是一个词表，每个词由一个向量来表�
 
 笔者推荐使用 Anaconda 这个 Python 的机器学习发布包，此处用的测试数据来自于[这里](http://mattmahoney.net/dc/text8.zip)
 
-* Installation
+- Installation
 
 使用`pip install word2vec`，然后使用`import word2vec`引入
 
-* 文本文件预处理
+- 文本文件预处理
 
 ```
 word2vec.word2phrase('/Users/drodriguez/Downloads/text8', '/Users/drodriguez/Downloads/text8-phrases', verbose=True)
@@ -53,14 +53,14 @@ word2vec.word2phrase('/Users/drodriguez/Downloads/text8', '/Users/drodriguez/Dow
 ```
 [u'word2phrase', u'-train', u'/Users/drodriguez/Downloads/text8', u'-output', u'/Users/drodriguez/Downloads/text8-phrases', u'-min-count', u'5', u'-threshold', u'100', u'-debug', u'2']
 Starting training using file /Users/drodriguez/Downloads/text8
-Words processed: 17000K     Vocab size: 4399K  
+Words processed: 17000K     Vocab size: 4399K
 Vocab size (unigrams + bigrams): 2419827
 Words in train file: 17005206
 ```
 
 ### 中文实验
 
-* 语料
+- 语料
 
   首先准备数据：采用网上博客上推荐的全网新闻数据(SogouCA)，大小为 2.1G。
 
@@ -84,19 +84,19 @@ Words in train file: 17005206
 2 cat SogouCA.txt | iconv -f gbk -t utf-8 -c | grep "<content>" > corpus.txt
 ```
 
-* 分词
+- 分词
 
   用 ANSJ 对 corpus.txt 进行分词，得到分词结果 resultbig.txt，大小为 3.1G。在分词工具 seg_tool 目录下先编译再执行得到分词结果 resultbig.txt，内含 426221 个词，次数总计 572308385 个。
 
 ![](http://img2.tuicool.com/3MNzmu.jpg%21web)
 
-* 词向量训练
+- 词向量训练
 
 ```shell
 nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -window 5 -negative 0 -hs 1 -sample 1e-3 -threads 12 -binary 1 &
 ```
 
-* 分析
+- 分析
 
 (1)相似词计算
 
@@ -104,7 +104,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 ./distance vectors.bin
 ```
 
-     ./distance可以看成计算词与词之间的距离，把词看成向量空间上的一个点，distance看成向量空间上点与点的距离。  
+     ./distance可以看成计算词与词之间的距离，把词看成向量空间上的一个点，distance看成向量空间上点与点的距离。
 
 ![](http://img2.tuicool.com/vmYBrq.png!web)
 
@@ -118,7 +118,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
 (3)聚类
 
-    将经过分词后的语料resultbig.txt中的词聚类并按照类别排序:  
+    将经过分词后的语料resultbig.txt中的词聚类并按照类别排序:
 
 ```shell
 1 nohup ./word2vec -train resultbig.txt -output classes.txt -cbow 0 -size 200 -window 5 -negative 0 -hs 1 -sample 1e-3 -threads 12 -classes 500  &
@@ -129,7 +129,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
 (4)短语分析
 
-    先利用经过分词的语料resultbig.txt中得出包含词和短语的文件sogouca_phrase.txt，再训练该文件中词与短语的向量表示。  
+    先利用经过分词的语料resultbig.txt中得出包含词和短语的文件sogouca_phrase.txt，再训练该文件中词与短语的向量表示。
 
 ```
 1 ./word2phrase -train resultbig.txt -output sogouca_phrase.txt -threshold 500 -debug 2
@@ -263,7 +263,7 @@ word2vec.word2phrase('/Users/drodriguez/Downloads/text8', '/Users/drodriguez/Dow
 ```
 [u'word2phrase', u'-train', u'/Users/drodriguez/Downloads/text8', u'-output', u'/Users/drodriguez/Downloads/text8-phrases', u'-min-count', u'5', u'-threshold', u'100', u'-debug', u'2']
 Starting training using file /Users/drodriguez/Downloads/text8
-Words processed: 17000K     Vocab size: 4399K  
+Words processed: 17000K     Vocab size: 4399K
 Vocab size (unigrams + bigrams): 2419827
 Words in train file: 17005206
 ```
@@ -280,7 +280,7 @@ word2vec.word2vec('/Users/drodriguez/Downloads/text8-phrases', '/Users/drodrigue
 Starting training using file /Users/drodriguez/Downloads/text8-phrases
 Vocab size: 98331
 Words in train file: 15857306
-Alpha: 0.000002  Progress: 100.03%  Words/thread/sec: 286.52k  
+Alpha: 0.000002  Progress: 100.03%  Words/thread/sec: 286.52k
 ```
 
 That generated a `text8.bin` file containing the word vectors in a binary format.
@@ -295,7 +295,7 @@ word2vec.word2clusters('/Users/drodriguez/Downloads/text8', '/Users/drodriguez/D
 Starting training using file /Users/drodriguez/Downloads/text8
 Vocab size: 71291
 Words in train file: 16718843
-Alpha: 0.000002  Progress: 100.02%  Words/thread/sec: 287.55k  
+Alpha: 0.000002  Progress: 100.02%  Words/thread/sec: 287.55k
 ```
 
 That created a `text8-clusters.txt` with the cluster for every word in the vocabulary

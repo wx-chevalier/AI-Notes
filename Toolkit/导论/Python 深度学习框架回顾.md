@@ -8,13 +8,13 @@
 
 最近我一直在思考某个 Data Science Stack Exchange 上存在很久的问题：[什么才是最好的基于 Python 的神经网络库？](http://datascience.stackexchange.com/a/695/684) 时光飞逝，在过去的两年半的时间里涌现出了很多基于 Python 的 深度学习框架，而我 2014 年七月份推荐的 pylearn2 这个框架早已物是人非，不再维护。可喜的是已经有不少优秀的深度学习框架填补了它的空缺，成为了 indico 日常产品开发中重要的组成部分。当然，尺有所短，寸有所长，每个框架都有其优势与不足；我也希望在本文中基于自己的工作经历对于 2017 年中的 Python 深度学习生态进行一个综合宏观的介绍，希望为初学者勾勒出一幅清晰的群雄逐鹿图。具体而言，本文会着眼于以下框架：
 
-* Theano
-* Lasagne
-* Blocks
-* TensorFlow
-* Keras
-* MXNet
-* PyTorch
+- Theano
+- Lasagne
+- Blocks
+- TensorFlow
+- Keras
+- MXNet
+- PyTorch
 
 ### [Theano](https://github.com/Theano/Theano)
 
@@ -32,22 +32,22 @@ Theano 不仅仅是一个可以独立使用的库，它还是我们下面介绍�
 
 #### **优势：**
 
-* 相对灵活
-* 正确使用的话性能较好
+- 相对灵活
+- 正确使用的话性能较好
 
 #### **不足：**
 
-* 陡峭的学习曲线
-* 大量的底层 API
-* 编译复杂符号图的时候可能会很慢
+- 陡峭的学习曲线
+- 大量的底层 API
+- 编译复杂符号图的时候可能会很慢
 
 #### **资源：**
 
-* [安装指南](http://deeplearning.net/software/theano/install.html)
-* [官方教程](http://deeplearning.net/software/theano/tutorial/)
-* [Theano 幻灯介绍与实践案例](https://github.com/goodfeli/theano_exercises)
-* [基于 Theano 实现从线性拟合到 CNN](https://github.com/Newmu/Theano-Tutorials)
-* [基于 Python & Theano 的深度学习介绍](https://indico.io/blog/introduction-to-deep-learning-with-python-and-theano-2/)
+- [安装指南](http://deeplearning.net/software/theano/install.html)
+- [官方教程](http://deeplearning.net/software/theano/tutorial/)
+- [Theano 幻灯介绍与实践案例](https://github.com/goodfeli/theano_exercises)
+- [基于 Theano 实现从线性拟合到 CNN](https://github.com/Newmu/Theano-Tutorials)
+- [基于 Python & Theano 的深度学习介绍](https://indico.io/blog/introduction-to-deep-learning-with-python-and-theano-2/)
 
 ---
 
@@ -67,20 +67,20 @@ Theano 不仅仅是一个可以独立使用的库，它还是我们下面介绍�
 
 #### **优势：**
 
-* 还是比较灵活的
-* 比 Theano 提供了更高层的抽象接口
-* 文档与代码更为条理清晰
+- 还是比较灵活的
+- 比 Theano 提供了更高层的抽象接口
+- 文档与代码更为条理清晰
 
 #### **不足：**
 
-* 社区并不是很活跃
+- 社区并不是很活跃
 
 #### **资源：**
 
-* [官方 GitHub 主页](https://github.com/Lasagne/Lasagne)
-* [官方 安装 指南](http://lasagne.readthedocs.io/en/latest/user/installation.html)
-* [官方 Lasagne 教程](http://lasagne.readthedocs.io/en/latest/user/tutorial.html)
-* [示范代码](https://github.com/Lasagne/Lasagne/tree/master/examples)
+- [官方 GitHub 主页](https://github.com/Lasagne/Lasagne)
+- [官方 安装 指南](http://lasagne.readthedocs.io/en/latest/user/installation.html)
+- [官方 Lasagne 教程](http://lasagne.readthedocs.io/en/latest/user/tutorial.html)
+- [示范代码](https://github.com/Lasagne/Lasagne/tree/master/examples)
 
 ---
 
@@ -100,21 +100,21 @@ Theano 不仅仅是一个可以独立使用的库，它还是我们下面介绍�
 
 #### **优势：**
 
-* 还是比较灵活的
-* 比 Theano 提供了更高层的抽象接口
-* 提供了相对完备的测试
+- 还是比较灵活的
+- 比 Theano 提供了更高层的抽象接口
+- 提供了相对完备的测试
 
 #### **不足：**
 
-* 陡峭的学习曲线
-* 社区不是很活跃
+- 陡峭的学习曲线
+- 社区不是很活跃
 
 #### **资源：**
 
-* [官方安装指南](http://blocks.readthedocs.io/en/latest/setup.html)
-* [Blocks 库构建的 Arxiv 论文](https://arxiv.org/pdf/1506.00619.pdf)
-* [Reddit 上关于 Blocks 与 Lasagne 区别的讨论](https://www.reddit.com/r/MachineLearning/comments/4kpztm/lasagne_vs_blocks_for_deep_learning/)
-* [Block 的姐妹库 Fuel](https://github.com/mila-udem/fuel)
+- [官方安装指南](http://blocks.readthedocs.io/en/latest/setup.html)
+- [Blocks 库构建的 Arxiv 论文](https://arxiv.org/pdf/1506.00619.pdf)
+- [Reddit 上关于 Blocks 与 Lasagne 区别的讨论](https://www.reddit.com/r/MachineLearning/comments/4kpztm/lasagne_vs_blocks_for_deep_learning/)
+- [Block 的姐妹库 Fuel](https://github.com/mila-udem/fuel)
 
 ---
 
@@ -134,26 +134,26 @@ TensorFlow 集成了类似于 Theano 这样底层的符号计算功能，也包�
 
 #### **优势：**
 
-* 由 Google 支持
-* 社区很繁荣
-* 同时提供了底层与高层的网络训练接口
-* 比 Theano 能够更快地训练模型
-* 清晰的多 GPU 支持
+- 由 Google 支持
+- 社区很繁荣
+- 同时提供了底层与高层的网络训练接口
+- 比 Theano 能够更快地训练模型
+- 清晰的多 GPU 支持
 
 #### **不足：**
 
-* 一开始的时候性能不是很好
-* 对 RNN 的支持度仍然落后于 Theano
+- 一开始的时候性能不是很好
+- 对 RNN 的支持度仍然落后于 Theano
 
 #### **资源：**
 
-* [官方 TensorFlow 主页](https://www.tensorflow.org/)
-* [下载与安装指南](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md)
-* [indico 对于 TensorFlow 的评价](https://indico.io/blog/the-good-bad-ugly-of-tensorflow/)
-* [一系列 TensorFlow 指南](https://github.com/nlintz/TensorFlow-Tutorials)
-* [Udacity 上关于 TensorFlow 的教程](https://www.udacity.com/course/deep-learning--ud730)
-* [TensorFlow MNIST 指南](https://www.tensorflow.org/tutorials/mnist/beginners/)
-* [TensorFlow 数据输入](https://indico.io/blog/tensorflow-data-inputs-part1-placeholders-protobufs-queues/)
+- [官方 TensorFlow 主页](https://www.tensorflow.org/)
+- [下载与安装指南](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md)
+- [indico 对于 TensorFlow 的评价](https://indico.io/blog/the-good-bad-ugly-of-tensorflow/)
+- [一系列 TensorFlow 指南](https://github.com/nlintz/TensorFlow-Tutorials)
+- [Udacity 上关于 TensorFlow 的教程](https://www.udacity.com/course/deep-learning--ud730)
+- [TensorFlow MNIST 指南](https://www.tensorflow.org/tutorials/mnist/beginners/)
+- [TensorFlow 数据输入](https://indico.io/blog/tensorflow-data-inputs-part1-placeholders-protobufs-queues/)
 
 ---
 
@@ -173,21 +173,21 @@ Keras 算是这个列表中提供了最高层接口、用户使用最友好的�
 
 #### **优势：**
 
-* 你可以自由选择使用 Theano 或者 TensorFlow
-* 直观，高级的接口
-* 相对简单的学习曲线
+- 你可以自由选择使用 Theano 或者 TensorFlow
+- 直观，高级的接口
+- 相对简单的学习曲线
 
 #### **不足：**
 
-* 与其他相比灵活性略差
+- 与其他相比灵活性略差
 
 #### **资源：**
 
-* [官方安装指南](https://keras.io/#installation)
-* [Keras 用户的 Google 社群](https://groups.google.com/forum/#!forum/keras-users)
-* [Keras 使用示例](https://github.com/fchollet/keras/tree/master/examples)
-* [基于 Docker 的 Keras 环境搭建](https://github.com/fchollet/keras/tree/master/docker)
-* [Keras 教程](https://github.com/fchollet/keras-resources)
+- [官方安装指南](https://keras.io/#installation)
+- [Keras 用户的 Google 社群](https://groups.google.com/forum/#!forum/keras-users)
+- [Keras 使用示例](https://github.com/fchollet/keras/tree/master/examples)
+- [基于 Docker 的 Keras 环境搭建](https://github.com/fchollet/keras/tree/master/docker)
+- [Keras 教程](https://github.com/fchollet/keras-resources)
 
 ---
 
@@ -207,21 +207,21 @@ MXNet 致力于提供兼顾性能与灵活性的深度学习框架。
 
 #### **优势：**
 
-* 相当快的评测结果
-* 彻底的灵活性
+- 相当快的评测结果
+- 彻底的灵活性
 
 #### **不足：**
 
-* 社区最小
-* 比 Theano 更陡峭的学习曲线
+- 社区最小
+- 比 Theano 更陡峭的学习曲线
 
 #### **资源：**
 
-* [官方初始化指南](http://mxnet.io/get_started/)
-* [indico 对于 MXNet 的介绍](https://indico.io/blog/getting-started-with-mxnet/)
-* [MXNet 示例仓库](https://github.com/dmlc/mxnet/tree/master/example)
-* [Amazon 的 CTO 对于 MXNet 的评价](http://www.allthingsdistributed.com/2016/11/mxnet-default-framework-deep-learning-aws.html)
-* [MXNet Arxiv 论文](https://arxiv.org/abs/1512.01274)
+- [官方初始化指南](http://mxnet.io/get_started/)
+- [indico 对于 MXNet 的介绍](https://indico.io/blog/getting-started-with-mxnet/)
+- [MXNet 示例仓库](https://github.com/dmlc/mxnet/tree/master/example)
+- [Amazon 的 CTO 对于 MXNet 的评价](http://www.allthingsdistributed.com/2016/11/mxnet-default-framework-deep-learning-aws.html)
+- [MXNet Arxiv 论文](https://arxiv.org/abs/1512.01274)
 
 ---
 
@@ -241,20 +241,20 @@ PyTorch 问世不过数周，在我们的深度学习框架列表中尚属新生
 
 #### **优势：**
 
-* 由 Facebook 支持与维护
-* 支持动态图计算
-* 同时提供了高层接口与底层接口
+- 由 Facebook 支持与维护
+- 支持动态图计算
+- 同时提供了高层接口与底层接口
 
 #### **不足：**
 
-* 与竞争者相比还不成熟
-* 除了官方文档之外的相关资料尚处于短缺
+- 与竞争者相比还不成熟
+- 除了官方文档之外的相关资料尚处于短缺
 
 #### **资源：**
 
-* [官方主页](http://pytorch.org/)
-* [PyTorch twitter](https://twitter.com/PyTorch)
-* [PyTorch 使用示例仓库](https://github.com/pytorch/examples)
-* [PyTorch 教程仓库](https://github.com/pytorch/tutorials)
+- [官方主页](http://pytorch.org/)
+- [PyTorch twitter](https://twitter.com/PyTorch)
+- [PyTorch 使用示例仓库](https://github.com/pytorch/examples)
+- [PyTorch 教程仓库](https://github.com/pytorch/tutorials)
 
 > 参考英文原文：[Python Deep Learning Frameworks Reviewed](https://indico.io/blog/python-deep-learning-frameworks-reviewed/)
