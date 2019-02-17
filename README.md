@@ -4,7 +4,7 @@
 
 本仓库存放了笔者数据科学、人工智能、机器学习、深度学习、自然语言处理等相关的内容。
 
-![default](https://user-images.githubusercontent.com/5803001/47262684-025c2e00-d522-11e8-8c82-4a5afcf428d1.png)
+![default](https://i.postimg.cc/7Lq1rwBT/image.png)
 
 更多信息请
 
