@@ -6,8 +6,6 @@
 
 ![default](https://i.postimg.cc/y1QXgJ6f/image.png)
 
-更多信息请
-
 # Navigation | 导航
 
 **建议前往 [xCompass](https://wxyyxc1992.github.io/home/#/search)/[alfred-sg](https://github.com/wxyyxc1992/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
@@ -24,11 +22,17 @@
 
 - [人工智能与深度学习课程篇](./Course-Notes)
 
+# 参考
+
+- [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-List.md)
+
+- [机器学习、深度学习与自然语言处理领域推荐的书籍列表](https://zhuanlan.zhihu.com/p/25612011)
+
+- [数据科学与机器学习概述](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
+
 # 版权
 
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 ![](https://parg.co/bDm)
 
-笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮(支付宝扫码)~
-
-![](https://github.com/wxyyxc1992/OSS/blob/master/2017/8/1/Buding.jpg?raw=true)
+笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。
