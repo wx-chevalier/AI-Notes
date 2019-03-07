@@ -2,7 +2,7 @@
 
 这里我们以 [Scikit Flow](https://github.com/google/skflow)为例，scflow 是 Google 官方提供的基于 scikit api 的对于 TensorFlow 的封装，整个开发环境安装如下：
 
-```
+```py
 pip install numpy scipy sklearn pandas
 # For Ubuntu:
 pip install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.5.0-cp27-none-linux_x86_64.whl
