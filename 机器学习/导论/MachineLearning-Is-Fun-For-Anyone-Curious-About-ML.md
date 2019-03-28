@@ -1,6 +1,6 @@
 ﻿> 原文地址 :[machine-learning-is-fun-part-1](https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471#.dniejuowp)，原文共分三个部分，笔者在这里合并到一篇文章中，并且对内容进行了重新排版以方便阅读。
 
-- [笔者的数据科学 / 机器学习知识图谱以及系列文章在 Github 的 Repo，欢迎关注与点赞](https://github.com/wxyyxc1992/datascience-practice-handbook)，笔者之前攒了很多零散的笔记，打算拾掇拾掇整理出来
+- [笔者的数据科学 / 机器学习知识图谱以及系列文章在 Github 的 Repo，欢迎关注与点赞](https://github.com/wx-chevalier/datascience-practice-handbook)，笔者之前攒了很多零散的笔记，打算拾掇拾掇整理出来
 
 > 笔者自大学以来一直断断续续的学过机器学习啊、自然语言处理啊等等方面的内容，相信基本上每个本科生或者研究生都会接触过这方面，毕竟是一个如此大的 Flag。不过同样的，在机器学习，或者更大的一个概念，数据科学这个领域中，同样是学了忘忘了学。不可否认，数学是机器学习的一个基石，但是也是无数人，包括笔者学习机器学习的一个高的门槛，毕竟数学差。而在这篇文章中，原作者并没有讲很多的数学方面的东西，而是以一个有趣实用的方式来介绍机器学习。另一方面，其实很多数学原理也是很有意思的，笔者记得当年看完数学之美有一个不小的感触，就是知道了 TF-IDF 的计算公式是怎么来的 ~
 
@@ -32,7 +32,7 @@
 
 - [维基百科](https://en.wikipedia.org/wiki/Machine_learning#Algorithm_types)
   >
-- [笔者的数据科学与机器学习算法分类](https://github.com/wxyyxc1992/datascience-practice-handbook/blob/master/datascience-machinelearning-algorithms.md)
+- [笔者的数据科学与机器学习算法分类](https://github.com/wx-chevalier/datascience-practice-handbook/blob/master/datascience-machinelearning-algorithms.md)
 
 # House Price Estimation With Supervised Learning: 利用监督学习进行房屋价格估计
 

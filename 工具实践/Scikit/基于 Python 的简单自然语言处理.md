@@ -1,4 +1,4 @@
-> [基于 Python 的简单自然语言处理](https://zhuanlan.zhihu.com/p/26249110) 从属于笔者的 [程序猿的数据科学与机器学习实战手册](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders)。
+> [基于 Python 的简单自然语言处理](https://zhuanlan.zhihu.com/p/26249110) 从属于笔者的 [程序猿的数据科学与机器学习实战手册](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders)。
 
 # 基于 Python 的简单自然语言处理
 

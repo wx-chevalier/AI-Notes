@@ -8,7 +8,7 @@
 
 # Navigation | 导航
 
-**建议前往 [xCompass](https://wxyyxc1992.github.io/home/#/search)/[alfred-sg](https://github.com/wxyyxc1992/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
+**建议前往 [xCompass](https://wx-chevalier.github.io/home/#/search)/[alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
 
 - [数学原理篇](./Mathematics)
 
@@ -24,11 +24,11 @@
 
 # 参考
 
-- [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-List.md)
+- [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-List.md)
 
 - [机器学习、深度学习与自然语言处理领域推荐的书籍列表](https://zhuanlan.zhihu.com/p/25612011)
 
-- [数据科学与机器学习概述](https://github.com/wxyyxc1992/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
+- [数据科学与机器学习概述](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
 
 # 版权
 
