@@ -12,7 +12,7 @@
 
 互联网的迅猛发展催生了数据的爆炸式增长。面对海量数据，如何挖掘数据的架子，成为一个越来越重要的问题。首先，对于数据挖掘的概念，目前比较广泛认可的一种解释如下：
 
-> Data Mining is the use of efficient techniques for the analysis of very large collections of data and the extraction of useful and possibly unexpected patterns  in data。
+> Data Mining is the use of efficient techniques for the analysis of very large collections of data and the extraction of useful and possibly unexpected patternsin data。
 
 数据挖掘是一种通过分析海量数据，从数据中提取潜在的但是非常有用的模式的技术。数据挖掘的任务可以分为预测性任务和描述性任务，预测性任务主要是预测可能出现的情况；描述性任务则是发现一些人类可以解释的模式或者规律。数据挖掘中比较常见的任务包括分类、聚类、关联规则挖掘、时间序列挖掘、回归等，其中分类、回归属于预测性任务，聚类、关联规则挖掘、时间序列分析等则都是解释性任务。而什么又是机器学习呢？笔者在这里引用[有趣的机器学习概念纵览：从多元拟合，神经网络到深度学习，给每个感兴趣的人](https://segmentfault.com/a/1190000005746236)中的定义:
 
@@ -25,16 +25,16 @@ Machine Learning 即是指能够帮你从数据中寻找到感兴趣的部分而
 论及数据挖掘与机器学习的关系，笔者更倾向于使用数据科学这个概念来进行一个总括，在笔者的归纳中，数据科学泛指一切可以从数据中获取信息的技术与研究，不过注意和 Infrastructure 部分进行区分，笔者的数据科学部分知识体系，会包含以下部分：
 
 - Methodology:方法论
-      - DataProcess:数据预处理
-      - MachineLearning:机器学习
-      - NLP:自然语言处理
+     - DataProcess:数据预处理
+     - MachineLearning:机器学习
+     - NLP:自然语言处理
 
 - Statistics:数理统计
 
 - DeepLearning:深度学习
 
 - Application:应用
-      - Classification:分类
+     - Classification:分类
 
 -  CommunityDetection:社团发现
 
@@ -145,7 +145,7 @@ DataScience 是从数据中获取价值的最重要的流行方法之一。
 
 ## Data PreProcess:数据预处理
 
-###   数据集成、数据冗余与数值冲突
+### 数据集成、数据冗余与数值冲突
 
 数据挖掘中准备数据的时候，需要尽可能的将相关数据集成在一起。如果集成的数据中，有两列或者多列值一样，则不可避免地会产生数值冲突或者数据冗余，可能需要根据数据的质量来决定保留冲突中的哪一列。
 
@@ -277,20 +277,20 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
   # 俺们这嘎达，房子基本上每平方200
   price_per_sqft = 200
   if neighborhood == "hipsterton":
-    # 市中心会贵一点
-    price_per_sqft = 400
+  # 市中心会贵一点
+  price_per_sqft = 400
   elif neighborhood == "skid row":
-    # 郊区便宜点
-    price_per_sqft = 100
+  # 郊区便宜点
+  price_per_sqft = 100
   # 可以根据单价*房子大小得出一个基本价格
   price = price_per_sqft * sqft
   # 基于房间数做点调整
   if num_of_bedrooms == 0:
-    # 没房间的便宜点
-    price = price — 20000
+  # 没房间的便宜点
+  price = price — 20000
   else:
-    # 房间越多一般越值钱
-    price = price + (num_of_bedrooms * 1000)
+  # 房间越多一般越值钱
+  price = price + (num_of_bedrooms * 1000)
  return price
 ```
 
