@@ -1,6 +1,6 @@
 ![default](https://user-images.githubusercontent.com/5803001/44629093-c753d900-a97c-11e8-8c16-9d0e96b149aa.png)
 
-# 程序猿的数据科学与机器学习实战手册
+# 人工智能与深度学习实战
 
 本仓库存放了笔者数据科学、人工智能、机器学习、深度学习、自然语言处理等相关的内容。
 
@@ -8,27 +8,7 @@
 
 # Navigation | 导航
 
-**建议前往 [xCompass](https://wx-chevalier.github.io/home/#/search)/[alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。**
-
-- [数学原理篇](./Mathematics)
-
-- [机器学习篇](./MachineLearning)
-
-- [深度学习篇](./DeepLearning)
-
-- [自然语言篇](./NLP)
-
-- [工程实践篇](./Python)
-
-- [人工智能与深度学习课程篇](./Course-Notes)
-
-# 参考
-
-- [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-List.md)
-
-- [机器学习、深度学习与自然语言处理领域推荐的书籍列表](https://zhuanlan.zhihu.com/p/25612011)
-
-- [数据科学与机器学习概述](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
+建议前往 [xCompass](https://wx-chevalier.github.io/home/#/search)/[alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。
 
 # 版权
 
