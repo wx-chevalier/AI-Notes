@@ -4,6 +4,12 @@
 
 在本系列中，你可能会接触到数据挖掘、机器学习、深度学习、自然语言处理、人工智能等很多的概念，首先我们通过几张全景图来了解我们在本系列中会学习哪些知识：
 
+![](https://i.postimg.cc/L8w4YDPd/image.png)
+
+![](https://i.postimg.cc/GhMmrdhm/image.png)
+
+![](https://i.postimg.cc/pLpXL4pY/image.png)
+
 最后，如果你想了解数据结构与传统算法，那么可以参考 [数据结构与算法 https://url.wx-coder.cn/S84SI](https://url.wx-coder.cn/S84SI)。
 
 # Navigation | 导航
