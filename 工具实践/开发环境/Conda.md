@@ -2,14 +2,14 @@
 
 笔者推荐使用 Anaconda 作为环境搭建工具，并且推荐使用 Python 3.5 版本，可以在[这里](https: // www.continuum.io/downloads)下载。如果是习惯使用 Docker 的小伙伴可以参考[anaconda-notebook](https: // github.com/rothnic/anaconda-notebook)
 
-```
+```sh
 docker pull rothnic/anaconda-notebook
 docker run - p 8888: 8888 - i - t rothnic/anaconda-notebook
 ```
 
 安装完毕之后可以使用如下命令验证安装是否完毕:
 
-```
+```sh
 conda - -version
 ```
 

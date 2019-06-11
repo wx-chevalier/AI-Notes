@@ -4,7 +4,7 @@
 
 在 Conda 安装之后，Jupyter Notebook 是默认安装好的，直接在工作目录下打开即可 :
 
-```
+```sh
 jupyter notebook
 ```
 
