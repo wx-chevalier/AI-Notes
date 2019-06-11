@@ -2,7 +2,13 @@
 
 # 人工智能与深度学习实战
 
-在本系列中，你可能会接触到数据挖掘、机器学习、深度学习、自然语言处理、人工智能等很多的概念，首先我们通过几张全景图来了解我们在本系列中会学习哪些知识：
+在本系列中，你可能会接触到数据挖掘、机器学习、深度学习、自然语言处理、人工智能等很多的概念。最后，如果你想了解数据结构与传统算法，那么可以参考 [数据结构与算法 https://url.wx-coder.cn/S84SI](https://url.wx-coder.cn/S84SI)。
+
+值得说明的是，本系列文章的配套代码归纳于 [AIDL-Workbench](https://github.com/wx-chevalier/AIDL-Workbench)，特别是工具实践篇中的大部分内容是以 Juypter Notebook 的形式放在该仓库中。
+
+# Navigation | 导航
+
+首先我们通过几张全景图来了解我们在本系列中会学习哪些知识：
 
 ![](https://i.postimg.cc/L8w4YDPd/image.png)
 
@@ -10,11 +16,7 @@
 
 ![](https://i.postimg.cc/pLpXL4pY/image.png)
 
-最后，如果你想了解数据结构与传统算法，那么可以参考 [数据结构与算法 https://url.wx-coder.cn/S84SI](https://url.wx-coder.cn/S84SI)。
-
-# Navigation | 导航
-
-建议前往 [xCompass](https://wx-chevalier.github.io/home/#/search)/[alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程，或者直接浏览本仓库的目录以了解更多内容。
+对于具体的目录章节，建议直接浏览本仓库的目录以了解更多内容，或者前往 [xCompass](https://wx-chevalier.github.io/home/#/search)/[alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程。
 
 # Preface | 前言
 
