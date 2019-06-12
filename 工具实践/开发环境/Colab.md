@@ -1,6 +1,6 @@
 # Colaboratory
 
-Colaboratory 是一个免费的 Jupyter 笔记本环境，不需要进行任何设置就可以使用，并且完全在云端运行。借助 Colaboratory，我们可以在浏览器中编写和执行代码、保存和共享分析结果，以及利用强大的计算资源。
+Colaboratory 是一个免费的 Jupyter 笔记本环境，不需要进行任何设置就可以使用，并且完全在云端运行。借助 Colaboratory，我们可以在浏览器中编写和执行代码、保存和共享分析结果，以及利用强大的计算资源，包含 GPU 与 TPU 来运行我们的实验代码。
 
 Colab 能够方便地与 Google Driver 与 Github 链接，我们可以使用 [Open in Colab](https://chrome.google.com/webstore/detail/open-in-colab/iogfkhleblhcpcekbiedikdehleodpjo) 插件快速打开 Github 上的 Notebook，或者使用类似于 https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb 这样的链接打开。如果需要将 Notebook 保存回 Github，直接使用 `File→Save a copy to GitHub` 即可。
 
