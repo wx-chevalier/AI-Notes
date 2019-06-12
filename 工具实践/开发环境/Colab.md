@@ -26,6 +26,15 @@ Colab 提供了便捷的依赖安装功能，允许使用 pip 或者 apt-get 命
 # For the latest nightly build:
 !pip install tf-nightly
 
+# Install Pytorch
+from os import path
+from wheel.pep425tags import get_abbr_impl, get_impl_ver, get_abi_tag
+platform = '{}{}-{}'.format(get_abbr_impl(), get_impl_ver(), get_abi_tag())
+
+accelerator = 'cu80' if path.exists('/opt/bin/nvidia-smi') else 'cpu'
+
+!pip install -q http://download.pytorch.org/whl/{accelerator}/torch-0.4.0-{platform}-linux_x86_64.whl torchvision
+
 # Install 7zip reader libarchive
 # https://pypi.python.org/pypi/libarchive
 !apt-get -qq install -y libarchive-dev && pip install -q -U libarchive
