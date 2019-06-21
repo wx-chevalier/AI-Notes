@@ -4,7 +4,7 @@
 
 在本系列中，你可能会接触到数据挖掘、机器学习、深度学习、自然语言处理、人工智能等很多的概念。最后，如果你想了解数据结构与传统算法，那么可以参考 [数据结构与算法 https://url.wx-coder.cn/S84SI](https://url.wx-coder.cn/S84SI)。
 
-值得说明的是，本系列文章的配套代码归纳于 [AIDL-Workbench](https://github.com/wx-chevalier/AIDL-Workbench)，特别是工具实践篇中的大部分内容是以 Juypter Notebook 的形式放在该仓库中。
+值得说明的是，本系列文章的配套代码归纳于 [AIDL-Workbench](https://github.com/wx-chevalier/AIDL-Workbench)，特别是工具实践篇中的大部分内容是以 Juypter Notebook 的形式放在该仓库中，强烈建议按照目录层级对照浏览相关内容。
 
 # Navigation | 导航
 
