@@ -6,6 +6,8 @@
 
 值得说明的是，本系列文章的配套代码归纳于 [AIDL-Workbench](https://github.com/wx-chevalier/AIDL-Workbench)，特别是工具实践篇中的大部分内容是以 Juypter Notebook 的形式放在该仓库中，强烈建议按照目录层级对照浏览相关内容。
 
+You may find the structure of this book loose, deliberately. Because the definition of Data Science is vague.
+
 # Navigation | 导航
 
 首先我们通过几张全景图来了解我们在本系列中会学习哪些知识：
