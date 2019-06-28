@@ -10,21 +10,27 @@ You may find the structure of this book loose, deliberately. Because the definit
 
 # Navigation | 导航
 
-首先我们通过几张全景图来了解我们在本系列中会学习哪些知识：
+您可以通过以下任一方式阅读笔者的系列文章，涵盖了技术资料归纳、编程语言与理论、Web 与大前端、服务端开发与基础架构、云计算与大数据、数据科学与人工智能、产品设计等多个领域：
 
-![](https://i.postimg.cc/L8w4YDPd/image.png)
+- 在 Gitbook 中在线浏览，每个系列对应各自的 Gitbook 仓库。
 
-![](https://i.postimg.cc/GhMmrdhm/image.png)
+| [Awesome Lists](https://ngte-al.gitbook.io/i/) | [Awesome CheatSheets](https://ngte-ac.gitbook.io/i/) | [Awesome Interviews](https://github.com/wx-chevalier/Developer-Zero-To-Mastery/tree/master/Interview) | [Awesome RoadMaps](https://github.com/wx-chevalier/Developer-Zero-To-Mastery/tree/master/RoadMap) |
+| ---------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 
-![](https://i.postimg.cc/pLpXL4pY/image.png)
 
-对于具体的目录章节，建议直接浏览本仓库的目录以了解更多内容：
+| [编程语言理论与实践](https://ngte-pl.gitbook.io/i/) | [软件工程、数据结构与算法、设计模式、软件架构](https://ngte-se.gitbook.io/i/) | [现代 Web 开发基础与工程实践](https://ngte-web.gitbook.io/i/) | [大前端混合开发与数据可视化](https://ngte-fe.gitbook.io/i/) | [服务端开发实践与工程架构](https://ngte-be.gitbook.io/i/) | [分布式基础架构](https://ngte-infras.gitbook.io/i/) | [数据科学，人工智能与深度学习](https://ngte-aidl.gitbook.io/i/) | [产品设计与用户体验](https://ngte-pd.gitbook.io/i/) |
+| --------------------------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------- |
+
+
+- 前往 [xCompass https://wx-chevalier.github.io](https://wx-chevalier.github.io/home/#/search) 交互式地检索、查找需要的文章/链接/书籍/课程。
+
+![](https://i.postimg.cc/3RVYtbsv/image.png)
+
+- 在下文的 [MATRIX 文章与代码矩阵 https://github.com/wx-chevalier/Developer-Zero-To-Mastery](https://github.com/wx-chevalier/Developer-Zero-To-Mastery) 中查看文章与项目的源代码。
 
 | [数理统计](./数理统计) | [数据分析](./数据分析) | [机器学习](./机器学习) | [深度学习](./深度学习) | [自然语言处理](./自然语言处理) | [推荐系统等行业应用](./行业应用) | [课程笔记](./课程笔记) | [TensorFlow & PyTorch 等工具实践](./工具实践) |
 | ---------------------- | ---------------------- | ---------------------- | ---------------------- | ------------------------------ | -------------------------------- | ---------------------- | --------------------------------------------- |
 
-
-最后，您还可以前往 [xCompass](https://wx-chevalier.github.io/home/#/search)/[alfred-sg](https://github.com/wx-chevalier/Soogle/tree/master/alfred-sg) 交互式地检索、查找需要的文章/链接/书籍/课程。
 
 # Preface | 前言
 
@@ -43,6 +49,14 @@ You may find the structure of this book loose, deliberately. Because the definit
 - 第二阶段的感知智能，即让机器拥有视觉、听觉、触觉等感知能力。自动驾驶汽车做的就是这一方面的研究，使机器通过传感器对周围的环境进行感知和处理，从而实现自动驾驶。感知智能方面的技术目前发展比较成熟的领域有语音识别和图像识别，比如做安全领域人脸识别技术的 Face++，以成熟的计算机视觉技术深耕电商、短视频等领域的 Yi+，能够对多种语言进行准确识别翻译的科大讯飞等。
 
 - 第三阶段的认知智能就是让机器拥有自己的认知，能理解会思考。认知智能是目前机器和人差距最大的领域，因为这不仅涉及逻辑和技术，还涉及心理学、哲学和语言学等学科。
+
+最后，我们通过几张全景图来了解我们在本系列中会学习哪些知识：
+
+![](https://i.postimg.cc/L8w4YDPd/image.png)
+
+![](https://i.postimg.cc/GhMmrdhm/image.png)
+
+![](https://i.postimg.cc/pLpXL4pY/image.png)
 
 # 版权
 
