@@ -3,12 +3,12 @@
 ## 工具实践 
 
 - [API](../工具实践/API/README.md) 
-  - [52 Useful Machine Learning & Prediction APIs](../工具实践/API/52%20Useful%20Machine%20Learning%20&%20Prediction%20APIs.md) 
+  - [52 Useful Machine Learning & Prediction APIs](../工具实践/API/52 Useful Machine Learning & Prediction APIs.md) 
 - [DuerOS](../工具实践/DuerOS/README.md) 
 - [PyTorch](../工具实践/PyTorch/README.md) 
 - [Scikit](../工具实践/Scikit/README.md) 
-  - [基于 Gensim 的 Word2Vec 实践](../工具实践/Scikit/基于%20Gensim%20的%20Word2Vec%20实践.md) 
-  - [基于 Python 的简单自然语言处理](../工具实践/Scikit/基于%20Python%20的简单自然语言处理.md) 
+  - [基于 Gensim 的 Word2Vec 实践](../工具实践/Scikit/基于 Gensim 的 Word2Vec 实践.md) 
+  - [基于 Python 的简单自然语言处理](../工具实践/Scikit/基于 Python 的简单自然语言处理.md) 
   - [安装与配置](../工具实践/Scikit/安装与配置.md) 
 - [TensorFlow](../工具实践/TensorFlow/README.md) 
   - [多端部署](../工具实践/TensorFlow/多端部署/README.md) 
@@ -23,7 +23,7 @@
   - [Jupyter](../工具实践/开发环境/Jupyter.md) 
 - [数据集](../工具实践/数据集/README.md) 
 - [系统设计](../工具实践/系统设计/README.md) 
-  - [Python 深度学习框架回顾](../工具实践/系统设计/Python%20深度学习框架回顾.md) 
+  - [Python 深度学习框架回顾](../工具实践/系统设计/Python 深度学习框架回顾.md) 
 
 ## 数据分析 
 
@@ -36,7 +36,7 @@
 
 ## 数理统计 
 
-- [EM 算法](../数理统计/EM%20算法/README.md) 
+- [EM 算法](../数理统计/EM 算法/README.md) 
 - [优化理论](../数理统计/优化理论/README.md) 
   - [代价函数](../数理统计/优化理论/代价函数.md) 
 - [凸优化](../数理统计/凸优化/README.md) 
@@ -121,8 +121,8 @@
 - [主题模型](../自然语言处理/主题模型/README.md) 
   - [LDA](../自然语言处理/主题模型/LDA.md) 
 - [导论](../自然语言处理/导论/README.md) 
-- [文本 Hash](../自然语言处理/文本%20Hash/README.md) 
-  - [URL 归一化](../自然语言处理/文本%20Hash/URL%20归一化.md) 
+- [文本 Hash](../自然语言处理/文本 Hash/README.md) 
+  - [URL 归一化](../自然语言处理/文本 Hash/URL 归一化.md) 
 - [统计语言模型](../自然语言处理/统计语言模型/README.md) 
   - [Word2Vec](../自然语言处理/统计语言模型/Word2Vec.md) 
   - [统计语言模型](../自然语言处理/统计语言模型/统计语言模型.md) 
@@ -146,9 +146,9 @@
 
 - [DeepLearning-Specialization](../课程笔记/DeepLearning-Specialization/README.md) 
   - [NeuralNetworks-And-DeepLearning](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/README.md) 
-    - [二元分类与 Logistic 回归](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/二元分类与%20Logistic%20回归.md) 
-    - [基于 Logistic 回归的图像分类实践](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/基于%20Logistic%20回归的图像分类实践.md) 
-    - [基于 Numpy 的 Python 向量操作](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/基于%20Numpy%20的%20Python%20向量操作.md) 
+    - [二元分类与 Logistic 回归](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/二元分类与 Logistic 回归.md) 
+    - [基于 Logistic 回归的图像分类实践](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/基于 Logistic 回归的图像分类实践.md) 
+    - [基于 Numpy 的 Python 向量操作](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/基于 Numpy 的 Python 向量操作.md) 
     - [梯度下降与向量化操作](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/梯度下降与向量化操作.md) 
     - [浅层神经网络](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/浅层神经网络.md) 
     - [神经网络、有监督学习与深度学习](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/神经网络、有监督学习与深度学习.md) 
