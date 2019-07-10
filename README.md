@@ -54,10 +54,6 @@ You may find the structure of this book loose, deliberately. Because the definit
 
 ![](https://i.postimg.cc/L8w4YDPd/image.png)
 
-![](https://i.postimg.cc/GhMmrdhm/image.png)
-
-![](https://i.postimg.cc/pLpXL4pY/image.png)
-
 # 版权
 
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg) ![](https://parg.co/bDm)
