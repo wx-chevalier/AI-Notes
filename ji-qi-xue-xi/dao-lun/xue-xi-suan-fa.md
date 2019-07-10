@@ -1,0 +1,193 @@
+# 学习算法
+
+## 机器学习算法
+
+## 变量关系
+
+## 学习风格
+
+## 算法相似度
+
+## Machine Learning Algorithms: 常见的机器学习算法分类
+
+> [a-tour-of-machine-learning-algorithms](http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/)
+
+算法基本上从功能或者形式上来分类。比如，基于树的算法，神经网络算法。这是一个很有用的分类方式，但并不完美。因为有许多算法可以轻易地被分到两类中去，比如说 Learning Vector Quantization 就同时是神经网络类的算法和基于实例的方法。正如机器学习算法本身没有完美的模型一样，算法的分类方法也没有完美的。
+
+### Grouped By Learning Style: 根据学习风格分类
+
+#### Supervised Learning: 有监督学习
+
+输入数据被称为训练数据，并且有已知的结果或被标记。比如说一封邮件是否是垃圾邮件，或者说一段时间内的股价。模型做出预测，如果错了就会被修正，这个过程一直持续到对于训练数据它能够达到一定的正确标准。问题例子包括分类和回归问题，算法例子包括逻辑回归和反向神经网络。
+
+![](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Supervised-Learning-Algorithms.png)
+
+有监督学习的通俗例子可以以人类认知月亮的过程为例，小时候会认为黑夜里天空中明亮的圆盘状物体为月亮，后来随着时间的推移，发现圆盘状这个特点并非一个决定性因素。
+
+#### Semi-Supervised Learning: 半监督学习
+
+![](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Semi-supervised-Learning-Algorithms.png)
+
+输入数据是被标记的和不被标记的数据的混合，有一些预测问题但是模型也必须学习数据的结构和组成。问题例子包括分类和回归问题，算法例子基本上是无监督学习算法的延伸。
+
+#### [Unsupervised Learning](https://github.com/okulbilisim/awesome-datascience/blob/master/Algorithms.md#unsupervised-learning): 无监督学习
+
+输入数据没有被标记，也没有确定的结果。模型对数据的结构和数值进行归纳。问题例子包括 Association rule learning 和聚类问题，算法例子包括 Apriori 算法和 K- 均值算法。
+
+![](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Unsupervised-Learning-Algorithms.png)
+
+### Grouped By Similarity: 根据算法相似度分类
+
+#### Regression Algorithms: 回归拟合
+
+![Regression Algorithms](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Regression-Algorithms.png)
+
+回归主要用于对变量之间的关系进行建模，并且使用某个损失函数或者代价函数作为某个变量组合的评估标准。回归方法是统计的一个重要组成部分，目前主要用于统计机器学习中。有时候这个概念会混乱，因为有时候会用回归去描述一类问题，有时候也会用回归去描述一类算法，而实际上回归更多的指的是一个处理过程。常见的回归算法有 :
+
+* Ordinary Least Squares Regression \(OLSR\)
+* Linear Regression
+* Logistic Regression
+* Stepwise Regression
+* Multivariate Adaptive Regression Splines \(MARS\)
+* Locally Estimated Scatterplot Smoothing \(LOESS\)
+
+#### Instance-based Algorithms: 基于实例的算法
+
+![Instance-based Algorithms](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Instance-based-Algorithms.png)
+
+基于实例的学习模型主要是根据训练实例或者样本的特性进行模型构建，因此对于此类算法训练数据至关重要。此类型算法通常会对测试数据建立一个统一的数据库，然后通过比较新老数据之间的相似度来进行匹配预测。鉴于这个特性，基于实例的算法又被成为 “ 赢者通吃 ” 或者 “ 基于记忆 ” 的学习。此类算法的核心在于存储实例的表示方法与实例间相似度的度量方法，最常见的基于实例的学习算法有 :
+
+* k-Nearest Neighbour \(kNN\)
+* Learning Vector Quantization \(LVQ\)
+* Self-Organizing Map \(SOM\)
+* Locally Weighted Learning \(LWL\)
+
+#### Decision Tree Algorithms: 决策树算法
+
+![Decision Tree Algorithms](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Decision-Tree-Algorithms.png)
+
+决策树即利用数据中属性的真实值来构建一个决策模型，决策树算法也主要用于分类与回归问题。决策树算法一般速度和准确度都不错，因此在机器学习中很受欢迎。常见的机器学习算法有：
+
+* Classification and Regression Tree \(CART\)
+* Iterative Dichotomiser 3 \(ID3\)
+* C4.5 and C5.0 \(different versions of a powerful approach\)
+* Chi-squared Automatic Interaction Detection \(CHAID\)
+* Decision Stump
+* M5
+* Conditional Decision Trees
+
+#### Bayesian Algorithms: 贝叶斯算法
+
+![Bayesian Algorithms](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Bayesian-Algorithms.png) 贝叶斯算法即是基于贝叶斯公式及其变种而用于常见的分类与聚类问题的算法。常见的贝叶斯算法有：
+
+* Naive Bayes
+* Gaussian Naive Bayes
+* Multinomial Naive Bayes
+* Averaged One-Dependence Estimators \(AODE\)
+* Bayesian Belief Network \(BBN\)
+* Bayesian Network \(BN\)
+
+#### Clustering Algorithms: 聚类算法
+
+![Clustering Algorithms](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Clustering-Algorithms.png) 聚类，与回归一样同时描述了一系列问题与一系列算法的集合。聚类算法通常地基于中心与层次化进行建模，基本上所有的方法都使用数据的内部结构来将数据组合进入不同的社群中，常见的聚类算法有：
+
+* k-Means
+* k-Medians
+* Expectation Maximisation \(EM\)
+* Hierarchical Clustering
+
+#### Artificial Neural Network Algorithms: 人工神经网络算法
+
+![Artificial Neural Network Algorithms](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Artificial-Neural-Network-Algorithms.png) 人工神经网络算法主要受生物学中的人工神经网络的启发，需要注意，本文将深度学习剥离为一个单独的部分进行描述。常见的人工神经网络算法有：
+
+* Perceptron
+* Back-Propagation
+* Hopfield Network
+* Radial Basis Function Network \(RBFN\)
+
+#### Deep Learning Algorithms: 深度学习算法
+
+![Deep Learning Algorithms](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Deep-Learning-Algorithms.png) 深度学习算法是对于人工神经网络算法的一个扩展，基于现代大量廉价的计算能力的组合从而实现对于复杂模型的求解。深度学习算法主要是基于构建大型、复杂的神经网络，很多方法都是为了处理只含有少量标签数据的海量数据集的半监督学习方法。常见的深度学习算法有：
+
+* Deep Boltzmann Machine \(DBM\)
+* Deep Belief Networks \(DBN\)
+* Convolutional Neural Network \(CNN\)
+* Stacked Auto-Encoders
+
+#### Support Vector Machines
+
+#### Ensemble Algorithms
+
+![Ensemble Algorithms](http://3qeqpr26caki16dnhd19sv6by6v.wpengine.netdna-cdn.com/wp-content/uploads/2013/11/Ensemble-Algorithms.png)
+
+组合方式主要分为 Bagging 和 Boosting。Bagging 是 Bootstrapped Aggregation 的缩写，其基本原理是让学习算法训练多轮，每轮的训练集由从初始的训练集中随机取出的 N 个训练样本组成\(有放回的随机抽样\)，训练之后可得到一个预测函数集合，通过投票的方式决定预测结果。而 Boosting 中主要的是 AdaBoost\(Adaptive Boosting\)。基本原理是初始化时对每一个训练样本赋相等的权重 $1/n$，然后用学习算法训练多轮，每轮结束后，对训练失败的训练样本赋以较大的权重，也就是让学习算法在后续的学习中集中对比较难的训练样本进行学习，从而得到一个预测函数的集合。每个预测函数都有一定的权重，预测效果好的函数权重较大，反之较小，最终通过有权重的投票方式来决定预测结果。而 Bagging 与 Boosting 的主要区别在于：
+
+* 取样方式不同。Bagging 采用均匀取样，而 Boosting 根据错误率来取样，因此理论上来说 Boosting 的分类精度要优于 Bagging。
+* 训练集的选择方式不同。Bagging 的训练集的选择是随机的，各轮训练集之间相互独立，而 Boosting 的各轮训练集的选择与前面的学习结果有关。
+* 预测函数不同。Bagging 的各个预测函数没有权重，而 Boosting 是有权重的。Bagging 的各个预测函数可以并行生成，而 Boosting 的各个预测函数只能顺序生成。
+
+总结而言，对于像神级网络这样及其耗时的学习方法，Bagging 可以通过并行训练节省大量时间的开销。Bagging 和 Boosting 都可以有效地提高分类的准确性。在大多数数据集合中，Boosting 的准确性比 Bagging 要高。
+
+* Boosting
+* Bootstrapped Aggregation \(Bagging\)
+* AdaBoost
+* Stacked Generalization \(blending\)
+* Gradient Boosting Machines \(GBM\)
+* Gradient Boosted Regression Trees \(GBRT\)
+* Random Forest
+
+## DataScience LifeCycle:一次数据研究的生命周期
+
+> [DataScience-Life-Cycle](https://github.com/okulbilisim/awesome-datascience/blob/master/DataScience-Life-Cycle.md)
+
+DataScience 是从数据中获取价值的最重要的流行方法之一。
+
+### Identify Problem:定位问题
+
+这个环节最重要的是需求和数据的匹配。首先需要明确需求，比如分类问题中需要判断是否有带标注的训练数据集，否则，无法按照有监督的分类算法来解决。此外，数据的规模、重要 Feature 的覆盖率等等，也都是要考虑的问题。
+
+### Data PreProcess:数据预处理
+
+#### 数据集成、数据冗余与数值冲突
+
+数据挖掘中准备数据的时候，需要尽可能的将相关数据集成在一起。如果集成的数据中，有两列或者多列值一样，则不可避免地会产生数值冲突或者数据冗余，可能需要根据数据的质量来决定保留冲突中的哪一列。
+
+#### 数据采样
+
+一般来说，有效的采样方式如下：如果样本是有代表性的，则使用样本数据和使用整个数据集的效果几乎是一样的。抽样方法有很多，首先考虑的是有放回的采样，以及具体选择哪种采样方式。
+
+#### 数据清洗、缺失值处理与噪声数据
+
+现实世界中的数据，是真实的数据，不可避免地会存在各种各样异常的情况。比如某一列的值缺失或者某列的值是异常的。所以，我们需要在数据预处理阶段进行数据清洗，来减少噪音数据对于模型训练和预测结果的影响。
+
+### Feature Engineering:特征工程
+
+数据和特征决定了机器学习的上限，而模型和算法只是逼近这个上限。
+
+> feature engineering is another topic which doesn’t seem to merit any review papers or books, or even chapters in books, but it is absolutely vital to ML success. \[…\] Much of the success of machine learning is actually success in engineering features that a learner can understand.
+
+特征是对于所需解决问题有用的属性。比如在计算机视觉领域，图片作为研究对象，可能图片中的一个线条就是一个特征；在自然语言处理领域，研究对象是文档，文档中一个词语出现的次数就是一个特征；在语音识别领域，研究对象是一段话，那么一个音频位就是一个特征。
+
+#### 特征的提取、选择和构造
+
+既然特征是对我们所解决的问题最有用的属性，首先我们需要处理的是根据原始数据抽取出所需要的特征。不过需要注意的是并不是所有的特征对所解决的问题影响一样大，有些特征可能对问题产生特别大的影响，但是有些则影响甚微，和所解决的问题不相关的特征需要被剔除掉。因此，我们需要针对所解决的问题选择最有用的特征集合，一般可以通过相关系数等方式来计算特征的重要性。
+
+当然，有些模型本身会输出 feature 重要性，譬如 Random Forest 算法，而对于图片、音频等原始数据形态特别大的对象，则可能需要采用像 PCA 这样的自动降维技术。另外，还可能需要本人对数据和所需解决的问题有深入的理解，能够通过特征组合等方式构造出新的特征，这也正是特征工程被称为一门艺术的原因。
+
+### Model Selection&Evaluation:模型选择与评估
+
+一般来说，对于算法与模型选型的考虑，可能有：
+
+* 训练集的大小
+* 特征的维度大小
+* 所解决问题是否是线性可分的
+* 所有的特征是独立的吗
+* 是否需要考虑过拟合
+* 性能要求
+
+在实际的工作中，我们选择算法与模型时候会考虑到奥卡姆剃刀原理：
+
+> Occam's Razor principle:use the least complicated algorithm that can address your needs and only go for something more complicated if strictly necessary
+
+业界比较通用的算法选择一般是这样的规律：如果 LR 可以，则用 LR；如果 LR 不合适，则选择 Ensemble 方式；如果 Ensemble 方式不合适，则考虑是否尝试 Deep Learning。
+
