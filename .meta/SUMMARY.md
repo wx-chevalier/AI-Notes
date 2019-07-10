@@ -2,6 +2,8 @@
 
 ## [工具实践](../工具实践/README.md) 
 
+- [Introduction](../工具实践/README.md) 
+
 - [API](../工具实践/API/README.md) 
   - [52 Useful Machine Learning & Prediction APIs](../工具实践/API/52 Useful Machine Learning & Prediction APIs.md) 
 - [DuerOS](../工具实践/DuerOS/README.md) 
@@ -27,6 +29,8 @@
 
 ## [数据分析](../数据分析/README.md) 
 
+- [Introduction](../数据分析/README.md) 
+
 - [模拟退火](../数据分析/模拟退火/README.md) 
 - [爬山](../数据分析/爬山/README.md) 
 - [用户画像](../数据分析/用户画像/README.md) 
@@ -35,6 +39,8 @@
   - [进化过程](../数据分析/遗传算法/进化过程.md) 
 
 ## [数理统计](../数理统计/README.md) 
+
+- [Introduction](../数理统计/README.md) 
 
 - [EM 算法](../数理统计/EM 算法/README.md) 
 - [优化理论](../数理统计/优化理论/README.md) 
@@ -72,6 +78,8 @@
 
 ## [机器学习](../机器学习/README.md) 
 
+- [Introduction](../机器学习/README.md) 
+
 - [分类](../机器学习/分类/README.md) 
   - [贝叶斯分类器](../机器学习/分类/贝叶斯分类器.md) 
 - [导论](../机器学习/导论/README.md) 
@@ -98,6 +106,8 @@
 
 ## [深度学习](../深度学习/README.md) 
 
+- [Introduction](../深度学习/README.md) 
+
 - [卷积神经网络](../深度学习/卷积神经网络/README.md) 
 - [导论](../深度学习/导论/README.md) 
   - [背景与现状](../深度学习/导论/背景与现状.md) 
@@ -113,6 +123,8 @@
     - [图像滤波](../深度学习/计算机视觉/图形学基础/图像滤波.md) 
 
 ## [自然语言处理](../自然语言处理/README.md) 
+
+- [Introduction](../自然语言处理/README.md) 
 
 - [BERT](../自然语言处理/BERT/README.md) 
   - [目标函数](../自然语言处理/BERT/目标函数.md) 
@@ -135,6 +147,8 @@
 
 ## [行业应用](../行业应用/README.md) 
 
+- [Introduction](../行业应用/README.md) 
+
 - [推荐系统](../行业应用/推荐系统/README.md) 
 - [无人驾驶](../行业应用/无人驾驶/README.md) 
   - [概述](../行业应用/无人驾驶/概述.md) 
@@ -143,6 +157,8 @@
 - [聊天对话](../行业应用/聊天对话/README.md) 
 
 ## [课程笔记](../课程笔记/README.md) 
+
+- [Introduction](../课程笔记/README.md) 
 
 - [DeepLearning-Specialization](../课程笔记/DeepLearning-Specialization/README.md) 
   - [NeuralNetworks-And-DeepLearning](../课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/README.md) 
