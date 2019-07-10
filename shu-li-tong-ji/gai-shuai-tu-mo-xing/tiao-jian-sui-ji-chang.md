@@ -1,4 +1,0 @@
-# 条件随机场
-
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/12/1/D2A37B13-156B-4A25-93F2-895287325C1F.png)
-
