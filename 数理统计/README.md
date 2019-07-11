@@ -2,6 +2,8 @@
 
 # 数理统计
 
+![](https://i.postimg.cc/L8w4YDPd/image.png)
+
 # 链接
 
 - 待归档图片
