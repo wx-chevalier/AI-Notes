@@ -4,7 +4,7 @@
 
 在深度学习篇中，我们将了解深度学习的历史与理论。深度学习的起点即是所谓的神经网络（Neural Network）。
 
-![](https://i.postimg.cc/pLpXL4pY/image.png)
+![mindmap](https://i.postimg.cc/pLpXL4pY/image.png)
 
 # NN | 神经网络基础
 

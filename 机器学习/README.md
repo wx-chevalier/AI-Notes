@@ -8,4 +8,4 @@
 
 换一个形象点的阐述方式，对于某给定的任务 T，在合理的性能度量方案 P 的前提下，某计算机程序可以自主学习任务 T 的经验 E；随着提供合适、优质、大量的经验 E，该程序对于任务 T 的性能逐步提高。即随着任务的不断执行，经验的累积会带来计算机性能的提升。
 
-![](https://i.postimg.cc/GhMmrdhm/image.png)
+![mindmap](https://i.postimg.cc/GhMmrdhm/image.png)

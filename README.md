@@ -52,8 +52,6 @@
 
 - 第三阶段的认知智能就是让机器拥有自己的认知，能理解会思考。认知智能是目前机器和人差距最大的领域，因为这不仅涉及逻辑和技术，还涉及心理学、哲学和语言学等学科。
 
-最后，我们通过一张全景图来了解我们在本系列中会学习哪些知识：
-
 # 版权
 
 ![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg) ![](https://parg.co/bDm)
