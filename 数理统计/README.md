@@ -2,7 +2,7 @@
 
 # 数理统计
 
-![mindmap](https://i.postimg.cc/L8w4YDPd/image.png)
+![数理统计](https://i.postimg.cc/L8w4YDPd/image.png)
 
 # 链接
 
