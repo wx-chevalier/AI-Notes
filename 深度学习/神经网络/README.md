@@ -13,3 +13,7 @@ $$ S(x) = \frac{1}{1+ e^{-x}} $$
 Geoff Hinton covered exactly this topic in his coursera course on neural nets. The problem with sigmoids is that as you reach saturation (values get close to 1 or 0), the gradients vanish. This is detrimental to optimization speed. Softmax doesn't have this problem, and in fact if you combine softmax with a cross entropy error function the gradients are just (z-y), as they would be for a linear output with least squares error.
 
 其导数 $f'(x)=f(x)\*[1-f(x)]$，可以节约计算时间
+
+# 链接
+
+- https://www.zhihu.com/question/314879954/answer/638380202
