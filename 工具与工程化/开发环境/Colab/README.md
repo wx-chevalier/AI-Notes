@@ -175,7 +175,7 @@ os.listdir(path)
 
 ## Google Driver
 
-在过去进行实验的时候，大量训练与测试数据的获取、存储与加载一直是令人头疼的问题；在 Colab 中，笔者将 [Awesome DataSets https://url.wx-coder.cn/FqwyP](https://url.wx-coder.cn/FqwyP)) 中的相关数据通过 [AIDL-Workbench/datasets](https://github.com/wx-chevalier/AIDL-Workbench/tree/master/datasets) 中的脚本持久化存储在 Google Driver 中。
+在过去进行实验的时候，大量训练与测试数据的获取、存储与加载一直是令人头疼的问题；在 Colab 中，笔者将 [Awesome DataSets](http://ngte-al.gitbook.io) 中的相关数据通过 [AIDL-Workbench/datasets](https://github.com/wx-chevalier/AIDL-Workbench/tree/master/datasets) 中的脚本持久化存储在 Google Driver 中。
 
 在 Colab 中我们可以将 Google Driver 挂载到当的工作路径：
 
