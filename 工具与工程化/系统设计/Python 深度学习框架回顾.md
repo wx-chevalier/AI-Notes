@@ -46,7 +46,7 @@ Theano 不仅仅是一个可以独立使用的库，它还是我们下面介绍�
 - [安装指南](http://deeplearning.net/software/theano/install.html)
 - [官方教程](http://deeplearning.net/software/theano/tutorial/)
 - [Theano 幻灯介绍与实践案例](https://github.com/goodfeli/theano_exercises)
-- [基于 Theano 实现从线性拟合到 CNN](https://github.com/Newmu/Theano-Tutorials)
+- [基于 Theano 实现从线性拟合到 CNN](https://github.com/Newmu/Theano-Tutorial)
 - [基于 Python & Theano 的深度学习介绍](https://indico.io/blog/introduction-to-deep-learning-with-python-and-theano-2/)
 
 ---
@@ -150,7 +150,7 @@ TensorFlow 集成了类似于 Theano 这样底层的符号计算功能，也包�
 - [官方 TensorFlow 主页](https://www.tensorflow.org/)
 - [下载与安装指南](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/g3doc/get_started/os_setup.md)
 - [indico 对于 TensorFlow 的评价](https://indico.io/blog/the-good-bad-ugly-of-tensorflow/)
-- [一系列 TensorFlow 指南](https://github.com/nlintz/TensorFlow-Tutorials)
+- [一系列 TensorFlow 指南](https://github.com/nlintz/TensorFlow-Tutorial)
 - [Udacity 上关于 TensorFlow 的教程](https://www.udacity.com/course/deep-learning--ud730)
 - [TensorFlow MNIST 指南](https://www.tensorflow.org/tutorials/mnist/beginners/)
 - [TensorFlow 数据输入](https://indico.io/blog/tensorflow-data-inputs-part1-placeholders-protobufs-queues/)

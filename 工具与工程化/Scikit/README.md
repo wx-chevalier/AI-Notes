@@ -19,7 +19,7 @@ docker run -p 8888:8888 -i -t rothnic/anaconda-notebook
 
 ## Reference
 
-### Tutorials & Docs
+### Tutorial & Docs
 
 - [scipy_2015_sklearn_tutorial](https://github.com/amueller/scipy_2015_sklearn_tutorial)
 

@@ -22,7 +22,7 @@ Word2vec 神经网络的输出是一个词表，每个词由一个向量来表�
 
 ## Reference
 
-### Tutorials & Docs
+### Tutorial & Docs
 
 - [Google - Word2Vec](https://code.google.com/p/word2vec/)
 - [Deep Learning 实战之 word2vec](http://techblog.youdao.com/?p=915#LinkTarget_699)
