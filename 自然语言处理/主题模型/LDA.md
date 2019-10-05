@@ -69,8 +69,8 @@ document_length = {}
 topic_index = defaultdict(list)
 word_index = defaultdict(list)
 
-term_distribution = dirichlet(num_terms * [term_dirichlet_parameter])
-topic_distribution = dirichlet(num_topics * [topic_dirichlet_parameter])
+term_distribution = dirichlet(num_terms - [term_dirichlet_parameter])
+topic_distribution = dirichlet(num_topics - [topic_dirichlet_parameter])
 
 # 遍历每个主题
 for topic in range(num_topics):

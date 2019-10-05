@@ -8,23 +8,23 @@
 
 # 目录
 
-* [机器学习综述]()
+- [机器学习综述]()
 
-* [数据科学与机器学习简史]()
+- [数据科学与机器学习简史]()
 
 - [机器学习算法简论]()
 
-* [机器学习与 Python]()
+- [机器学习与 Python]()
 
-* [语法速览与环境搭建]()
+- [语法速览与环境搭建]()
 
 # 参考资料
 
-* [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-List.md)
+- [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-List.md)
 
-* [机器学习、深度学习与自然语言处理领域推荐的书籍列表](https://zhuanlan.zhihu.com/p/25612011)
+- [机器学习、深度学习与自然语言处理领域推荐的书籍列表](https://zhuanlan.zhihu.com/p/25612011)
 
-* [数据科学与机器学习概述](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
+- [数据科学与机器学习概述](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
 
 # 狗粮
 
