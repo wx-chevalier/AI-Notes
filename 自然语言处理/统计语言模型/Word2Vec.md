@@ -152,7 +152,7 @@ CBOW 是 Continuous Bag-of-Words Model 的缩写，是一种与前向 NNLM 类�
 
 ![](http://7xlgth.com1.z0.glb.clouddn.com/1424C789-5B58-43BA-952C-EACDF43E2AEB.png)
 
-从输入层到隐层所进行的操作实际就是上下文向量的加和，具体的代码如下。 其中 sentence_position 为当前 word 在句子中的下标。以一个具体的句子 A B C D 为例，第一次进入到下面代码时当前 word 为 A，sentence_position 为 0。b 是一 个随机生成的 0 到$window-1$的词，整个窗口的大小为$2*window + 1 - 2*b$，相当于左右各看$window-b$个词。可以看出随着窗口的从左往右滑动，其大小也 是随机的$3 (b=window-1)$到$2\*window+1(b=0)$之间随机变通，即随机值 b 的大小决定了当前窗口的大小。代码中的 neu1 即为隐层向量，也就是上下文(窗口 内除自己之外的词)对应 vector 之和。
+从输入层到隐层所进行的操作实际就是上下文向量的加和，具体的代码如下。其中 sentence_position 为当前 word 在句子中的下标。以一个具体的句子 A B C D 为例，第一次进入到下面代码时当前 word 为 A，sentence_position 为 0。b 是一 个随机生成的 0 到$window-1$的词，整个窗口的大小为$2*window + 1 - 2*b$，相当于左右各看$window-b$个词。可以看出随着窗口的从左往右滑动，其大小也 是随机的$3 (b=window-1)$到$2\*window+1(b=0)$之间随机变通，即随机值 b 的大小决定了当前窗口的大小。代码中的 neu1 即为隐层向量，也就是上下文(窗口 内除自己之外的词)对应 vector 之和。
 
 ![](http://7xlgth.com1.z0.glb.clouddn.com/36F89DA8-F3A0-4C6C-84F8-C31BB19CEEC1.png)
 
@@ -218,14 +218,14 @@ word2vec 可调整的超参数有很多：
 
 | 参数名     | 说明                 |                                                                                                    |
 | ---------- | -------------------- | -------------------------------------------------------------------------------------------------- |
-| -size      | 向量维度             | 一般维度越高越好，但并不总是这样。                                                                 |
-| -window    | 上下文窗口大小       | Skip-gram—般 10 左右，CBOW—般 5 左右。                                                             |
-| -sample    | 高频词亚采样         | 对大数据集合可以同时提高精度和速度，sample 的取值 在 1e-3 到 1e-5 之间效果最佳。                   |
-| -hs        | 是否采用层次 softmax | 层次 softmax 对低频词效果更好；对应的 negative sampling 对高频词效果更好，向量维度较低时效果更好。 |
+| -size      | 向量维度             | 一般维度越高越好，但并不总是这样。                                                                |
+| -window    | 上下文窗口大小       | Skip-gram—般 10 左右，CBOW—般 5 左右。                                                            |
+| -sample    | 高频词亚采样         | 对大数据集合可以同时提高精度和速度，sample 的取值 在 1e-3 到 1e-5 之间效果最佳。                  |
+| -hs        | 是否采用层次 softmax | 层次 softmax 对低频词效果更好；对应的 negative sampling 对高频词效果更好，向量维度较低时效果更好。|
 | -negative  | 负例数目             |                                                                                                    |
 | -min-count | 被截断的低频词阈值   |                                                                                                    |
 | -alpha     | 开始的学习速率       |                                                                                                    |
-| -cbow      | 使用 CBOW            | Skip-gram 更慢一些，但是对低频词效果更好；对应的 CBOW 则速度更快一些。                             |
+| -cbow      | 使用 CBOW            | Skip-gram 更慢一些，但是对低频词效果更好；对应的 CBOW 则速度更快一些。                            |
 
 ## Deeplearning4j
 

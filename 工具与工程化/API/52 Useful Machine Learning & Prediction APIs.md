@@ -8,7 +8,7 @@
 
 ## 正文
 
-随着基于人工智能与机器学习的应用如雨后春笋般不断涌现，我们也看到有很多提供类似功能的 API 悄悄登上了舞台。 API 是用于构建软件应用的程序、协议以及工具的组合；本文是对[2015 中这个列表](http://www.kdnuggets.com/2015/12/machine-learning-data-science-apis.html/2)的修正与完善，移除了部分被废弃的 API ；我们也添加了最近由  IBM、Google、Microsoft 这些大厂发布的 API 。所有的 API 可以根据应用场景进行分组：
+随着基于人工智能与机器学习的应用如雨后春笋般不断涌现，我们也看到有很多提供类似功能的 API 悄悄登上了舞台。API 是用于构建软件应用的程序、协议以及工具的组合；本文是对[2015 中这个列表](http://www.kdnuggets.com/2015/12/machine-learning-data-science-apis.html/2)的修正与完善，移除了部分被废弃的 API ；我们也添加了最近由  IBM、Google、Microsoft 这些大厂发布的 API 。所有的 API 可以根据应用场景进行分组：
 
 - 人脸与图片识别。
 - 文本分析，自然语言处理以及情感分析。
