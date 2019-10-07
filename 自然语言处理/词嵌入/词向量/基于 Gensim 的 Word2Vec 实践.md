@@ -1,6 +1,6 @@
 # Word2Vec
 
-> [基于 Gensim 的 Word2Vec 实践](https://zhuanlan.zhihu.com/p/24961011)，从属于笔者的[程序猿的数据科学与机器学习实战手册](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders)，代码参考[gensim.ipynb](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/code/python/nlp/genism/gensim.ipynb)。推荐前置阅读[Python 语法速览与机器学习开发环境搭建](https://zhuanlan.zhihu.com/p/24536868)，[Scikit-Learn 备忘录](https://zhuanlan.zhihu.com/p/24770526)。
+- [基于 Gensim 的 Word2Vec 实践](https://zhuanlan.zhihu.com/p/24961011)，从属于笔者的[程序猿的数据科学与机器学习实战手册](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders)，代码参考[gensim.ipynb](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/code/python/nlp/genism/gensim.ipynb)。推荐前置阅读[Python 语法速览与机器学习开发环境搭建](https://zhuanlan.zhihu.com/p/24536868)，[Scikit-Learn 备忘录](https://zhuanlan.zhihu.com/p/24770526)。
 
 ![](https://i.ytimg.com/vi/xMwx2A_o5r4/maxresdefault.jpg)
 

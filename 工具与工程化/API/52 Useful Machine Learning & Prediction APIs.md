@@ -1,4 +1,4 @@
-﻿> [52 个有用的机器学习与预测 API 盘点]()翻译自 [52 Useful Machine Learning & Prediction APIs](http://www.kdnuggets.com/2017/02/machine-learning-data-science-apis-updated.html)
+﻿- [52 个有用的机器学习与预测 API 盘点]()翻译自 [52 Useful Machine Learning & Prediction APIs](http://www.kdnuggets.com/2017/02/machine-learning-data-science-apis-updated.html)
 
 # 52 个有用的机器学习与预测 API 盘点
 

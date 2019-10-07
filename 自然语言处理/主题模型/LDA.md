@@ -123,7 +123,7 @@ def perplexity(self, docs=None):
 
 LDA 是标准的词袋模型。
 
-> [通俗理解 LDA 主题模型](http://blog.csdn.net/v_july_v/article/details/41209515)
+- [通俗理解 LDA 主题模型](http://blog.csdn.net/v_july_v/article/details/41209515)
 
 LDA 主要涉及的问题包括共轭先验分布、Dirichlet 分布以及 Gibbs 采样算法学习参数。LDA 的输入为文档数目$M$，词数目$V$(非重复的 term)，主题数目$K$。
 ![](http://7xlgth.com1.z0.glb.clouddn.com/5C724613-24AC-4782-B1DB-E890B87885FF.png)
