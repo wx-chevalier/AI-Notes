@@ -2,38 +2,20 @@
 
 # 深入浅出 Python 机器学习与自然语言处理
 
-`Copyright © 王下邀月熊`
+20 年来，NLP 的技术也经历了从基于语法语义规则系统（1970s-1990s）迁移到基于统计机器学习的框架（2000s-2014）并进一步发展为基于大数据和深度学习的 NLP 技术范式（2014 至今）。
 
-# 前言
+![NLP 领域全景图](https://s2.ax1x.com/2019/10/11/uHexcq.png)
 
-# 目录
+# NLP 通用技术
 
-- [机器学习综述]()
+## 文本生成
 
-- [数据科学与机器学习简史]()
+文本生成是使用计算机模拟人来生成文本的技术，可以分为 text-to-text，image-to-text，以及 data-to-text 等。文本生成的应用领域包括机器翻译、QA、文本摘要、文字改写、新闻报道（体育、气象、财经、医疗等）、报告的自动生成等。
 
-- [机器学习算法简论]()
+随着深度学习等技术在文本生成领域的应用，近年来文本生成技术发展比较快，特别是源于机器翻译的 seq2seq 结构，广泛应用到了文本生成的各个领域。但是应用中还是存在很多诸如创新度不够、不流畅、语句之间相关性不强等问题。文本生成的难度在于，由于人类的语言表达是多种多样的，因此文本生成的结果的质量没有确定的标准，难以评估模型效果，同时对于结果质量和多样性的的平衡也很难把握。
 
-- [机器学习与 Python]()
+## 情感分析
 
-- [语法速览与环境搭建]()
+文本情感分析（Sentiment Analysis)，又称意见挖掘(Opinion Mining)，是自然语言处理领域的一个重要研究方向， 在工业界和学术界都有广泛的研究和应用，在每年的国际顶会中（例如：ACL、EMNLP、IJCAI、AAAI、WWW 等）都有大量的论文。
 
-# 参考资料
-
-- [面向程序猿的数据科学与机器学习知识体系及资料合集](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI-List.md)
-
-- [机器学习、深度学习与自然语言处理领域推荐的书籍列表](https://zhuanlan.zhihu.com/p/25612011)
-
-- [数据科学与机器学习概述](https://github.com/wx-chevalier/DataScience-And-MachineLearning-Handbook-For-Coders/blob/master/DataScienceAI.md)
-
-# 狗粮
-
-如果觉得本系列对你有所帮助，欢迎给我家布丁买点狗粮(支付宝扫码)~
-
-![](https://i.postimg.cc/y1QXgJ6f/image.png?raw=true)
-
-# 版权
-
-![](https://parg.co/bDY) ![](https://parg.co/bDm)
-
-笔者所有文章遵循 [知识共享 署名-非商业性使用-禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。
+简单而言，它是对带有情感色彩的主观性文本进行分析、处理、归纳和推理的过程。相对于客观文本，主观文本包含了用户个人的想法或态度，是用户群体对某产品或事件，从不同角度、不同需求和自身体验去分析评价的结果，这些评价具有主观能动性和多样性，具有情感分析的意义和价值。
