@@ -203,6 +203,7 @@
 
 - [Introduction](../行业应用/README.md) 
 
+- [RPA](../行业应用/RPA/README.md) 
 - [推荐系统](../行业应用/推荐系统/README.md) 
 - [无人驾驶](../行业应用/无人驾驶/README.md) 
   - [概述](../行业应用/无人驾驶/概述.md) 
