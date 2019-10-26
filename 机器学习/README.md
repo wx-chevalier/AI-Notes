@@ -9,3 +9,16 @@
 换一个形象点的阐述方式，对于某给定的任务 T，在合理的性能度量方案 P 的前提下，某计算机程序可以自主学习任务 T 的经验 E；随着提供合适、优质、大量的经验 E，该程序对于任务 T 的性能逐步提高。即随着任务的不断执行，经验的累积会带来计算机性能的提升。
 
 ![mindmap](https://i.postimg.cc/GhMmrdhm/image.png)
+
+# 什么是机器学习？
+
+![机器学习的行业应用](https://s2.ax1x.com/2019/10/26/KBZu3d.png)
+
+Andrew Ng 对机器学习的定义是：Machine Learning is the science of getting computers to act without being explicitly programmed. 微软的定义是：Machine learning is a technique of data science that helps computers learn from existing data in order to
+forecast future behaviors, outcomes, and trends.
+
+![机器学习与传统应用的区别](https://s2.ax1x.com/2019/10/26/KBuEMd.png)
+
+![机器学习的工作流程](https://s2.ax1x.com/2019/10/26/KBnCcj.png)
+
+![常用的机器学习分类与回归算法](https://s2.ax1x.com/2019/10/26/KBMFud.png)
