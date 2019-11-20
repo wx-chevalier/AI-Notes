@@ -40,6 +40,7 @@
   - [自然语言处理](../工具与工程化/TensorFlow/自然语言处理/README.md) 
     - [基于 Python 的简单自然语言处理](../工具与工程化/TensorFlow/自然语言处理/基于 Python 的简单自然语言处理.md) 
   - [语法基础](../工具与工程化/TensorFlow/语法基础/README.md) 
+    - [Keras](../工具与工程化/TensorFlow/语法基础/Keras/README.md) 
 - [开发环境](../工具与工程化/开发环境/README.md) 
   - [Conda](../工具与工程化/开发环境/Conda.md) 
   - [Jupyter](../工具与工程化/开发环境/Jupyter.md) 
