@@ -9,3 +9,7 @@ jupyter notebook
 ```
 
 你可以参阅[Running the Notebook](http://jupyter.readthedocs.io/en/latest/running.html#running)获取更多命令细节。
+
+# 链接
+
+- http://timstaley.co.uk/posts/making-git-and-jupyter-notebooks-play-nice/
