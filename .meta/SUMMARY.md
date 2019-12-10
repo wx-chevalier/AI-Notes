@@ -27,6 +27,8 @@
   - [Matplotlib](../工具与工程化/Scikit/Matplotlib/README.md) 
     - [charts.ipynb](../工具与工程化/Scikit/Matplotlib/charts.ipynbREADME.md) 
   - [Numpy](../工具与工程化/Scikit/Numpy/README.md) 
+    - [.ipynb_checkpoints](../工具与工程化/Scikit/Numpy/.ipynb_checkpoints/README.md) 
+      - [numpy-checkpoint.ipynb](../工具与工程化/Scikit/Numpy/.ipynb_checkpoints/numpy-checkpoint.ipynbREADME.md) 
     - [numpy.ipynb](../工具与工程化/Scikit/Numpy/numpy.ipynbREADME.md) 
   - [Pandas](../工具与工程化/Scikit/Pandas/README.md) 
 - [TensorFlow](../工具与工程化/TensorFlow/README.md) 
