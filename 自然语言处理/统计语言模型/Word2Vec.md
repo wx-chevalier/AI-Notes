@@ -4,7 +4,7 @@
 
 深度学习(DeepLearning)在图像、语音、视频等多方应用中大放异彩，从本质而言，深度学习是表征学习(Representation Learning)的一种方法，可以看做对事物进行分类的不同过滤器的组成。
 
-Word2Vec 是 Google 在 2013 年年中开源的一款将词表征为实数值向量的高效 工具，采用的模型有 CBOW (Continuous Bag-Of-Words，即连续的词袋模型)和 Skip-Gram 两种。word2vec 代码链接为：https://code.google.com/p/word2vec/， 遵循 Apache License 2.0 开源协议，是一种对商业应用友好的许可，当然需要充分尊重原作者的著作权。Word2Vec 采用了所谓的 Distributed Representation 方式来表示词。Distributed representation 最早是 Hinton 在 1986 年的论文《Learning distributed representations of concepts》中提出的。虽然这篇文章没有说要将词做 Distributed representation，但至少这种先进的思想在那个时候就在人们的心中埋下了火种，到 2000 年之后开始逐渐被人重视。Distributed representation 用来表示词，通常被称为“Word Representation”或“Word Embedding”，中文俗称“词向量”。
+Word2Vec 是 Google 在 2013 年年中开源的一款将词表征为实数值向量的高效 工具，采用的模型有 CBOW (Continuous Bag-Of-Words，即连续的词袋模型)和 Skip-Gram 两种。word2vec 代码链接为：https://code.google.com/p/word2vec/，遵循 Apache License 2.0 开源协议，是一种对商业应用友好的许可，当然需要充分尊重原作者的著作权。Word2Vec 采用了所谓的 Distributed Representation 方式来表示词。Distributed representation 最早是 Hinton 在 1986 年的论文《Learning distributed representations of concepts》中提出的。虽然这篇文章没有说要将词做 Distributed representation，但至少这种先进的思想在那个时候就在人们的心中埋下了火种，到 2000 年之后开始逐渐被人重视。Distributed representation 用来表示词，通常被称为“Word Representation”或“Word Embedding”，中文俗称“词向量”。
 
 ![](http://deeplearning4j.org/img/word2vec.png)
 
@@ -112,7 +112,7 @@ nohup ./word2vec -train resultbig.txt -output vectors.bin -cbow 0 -size 200 -win
 
       在对demo-analogy.sh修改后得到下面几个例子：
 
-      法国的首都是巴黎，英国的首都是伦敦， vector("法国") - vector("巴黎) + vector("英国") --> vector("伦敦")"
+      法国的首都是巴黎，英国的首都是伦敦，vector("法国") - vector("巴黎) + vector("英国") --> vector("伦敦")"
 
 ![](http://img0.tuicool.com/FrmE73.png%21web)
 
@@ -219,13 +219,13 @@ word2vec 可调整的超参数有很多：
 | 参数名     | 说明                 |                                                                                                    |
 | ---------- | -------------------- | -------------------------------------------------------------------------------------------------- |
 | -size      | 向量维度             | 一般维度越高越好，但并不总是这样。                                                             |
-| -window    | 上下文窗口大小       | Skip-gram—般 10 左右，CBOW—般 5 左右，                                                        |
-| -sample    | 高频词亚采样         | 对大数据集合可以同时提高精度和速度，sample 的取值 在 1e-3 到 1e-5 之间效果最佳，              |
+| -window    | 上下文窗口大小       | Skip-gram—般 10 左右，CBOW—般 5 左右，                                                       |
+| -sample    | 高频词亚采样         | 对大数据集合可以同时提高精度和速度，sample 的取值 在 1e-3 到 1e-5 之间效果最佳，             |
 | -hs        | 是否采用层次 softmax | 层次 softmax 对低频词效果更好；对应的 negative sampling 对高频词效果更好，向量维度较低时效果更好。|
 | -negative  | 负例数目             |                                                                                                    |
 | -min-count | 被截断的低频词阈值   |                                                                                                    |
 | -alpha     | 开始的学习速率       |                                                                                                    |
-| -cbow      | 使用 CBOW            | Skip-gram 更慢一些，但是对低频词效果更好；对应的 CBOW 则速度更快一些，                        |
+| -cbow      | 使用 CBOW            | Skip-gram 更慢一些，但是对低频词效果更好；对应的 CBOW 则速度更快一些，                       |
 
 ## Deeplearning4j
 

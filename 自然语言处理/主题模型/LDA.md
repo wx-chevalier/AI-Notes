@@ -42,7 +42,7 @@ Q：**我们如何知道这枚硬币抛出字的概率？**我们知道，如果
 其实之所以计算会变得这么简单，是因为被 beta distribution 描述的 prior 经过 bayes formula 前后还是一个 beta distribution；这种不改变函数本身所属 family 的特性，叫**共轭(conjugate)**。
 
 ok。讲到这你应该明白，对于有两个结果的重复 Bernoulli trial，我们用 beta prior/distribution 就能解决。那么加入我们有 n 个结果呢？比如抛的是骰子？
-这时候上面的 Bernoulli trial 就要变成有一次 trial 有 k 个可能的结果； Bernoulli distribution 就变成 multinomial distribution。而 beta distribution 所表述的先验分布，也要改写成一个多结果版本的先验分布。那就是 dirichlet distribution。
+这时候上面的 Bernoulli trial 就要变成有一次 trial 有 k 个可能的结果；Bernoulli distribution 就变成 multinomial distribution。而 beta distribution 所表述的先验分布，也要改写成一个多结果版本的先验分布。那就是 dirichlet distribution。
 均匀的先验分布 Beta(1,1)也要变成 k 个结果的 Dir(alpha/K)。dirichlet prior 也有共轭的性质，所以也是非常好计算的。
 简而言之，就是由 2 种外推到 k 种，而看待它们的视角并没有什么不同。
 他们有着非常非常非常相似的形式。
