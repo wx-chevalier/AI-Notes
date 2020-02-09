@@ -24,7 +24,7 @@
 3. [Eyedea Recognition: ](http://www.eyedea.cz/)致力于提供高阶的计算机视觉解决方案，主要包括对象检测与识别。其识别服务提供了常见的眼部、人脸、车辆、版权以及果盘识别，该 API 主要的价值在于对于对象、用户以及行为的快速识别。
 4. [Face++](https://www.faceplusplus.com/): 为应用提供面部的检测、识别以及分析服务，用户可以通过 API 调用训练模型，进行人脸检测、人脸识别、人脸分类、图像修正、创建人脸分组等等服务。
 5. [FaceMark](http://apicloud.me/apis/facemark/docs/):   提供了能够在正面照片中检测 68 个特征点以及侧面照片中检测 35 个特征点的服务。
-6. [FaceRect](http://apicloud.me/apis/facerect/demo/): 提供了非常强力与完整的面部检测的 API ，包括在正面照片与侧面照片中检测面部以及在单张照片中提取多个面部的功能；它还能将结果以 JSON 格式输出，包括检测到的眼睛、鼻子、嘴等等面部特征。
+6. [FaceRect](http://apicloud.me/apis/facerect/demo/): 提供了非常强力与完整的面部检测的 API，包括在正面照片与侧面照片中检测面部以及在单张照片中提取多个面部的功能；它还能将结果以 JSON 格式输出，包括检测到的眼睛、鼻子、嘴等等面部特征。
 7. [Google Cloud Vision API](https://cloud.google.com/vision/): 架构于著名的  [TensorFlow](http://www.tensorflow.org/) 之上，能够高效地学习与预测图片中的内容。它能够有助于用户搜索最爱的图片，并且获取图片中丰富的注释。它还能将图片按照船、狮子、埃菲尔铁塔等等不同的类别进行分类，并且对照片中不同表情的面部进行识别，除此之外它还能将图片中不同国家的语言打印出来。
 8. [IBM Watson Visual Recognition](https://www.ibm.com/watson/developercloud/visual-recognition.html): 该 API 能够辅助理解图片内容，包括图片标记、人脸识别、年龄估计以及性别判断，还能根据人脸相似度进行搜索。开发者能够在该服务的基础上结合自身业务特点定制出各式各样奇妙的产品。
 9. [Kairos](https://www.kairos.com/docs/api/): 该平台方便开发者快速添加 [情感分析](https://www.kairos.com/emotion-analysis-api) 与 [人脸识别](https://www.kairos.com/face-recognition-api) 的功能到应用与服务中。

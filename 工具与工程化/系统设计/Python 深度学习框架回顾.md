@@ -203,7 +203,7 @@ MXNet 致力于提供兼顾性能与灵活性的深度学习框架。
 
 #### **总结：**
 
-作为 Amazon 的钦定深度学习框架，MXNet 也算是性能最好的深度学习框架之一了。它提供了类似于 Theano 与 TensorFlow 的数据流图，并且支持多 GPU 配置 ，提供了类似于 Lasagne 与 Blocks 的相对高阶的模型构建块，还能运行在多种硬件设备上(包括移动设备)。Python 只是 MXNet 支持的多种语言之一，它还提供了基于 R, Julia, C++, Scala, Matlab 以及 JavaScript 的多种接口。如果你专注于效率，那么 MXNet 是个不二选择，不过你可能会要让自己习惯 MXNet 中很多的奇怪设定。
+作为 Amazon 的钦定深度学习框架，MXNet 也算是性能最好的深度学习框架之一了。它提供了类似于 Theano 与 TensorFlow 的数据流图，并且支持多 GPU 配置，提供了类似于 Lasagne 与 Blocks 的相对高阶的模型构建块，还能运行在多种硬件设备上(包括移动设备)。Python 只是 MXNet 支持的多种语言之一，它还提供了基于 R, Julia, C++, Scala, Matlab 以及 JavaScript 的多种接口。如果你专注于效率，那么 MXNet 是个不二选择，不过你可能会要让自己习惯 MXNet 中很多的奇怪设定。
 
 #### **优势：**
 
