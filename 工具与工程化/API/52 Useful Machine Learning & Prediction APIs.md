@@ -8,7 +8,7 @@
 
 ## 正文
 
-随着基于人工智能与机器学习的应用如雨后春笋般不断涌现，我们也看到有很多提供类似功能的 API 悄悄登上了舞台。API 是用于构建软件应用的程序、协议以及工具的组合；本文是对[2015 中这个列表](http://www.kdnuggets.com/2015/12/machine-learning-data-science-apis.html/2)的修正与完善，移除了部分被废弃的 API ；我们也添加了最近由  IBM、Google、Microsoft 这些大厂发布的 API 。所有的 API 可以根据应用场景进行分组：
+随着基于人工智能与机器学习的应用如雨后春笋般不断涌现，我们也看到有很多提供类似功能的 API 悄悄登上了舞台。API 是用于构建软件应用的程序、协议以及工具的组合；本文是对[2015 中这个列表](http://www.kdnuggets.com/2015/12/machine-learning-data-science-apis.html/2)的修正与完善，移除了部分被废弃的 API ；我们也添加了最近由  IBM、Google、Microsoft 这些大厂发布的 API。所有的 API 可以根据应用场景进行分组：
 
 - 人脸与图片识别。
 - 文本分析，自然语言处理以及情感分析。
@@ -45,7 +45,7 @@
 8. [Microsoft Cognitive Service - Text Analytics](https://www.microsoft.com/cognitive-services/en-us/text-analytics-api): 提供了情感检测、关键语句提取、主题以及语言分析等功能。该分组中其他的 API 还包括  [Bing 拼写检测](https://www.microsoft.com/cognitive-services/en-us/bing-spell-check-api)、[语言理解](https://www.microsoft.com/cognitive-services/en-us/language-understanding-intelligent-service-luis)、[文本分析](https://www.microsoft.com/cognitive-services/en-us/linguistic-analysis-api)、[Web 语言模型](https://www.microsoft.com/cognitive-services/en-us/web-language-model-api)等等。
 9. [nlpTools](http://nlptools.atrilla.net/web/api.php): 简单的采用 JSON 传输格式的提供了自然语言处理功能的 HTTP RESTful 服务。它能够提供对于在线媒体的情感分析与文本分类等服务。
 10. [Semantic Biomedical Tagger](http://docs.s4.ontotext.com/display/S4docs/Semantic+Biomedical+Tagger): 能够利用文本分析技术提取出文档中的 133 个生物医药学相关的实体词汇并且将它们链接到知识库中。
-11. [Thomson Reuters Open Calais™](http://www.opencalais.com/opencalais-api/): Calais 基于自然语言处理与机器学习技术，能够分类与关联文档中的实体信息(人名、地名、组织名等)、事实信息(员工 x 为公司 y 工作)、事件信息(员工 z 在 x 日被任命为 y 公司的主席) 。
+11. [Thomson Reuters Open Calais™](http://www.opencalais.com/opencalais-api/): Calais 基于自然语言处理与机器学习技术，能够分类与关联文档中的实体信息(人名、地名、组织名等)、事实信息(员工 x 为公司 y 工作)、事件信息(员工 z 在 x 日被任命为 y 公司的主席)。
 12. [Yactraq Speech2Topics](http://yactraq.com/) 提供了基于语音识别与自然语言处理技术的将语音内容转化为主题数据的云服务。
 
 # 语言翻译
@@ -62,7 +62,7 @@
 1. [Amazon Machine Learning](https://aws.amazon.com/documentation/machine-learning/): 寻找数据中的隐藏模式信息，典型的用法包括诈骗检测、天气预报、市场营销以及点击预测等。
 2. [BigML](https://bigml.com/api/): 提供基于云的机器学习与数据分析服务，允许用户以 HTTP 请求的方式自己创建数据源以及选择合适的模型来处理有监督或者无监督的机器学习任务。
 3. [Ersatz](http://www.ersatzlabs.com/documentation/api/): 基于 GPU 支持的深度神经网络提供的预测服务，允许用户以 API 方式进行交互。Ersatz 中还利用增强学习来合并不同的神经网络模型来提升整体的效果。
-4. [Google Cloud Prediction](https://cloud.google.com/prediction/docs/): 提供了用于构建机器学习模型的 RESTful API 。这些工具能够通过分析数据来提取出应用中数据的不同特征，譬如用户情感、垃圾信息检测、推荐系统等等。
+4. [Google Cloud Prediction](https://cloud.google.com/prediction/docs/): 提供了用于构建机器学习模型的 RESTful API。这些工具能够通过分析数据来提取出应用中数据的不同特征，譬如用户情感、垃圾信息检测、推荐系统等等。
 5. ![new](http://www.kdnuggets.com/images/newr.gif) [Google Cloud Speech API](https://cloud.google.com/speech/docs/apis): 能够提供超过 80 种语言的快速与准确的语音识别以及转化服务。
 6. [Guesswork.co](http://www.guesswork.co/): 能够为电商网站提供产品推荐引擎，Guesswork 可以通过基于 Google 预测 API  构建的语义化引擎来对用户行为进行预测。
 7. [Hu:toma:](https://www.hutoma.com/about.html) 帮助世界各地的开发者构建商用级别的深度学习聊天机器人。

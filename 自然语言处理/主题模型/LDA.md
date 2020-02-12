@@ -33,7 +33,7 @@ Q：**我们如何知道这枚硬币抛出字的概率？**我们知道，如果
 ![f(q|x) \sim q^{k}(1-q)^{n-k}f(q) ](//zhihu.com/equation?tex=f%28q%7Cx%29+%5Csim+q%5E%7Bk%7D%281-q%29%5E%7Bn-k%7Df%28q%29+)
 虽然我们不知道，也求不出那个 P(x)，但我们知道它是固定的，我们这时其实已经得到了一个求 f(q|x)的公式(只要在 n 次观测下确定了，f(q)确定了，那么 f(q|x)也确定了)。
 
-现在在来看 f(q)。显然，在我们对硬币一无所知的时候，我们应当认为硬币抛出字的概率 q 有可能在[0,1]上任意处取值。f(q)在这里取个均匀分布的密度函数是比较合适的，即 f(q) = 1 (for q in [0,1]) 。
+现在在来看 f(q)。显然，在我们对硬币一无所知的时候，我们应当认为硬币抛出字的概率 q 有可能在[0,1]上任意处取值。f(q)在这里取个均匀分布的密度函数是比较合适的，即 f(q) = 1 (for q in [0,1])。
 有些同学可能发现了，这里面![f(q|x) \sim q^{k}(1-q)^{n-k}](//zhihu.com/equation?tex=f%28q%7Cx%29+%5Csim+q%5E%7Bk%7D%281-q%29%5E%7Bn-k%7D)，**那个![q^{k}(1-q)^{n-k}](//zhihu.com/equation?tex=q%5E%7Bk%7D%281-q%29%5E%7Bn-k%7D)乘上[0,1]的均匀分布不就是一个 Beta distribution 么**？
 对，它就是一个 Beta distribution。Beta distribution 由两个参数 alpha、beta 确定；在这里对应的 alpha 等于 k+1，beta 等于 n+1-k。而**均匀分布的先验密度函数，就是那个 f(q)也可以被 beta distribution 描述**，这时 alpha 等于 1，beta 也等于 1。
 
