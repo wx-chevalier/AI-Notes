@@ -253,7 +253,7 @@ Robert Cohn was once middleweight boxi
 
 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-pmDVDfrT9au3YwNiiO0FwQ.png)
 
-不过我们做的更疯狂一点，既然模型可以根据上一个字符自动预测下一个字符，那我们何不让模型来自动构建一个完整的故事？ 我们在这里使用[Andrej Karpathy](http://karpathy.github.io/about/)创建的[Recurrent Neural Network implementation](https://github.com/karpathy/char-rnn)框架来进行实验，他也发表了一系列[关于如何使用 RNN 进行文档生成的博客](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)。我们还是使用 `The Sun Also Rises` 这篇文章，该文章包括大小写、标点符号等在内一共有 84 个不同的字符以及 362239 个词汇。这个数据集合的大小和真实环境中的应用文本相比还是很小的，为了尽可能模仿原作者的风格，最好的是能有数倍的文本进行训练，不过作为例子这边还是足够的。经过大概 100 次迭代之后，得到的结果是：
+不过我们做的更疯狂一点，既然模型可以根据上一个字符自动预测下一个字符，那我们何不让模型来自动构建一个完整的故事？我们在这里使用[Andrej Karpathy](http://karpathy.github.io/about/)创建的[Recurrent Neural Network implementation](https://github.com/karpathy/char-rnn)框架来进行实验，他也发表了一系列[关于如何使用 RNN 进行文档生成的博客](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)。我们还是使用 `The Sun Also Rises` 这篇文章，该文章包括大小写、标点符号等在内一共有 84 个不同的字符以及 362239 个词汇。这个数据集合的大小和真实环境中的应用文本相比还是很小的，为了尽可能模仿原作者的风格，最好的是能有数倍的文本进行训练，不过作为例子这边还是足够的。经过大概 100 次迭代之后，得到的结果是：
 
 ```
 hjCTCnhoofeoxelif edElobe negnk e iohehasenoldndAmdaI ayio pe e h’e btentmuhgehi bcgdltt. gey heho grpiahe.
