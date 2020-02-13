@@ -109,20 +109,18 @@
       - [TensorFlow in Practice](/深度学习/课程笔记/TensorFlow-in-Practice/README.md)
         
   - [自然语言处理](/自然语言处理/README.md)
-    - [BERT](/自然语言处理/BERT/README.md)
-      - [目标函数](/自然语言处理/BERT/目标函数.md)
-      - [输入表示](/自然语言处理/BERT/输入表示.md)
     - [Transformer](/自然语言处理/Transformer/README.md)
       
     - 主题模型
       - [LDA](/自然语言处理/主题模型/LDA.md)
     - [导论](/自然语言处理/导论/README.md)
       
-    - [文本 Hash](/自然语言处理/文本%20Hash/README.md)
-      - [URL 归一化](/自然语言处理/文本%20Hash/URL%20归一化.md)
     - [机器人问答](/自然语言处理/机器人问答/README.md)
       
     - 统计语言模型
+      - [BERT](/自然语言处理/统计语言模型/BERT/README.md)
+        - [目标函数](/自然语言处理/统计语言模型/BERT/目标函数.md)
+        - [输入表示](/自然语言处理/统计语言模型/BERT/输入表示.md)
       - [Word2Vec](/自然语言处理/统计语言模型/Word2Vec.md)
       - [统计语言模型](/自然语言处理/统计语言模型/统计语言模型.md)
       - [词表示](/自然语言处理/统计语言模型/词表示.md)

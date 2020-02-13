@@ -8,7 +8,7 @@
 
 ## 正文
 
-随着基于人工智能与机器学习的应用如雨后春笋般不断涌现，我们也看到有很多提供类似功能的 API 悄悄登上了舞台。API 是用于构建软件应用的程序、协议以及工具的组合；本文是对[2015 中这个列表](http://www.kdnuggets.com/2015/12/machine-learning-data-science-apis.html/2)的修正与完善，移除了部分被废弃的 API ；我们也添加了最近由  IBM、Google、Microsoft 这些大厂发布的 API。所有的 API 可以根据应用场景进行分组：
+随着基于人工智能与机器学习的应用如雨后春笋般不断涌现，我们也看到有很多提供类似功能的 API 悄悄登上了舞台。API 是用于构建软件应用的程序、协议以及工具的组合；本文是对[2015 中这个列表](http://www.kdnuggets.com/2015/12/machine-learning-data-science-apis.html/2)的修正与完善，移除了部分被废弃的 API；我们也添加了最近由  IBM、Google、Microsoft 这些大厂发布的 API。所有的 API 可以根据应用场景进行分组：
 
 - 人脸与图片识别。
 - 文本分析，自然语言处理以及情感分析。
@@ -68,7 +68,7 @@
 7. [Hu:toma:](https://www.hutoma.com/about.html) 帮助世界各地的开发者构建商用级别的深度学习聊天机器人。
 8. ![new](http://www.kdnuggets.com/images/newr.gif) [IBM Watson Conversation  ](https://www.ibm.com/watson/developercloud/conversation.html): 帮助构建可以部署在多个消息平台或者网页上的，能够理解自然语言的聊天机器人。其他类似的 API 还包括  [Dialog](https://www.ibm.com/watson/developercloud/dialog.html)、[Natural Language Classifier](https://www.ibm.com/watson/developercloud/nl-classifier.html)、[Personality Insights](https://www.ibm.com/watson/developercloud/personality-insights.html)、[Document Conversion](https://www.ibm.com/watson/developercloud/document-conversion.html)  以及  [Tone Analyzer](https://www.ibm.com/watson/developercloud/tone-analyzer.html).
 9. ![new](http://www.kdnuggets.com/images/newr.gif)  [IBM Watson Speech  ](https://www.ibm.com/watson/developercloud/speech-to-text.html): 包含了 [语音到文本](https://www.ibm.com/watson/developercloud/speech-to-text.html) 以及 [文本到语音](https://www.ibm.com/watson/developercloud/text-to-speech.html) 之间的转化功能(譬如创建语音控制的应用)。
-10. ![new](http://www.kdnuggets.com/images/newr.gif) [IBM Watson Data Insights](https://www.ibm.com/watson/): 该系列的服务包含了三个 API ：AlchemyData News、Discovery 以及  Tradeoff Analytics。AlchemyData 提供了对于大量的新闻、博客内容的高级别定向搜索与趋势分析的服务。Tradeoff Analytics 则是帮助用户在多目标优化时进行有效抉择。
+10. ![new](http://www.kdnuggets.com/images/newr.gif) [IBM Watson Data Insights](https://www.ibm.com/watson/): 该系列的服务包含了三个 API：AlchemyData News、Discovery 以及  Tradeoff Analytics。AlchemyData 提供了对于大量的新闻、博客内容的高级别定向搜索与趋势分析的服务。Tradeoff Analytics 则是帮助用户在多目标优化时进行有效抉择。
 11. [IBM Watson Retrieve and Rank](http://www.ibm.com/watson/developercloud/retrieve-rank.html):   开发者可以将自定义数据导入到服务中，并且使用相关的关联发算法来训练机器学习模型。服务的输出包括了一系列相关的文档与元数据，譬如某个联络中心的代理能够基于该服务提高呼叫的平均处理时间。
 12. [Imagga](https://imagga.com/solutions/auto-tagging.html): 能够为你的图片自动打标签，从而允许你的图片可以被关联搜索到。
 13. [indico](https://indico.io/docs): 提供了文本分析(情感分析、Twitter 参与度、表情分析等)以及 图片分析(面部表情识别、面部定位)。indico   的 API  可以免费试用并且不需要任何的训练数据。
