@@ -1,0 +1,731 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "1_nlp_basics_tokenization_segmentation.ipynb",
+      "provenance": [],
+      "collapsed_sections": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/dair-ai/nlp_fundamentals/blob/master/1_nlp_basics_tokenization_segmentation.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "H7gQFbUxOQtb",
+        "colab_type": "text"
+      },
+      "source": [
+        "# Fundamentals of NLP (Chapter 1): Tokenization, Lemmatization, Stemming, and Sentence Segmentation\n",
+        "\n",
+        "**Author:** Elvis Saravia ( [Twitter](https://twitter.com/omarsar0) | [LinkedIn](https://www.linkedin.com/in/omarsar/))\n",
+        "\n",
+        "![alt text](https://drive.google.com/uc?export=view&id=1cCumIkBf0sax3DGjLw9-eVxvSvn01jnQ)\n",
+        "\n",
+        "\n",
+        "Natural language processing (NLP) has made substantial advances in the past few years due to the success of [modern techniques](https://nlpoverview.com/) that are based on [deep learning](https://en.wikipedia.org/wiki/Deep_learning). With the rise of the popularity of NLP and the availability of different forms of large-scale data, it is now even more imperative to understand the inner workings of NLP techniques and concepts, from first principles, as they find their way into real-world usage and applications that affect society at large. Building intuitions and having a solid grasp of concepts are both important for coming up with innovative techniques, improving research, and building safe, human-centered AI and NLP technologies.\n",
+        "\n",
+        "In this first chapter, which is part of a series called **Fundamentals of NLP**, we will learn about some of the most important **basic concepts** that power NLP techniques used for research and building real-world applications. Some of these techniques include *lemmatization*, *stemming*, *tokenization*, and *sentence segmentation*. These are all important techniques to train efficient and effective NLP models. Along the way, we will also cover best practices and common mistakes to avoid when training and building NLP models. We also provide some exercises for you to keep practicing and exploring some ideas.\n",
+        "\n",
+        "\n",
+        "In every chapter, we will introduce the theoretical aspect and motivation of each concept covered. Then we will obtain hands-on experience by using bootstrap methods, industry-standard tools, and other open-source libraries to implement the different techniques. Along the way, we will also cover best practices, share important references, point out common mistakes to avoid when training and building NLP models, and discuss what lies ahead.\n",
+        "\n",
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Xy7qsKcOFaH2",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Tokenization\n",
+        "\n",
+        "![alt text](https://drive.google.com/uc?export=view&id=1h0ZNzohff1nUWMerrW50eDxY99ArRJTK)\n",
+        "\n",
+        "With any typical NLP task, one of the first steps is to tokenize your pieces of text into its individual words/tokens (process demonstrated in the figure above), the result of which is used to create so-called vocabularies that will be used in the langauge model you plan to build. This is actually one of the techniques that we will use the most throughout this series but here we stick to the basics.\n",
+        "\n",
+        "Below I am showing you an example of a simple tokenizer without any following any standards. All it does is extract tokens based on a white space seperator.\n",
+        "\n",
+        "Try to running the following code blocks."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Fn7xM8HKqAtf",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "## required libraries that need to be installed\n",
+        "%%capture\n",
+        "!pip install -U spacy\n",
+        "!pip install -U spacy-lookups-data\n",
+        "!python -m spacy download en_core_web_sm"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vUhMRrhFGfqJ",
+        "colab_type": "code",
+        "outputId": "b390df54-00c9-482b-efd3-d69d1b325318",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 102
+        }
+      },
+      "source": [
+        "## tokenizing a piecen of text\n",
+        "doc = \"I love coding and writing\"\n",
+        "for i, w in enumerate(doc.split(\" \")):\n",
+        "    print(\"Token \" + str(i) + \": \" + w)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Token 0: I\n",
+            "Token 1: love\n",
+            "Token 2: coding\n",
+            "Token 3: and\n",
+            "Token 4: writing\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Med-k0CeG8Ke",
+        "colab_type": "text"
+      },
+      "source": [
+        "All the code does is separate the sentence into individual tokens. The above simple block of code works well on the text I have provided. But typically, text is a lot noisier and complex than the example I used. For instance, if I used the word \"so-called\" is that one word or two words? For such scenarios, you may need more advanced approaches for tokenization. You can consider stripping away the \"-\" and splitting into two tokens or just combining into one token but this all depends on the problem and domain you are working on. \n",
+        "\n",
+        "Another problem with our simple algorithm is that it cannot deal with extra whitespaces in the text. In addition, how do we deal with cities like \"New York\" and \"San Francisco\"?\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "z0qxNrl191NS",
+        "colab_type": "text"
+      },
+      "source": [
+        "---\n",
+        "**Exercise 1**: Copy the code from above and add extra whitespaces to the string value assigned to the `doc` variable and identify the issue with the code. Then try to fix the issue. Hint: Use `text.strip()` to fix the problem."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "bx22yqPJQCQc",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "###  ENTER CODE HERE\n",
+        "\n",
+        "### "
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "QpYLDmLu9379",
+        "colab_type": "text"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "kSQwXKwrQAp0",
+        "colab_type": "text"
+      },
+      "source": [
+        "Tokenization can also come in different forms. For instance, more recently a lot of state-of-the-art NLP models such as [BERT](https://arxiv.org/pdf/1810.04805.pdf) make use of `subword` tokens in which frequent combinations of characters also form part of the vocabulary. This helps to deal with the so-called out of vocabulary (OOV) problem. We will discuss this in upcoming chapters, but if you are interested in reading more about this now, check this [paper](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/37842.pdf).\n",
+        "\n",
+        "To demonstrate how you can achieve more reliable tokenization, we are going to use [spaCy](https://spacy.io/), which is an impressive and robust Python library for natural language processing. In particular, we are going to use the built-in tokenizer found [here](https://spacy.io/usage/linguistic-features#sbd-custom).\n",
+        "\n",
+        "Run the code block below."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Cpinv_FjoyVx",
+        "colab_type": "code",
+        "outputId": "ed70d690-7a25-4076-fa1c-d483162b641c",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 136
+        }
+      },
+      "source": [
+        "## import the libraries\n",
+        "import spacy\n",
+        "## load the language model\n",
+        "nlp = spacy.load(\"en_core_web_sm\")\n",
+        "\n",
+        "## tokenization\n",
+        "doc = nlp(\"This is the so-called lemmatization\")\n",
+        "for token in doc:\n",
+        "    print(token.text)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "This\n",
+            "is\n",
+            "the\n",
+            "so\n",
+            "-\n",
+            "called\n",
+            "lemmatization\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Zl6JG5yirhn0",
+        "colab_type": "text"
+      },
+      "source": [
+        "All the code does is tokenize the text based on a pre-built language model.\n",
+        "\n",
+        "Try putting different running text into the `nlp()` part of the code above. The tokenizer is quiet robust and it includes a series of built-in rules that deal with exceptions and special cases such as those tokens that contain puctuations like \"`\" and \".\", \"-\", etc. You can even add your own rules, find out how [here](https://spacy.io/usage/linguistic-features#special-cases).\n",
+        "\n",
+        "In a later chapter of the series, we will do a deep dive on tokenization and the different tools that exist out there that can simplify and speed up the process of tokenization to build vocabularies. Some of the tools we will explore are the [Keras Tokenizer API](https://www.tensorflow.org/api_docs/python/tf/keras/preprocessing/text/Tokenizer) and [Hugging Face Tokenizer](https://github.com/huggingface/tokenizers).  \n",
+        "\n",
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Z-F16mbBkVXF",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Lemmatization\n",
+        "\n",
+        "![alt text](https://drive.google.com/uc?export=view&id=1_-wxBOU_JebjdG1sxoobKYRCtX3dVF0L)\n",
+        "\n",
+        "[Lemmatization](https://en.wikipedia.org/wiki/Lemmatisation) is the process where we take individual tokens from a sentence and we try to reduce them to their *base* form. The process that makes this possible is having a vocabulary and performing morphological analysis to remove inflectional endings. The output of the lemmatization process (as shown in the figure above) is the *lemma* or the base form of the word. For instance, a lemmatization process reduces the inflections, \"am\", \"are\", and \"is\", to the base form, \"be\". Take a look at the figure above for a full example and try to understand what it's doing.\n",
+        "\n",
+        "Lemmatization is helpful for normalizing text for text classification tasks or search engines, and a variety of other NLP tasks such as [sentiment classification](https://en.wikipedia.org/wiki/Sentiment_analysis). It is particularly important when dealing with complex languages like Arabic and Spanish.\n",
+        "\n",
+        "To show how you can achieve lemmatization and how it works, we are going to use [spaCy](https://spacy.io/) again. Using the spaCy [Lemmatizer](https://spacy.io/api/lemmatizer#_title) class, we are going to convert a few words into their lemmas. \n",
+        "\n",
+        "Below I show an example of how to lemmatize a sentence using spaCy. Try to run the block of code below and inspect the results."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "i5QgWANL3JbD",
+        "colab_type": "code",
+        "outputId": "601bd079-db04-4897-8431-fad4630d358f",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 102
+        }
+      },
+      "source": [
+        "## import the libraries\n",
+        "from spacy.lemmatizer import Lemmatizer\n",
+        "from spacy.lookups import Lookups\n",
+        "\n",
+        "## lemmatization\n",
+        "doc = nlp(u'I love coding and writing')\n",
+        "for word in doc:\n",
+        "    print(word.text, \"=>\", word.lemma_)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "I => -PRON-\n",
+            "love => love\n",
+            "coding => code\n",
+            "and => and\n",
+            "writing => writing\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lgDcWgMvOFqA",
+        "colab_type": "text"
+      },
+      "source": [
+        "The results above look as expected. The only lemma that looks off is the `-PRON-` returned for the \"I\" token. According to the spaCy documentation, \"*This is in fact expected behavior and not a bug. Unlike verbs and common nouns, there’s no clear base form of a personal pronoun. Should the lemma of “me” be “I”, or should we normalize person as well, giving “it” — or maybe “he”? spaCy’s solution is to introduce a novel symbol, -PRON-, which is used as the lemma for all personal pronouns.*\"\n",
+        "\n",
+        "Check out more about this in the [spaCy documentation](https://spacy.io/api/annotation#lemmatization)."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Zc6wkiW-ANT6",
+        "colab_type": "text"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "mUB3wRFhkczV",
+        "colab_type": "text"
+      },
+      "source": [
+        "**Exercise 2:** Try the code above with different sentences and see if you get any unexpected results. Also, try adding punctuations and extra whitespaces which are more common in natural language. What happens?"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "cnfPOGgYkr3h",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "### ENTER CODE HERE\n",
+        "\n",
+        "###"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ALKZxh54APho",
+        "colab_type": "text"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cOdA8GxMta7N",
+        "colab_type": "text"
+      },
+      "source": [
+        "We can also create our own custom lemmatizer as shown below (*code adopted directly from the spaCy website*):\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "xwtdub8er-sU",
+        "colab_type": "code",
+        "outputId": "f36994b8-aba0-4411-b010-f192bb86b2fd",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 68
+        }
+      },
+      "source": [
+        "## lookup tables\n",
+        "lookups = Lookups()\n",
+        "lookups.add_table(\"lemma_rules\", {\"noun\": [[\"s\", \"\"]]})\n",
+        "lemmatizer = Lemmatizer(lookups)\n",
+        "\n",
+        "words_to_lemmatize = [\"cats\", \"brings\", \"sings\"]\n",
+        "\n",
+        "for w in words_to_lemmatize:\n",
+        "    lemma = lemmatizer(w, \"NOUN\")\n",
+        "    print(lemma)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['cat']\n",
+            "['bring']\n",
+            "['sing']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "NNYYuCC3GqPG",
+        "colab_type": "text"
+      },
+      "source": [
+        "In the example code above, we added one *lemma rule*, which aims to identify plural nouns and remove the plurality, i.e. remove the \"s\". There are different types of rules you can add here. I encourage you to head over to the [spaCy documentation](https://spacy.io/api/lemmatizer) to learn a bit more."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ZzL2K-sU-e3M",
+        "colab_type": "text"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dcaLqxPX5CJa",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Stemming\n",
+        "\n",
+        "![alt text](https://drive.google.com/uc?export=view&id=1XcK3OzdPd2ywO8Y4G6vfjuIFthPce3FH)\n",
+        "\n",
+        "Stemming is just a simpler version of lemmatization where we are interested in stripping the *suffix* at the end of the word. When stemming we are interesting in reducing the *inflected* or *derived* word to it's base form. Take a look at the figure above to get some intuition about the process.\n",
+        "\n",
+        "Both the stemming and the lemmatization processes involve [*morphological analysis*](https://en.wikipedia.org/wiki/Morphology_(linguistics)) where the stems and affixes (called the *morphemes*) are extracted and used to reduce inflections to their base form. For instance, the word *cats* has two morphemes, *cat* and *s*, the *cat* being the stem and the *s* being the affix representing plurality.\n",
+        "\n",
+        "spaCy doesn't support stemming so for this part we are going to use [NLTK](https://www.nltk.org/), which is another fantastic Python NLP library. \n",
+        "\n",
+        "The simple example below demonstrates how you can stem words in a piece of text. Go ahead and run the code to see what happens."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "0lVd74BE5BXK",
+        "colab_type": "code",
+        "outputId": "59cff187-333c-4de0-d4e9-f40a5f8b89da",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 119
+        }
+      },
+      "source": [
+        "from nltk.stem.snowball import SnowballStemmer\n",
+        "\n",
+        "stemmer = SnowballStemmer(language='english')\n",
+        "doc = 'I prefer not to argue'\n",
+        "for token in doc.split(\" \"):\n",
+        "    print(token, '=>' , stemmer.stem(token))"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "I => i\n",
+            "prefer => prefer\n",
+            "not => not\n",
+            "to => to\n",
+            " => \n",
+            "argue => argu\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "pdbxwdMw8AAD",
+        "colab_type": "text"
+      },
+      "source": [
+        "Notice how the stemmed version of the word \"argue\" is \"argu\". That's because we can have derived words like \"argument\", \"arguing\", and \"argued\"."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "RBG0l7CsBhAz",
+        "colab_type": "text"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Fa5xGWDVBild",
+        "colab_type": "text"
+      },
+      "source": [
+        "**Exercise 3:** Try to use different sentences in the code above and observe the effect of the stemmer. By the way, there are other stemmers such as the Porter stemmer in the NLTK library. Each stemmer behaves differently so the output may vary. Feel free to try the [Porter stemmer](https://www.nltk.org/howto/stem.html) from the NLTK library and inspect the output of the different stemmers."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Vow0MVZxmQQq",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "###  ENTER CODE HERE\n",
+        "\n",
+        "###"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "zIqegtJUjJeL",
+        "colab_type": "text"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "KjOkmpOn9QGL",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Sentence Segmentation\n",
+        "\n",
+        "![alt text](https://drive.google.com/uc?export=view&id=1aeHpGNWdnA_VdP0VAu7sO1OGW2eusgHH)\n",
+        "\n",
+        "When dealing with text, it is always common that we need to break up text into its individual sentences. That is what is known as sentence segmentation: the process of obtaining the individual sentences from a text corpus. The resulting segments can then be analyzed individually with the techniques that we previously learned.\n",
+        "\n",
+        "In the spaCy library, we have the choice to use a built-in sentence segmenter (trained on statistical models) or build your own rule-based method. In fact, we will cover a few examples to demonstrate the difficultiness of this problem."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "za0nOPqPAlph",
+        "colab_type": "text"
+      },
+      "source": [
+        "Below I created a naive implementation of a sentence segmentation algorithm without using any kind of special library. You can see that my code increases with complexity (bugs included) as I start to consider more rules. This sort of boostrapped or rule-based approach is sometimes your only option depending on the language you are working with or the availability of linguistic resources. \n",
+        "\n",
+        "Run the code below to apply a simple algorithm for sentence segmentation."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "sJc-bB8E9PVg",
+        "colab_type": "code",
+        "outputId": "b23fa1fc-30ce-45d0-acb1-781fb761a438",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 34
+        }
+      },
+      "source": [
+        "## using a simple rule-based segmenter with native python code\n",
+        "text = \"I love coding and programming. I also love sleeping!\"\n",
+        "\n",
+        "current_position = 0\n",
+        "cursor = 0\n",
+        "sentences = []\n",
+        "for c in text:\n",
+        "    if c == \".\" or c == \"!\":\n",
+        "        sentences.append(text[current_position:cursor+1])\n",
+        "        current_position = cursor + 2\n",
+        "    cursor+=1\n",
+        "\n",
+        "print(sentences)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['I love coding and programming.', 'I also love sleeping!']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "dNyddCAMmnv6",
+        "colab_type": "text"
+      },
+      "source": [
+        "Our sentence segmenter only segments sentences when it meets a sentence boundary which in this case is either a \".\" or a \"!\". It's not the cleanest of code but it shows how difficult the task can get as we are presented with richer text that include more diverse special characters. One problem with my code is that I am not able to differentiate between abbreviations like Dr. and numbers like 0.4. You may be able to create your own complex regular expression (we will get into this in the second chapter) to deal with these special cases but it still requires a lot of work and debugging. Luckily for us, there are libraries like spaCy and NLTK which help with this sort of preprocessing tasks.\n",
+        "\n",
+        "Let's try the sentence segmentation provided by spaCy. Run the code below and inspect the results."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "3_M1vypFBj8Y",
+        "colab_type": "code",
+        "outputId": "934c5fda-776a-4634-e1cc-3430cbf8990e",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 51
+        }
+      },
+      "source": [
+        "doc = nlp(\"I love coding and programming. I also love sleeping!\")\n",
+        "for sent in doc.sents:\n",
+        "    print(sent.text)"
+      ],
+      "execution_count": 0,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "I love coding and programming.\n",
+            "I also love sleeping!\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "WWcJ6EsVEGQU",
+        "colab_type": "text"
+      },
+      "source": [
+        "Here is a [link](https://spacy.io/usage/linguistic-features#sbd-custom) showing how you can create your own rule-based strategy for sentence segmentation using spaCy. This is particulary useful if you are working with domain-specific text which is full with noisy information and is not as standardized as text found on a factual Wiki page or news website."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "gImYrbxqHtGR",
+        "colab_type": "text"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "k-lomu0YHvBv",
+        "colab_type": "text"
+      },
+      "source": [
+        "**Exercise 4:** For practise, try to create your own sentence segmentation algorithm using spaCy (try this [link](https://spacy.io/usage/linguistic-features#sbd-custom) for help and ideas). At this point, I am encouraging you to look at documentation which is a huge part of learning in-depth about all the concepts we will cover in this series. Research is a huge part of the learning process."
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_Wys2htLnZYC",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "###  ENTER CODE HERE\n",
+        "\n",
+        "###"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "fTVD0ls4HzVu",
+        "colab_type": "text"
+      },
+      "source": [
+        "---"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "lnboskbe96z4",
+        "colab_type": "text"
+      },
+      "source": [
+        "## How to use with Machine Learning?\n",
+        "\n",
+        "When you are working with textual information, it is imperative to clean your data so as to be able to train more accurate machine learning (ML) models. \n",
+        "\n",
+        "One of the reasons why transformations like lemmatization and stemming are useful is for normalizing the text before you feed the output to an ML algorithm. For instance, if you are building a sentiment analysis model how can you tell the model that \"smiling\" and \"smile\" refer to the same concept? You may require stemming if you are using [TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) features combined with a machine learning algorithm such as [Naive Bayes classifier](https://en.wikipedia.org/wiki/Naive_Bayes_classifier). As you may suspect already, this also requires a really good tokenizer to come up with the features, especially when work on noisy pieces of text that could be generated from users in a social media site.\n",
+        "\n",
+        "With a wide variety of NLP tasks, one of the first big steps in the NLP pipeline is to create a vocabulary that will eventually be used to determine the inputs for the model representing the features. In modern NLP techniques such as pretrained language models, you need to process a text corpus that require proper and more sophisticated sentence segmentation and tokenization as we discussed before. We will talk more about these methods in due time. For now, the basics presented here are a good start into the world of practical NLP. Spend some time reading up on all the concepts mentioned here and take notes. I will guide through the series on what are the important parts and provide you with relevant links but you can also conduct your own additional research on the side and even improve this notebook. \n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "34h5bTlNdVH1",
+        "colab_type": "text"
+      },
+      "source": [
+        "## Final Words and What's Next?\n",
+        "In this chapter we learned some fundamental concepts of NLP such as lemmatization, stemming, sentence segmentations, and tokenization. In the next chapter we will cover topics such as **word normalization**, **regular expressions**, **part of speech** and **edit distance**, all very important topics when working with information retrieval and NLP systems."
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4-o4w9vpPHZz",
+        "colab_type": "text"
+      },
+      "source": [
+        "## References\n",
+        "- [Model Languages from spaCyu](https://spacy.io/usage/models#languages)\n",
+        "- [Speech and Language Processing - Jurafsky and Martin](https://web.stanford.edu/~jurafsky/slp3/)\n",
+        "- [Python for NLP: Tokenization, Stemming, and Lemmatization with SpaCy Library](https://stackabuse.com/python-for-nlp-tokenization-stemming-and-lemmatization-with-spacy-library/)\n",
+        "- [Stemming](https://en.wikipedia.org/wiki/Stemming)\n",
+        "- [Lemmatizer](https://spacy.io/api/lemmatizer#init)\n",
+        "- [Stanford IR Book](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html)\n",
+        "- [Linguistic Features by spaCy](https://spacy.io/usage/linguistic-features#sbd-custom)\n"
+      ]
+    }
+  ]
+}
