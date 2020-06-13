@@ -4,7 +4,7 @@
 
 ```sh
 docker pull rothnic/anaconda-notebook
-docker run - p 8888: 8888 - i - t rothnic/anaconda-notebook
+docker run -p 8888: 8888 - i - t rothnic/anaconda-notebook
 ```
 
 安装完毕之后可以使用如下命令验证安装是否完毕:
@@ -36,10 +36,9 @@ conda create - -name bunnies python = 3 astroid babel
 conda info - -envs
 conda environments:
 
-
-          snowflakes          * /home/username/miniconda/envs/snowflakes
-          bunnies               / home/username/miniconda/envs/bunnies
-          root                  / home/username/miniconda
+snowflakes          * /home/username/miniconda/envs/snowflakes
+bunnies               / home/username/miniconda/envs/bunnies
+root                  / home/username/miniconda
 ```
 
 当我们切换到某个具体的环境后，可以安装依赖包了:
