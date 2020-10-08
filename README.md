@@ -6,9 +6,7 @@
 
 # Nav | 导航
 
-本系列目前分为[机器学习](./机器学习)、[自然语言处理](./自然语言处理)等部分。如果您是新人，建议从[机器学习](./机器学习)篇开始阅读，也可以在[数理统计](./数理统计)篇中夯实理论基础。如果想了解更多实践操作，建议阅读[深度学习](./深度学习)、[自然语言处理](./自然语言处理)、[工具与工程化](./工具与工程化)等部分。
-
-最后，如果你想了解数据结构与传统算法，那么可以参考[数据结构与算法](http://ngte-se.gitbook.io)。
+本系列目前分为[机器学习](https://github.com/wx-chevalier/MachineLearning-Series)、[自然语言处理](https://github.com/wx-chevalier/NLP-Series)等部分。如果您是新人，建议从[机器学习](./机器学习)篇开始阅读，也可以在[数理统计](https://github.com/wx-chevalier/Mathematics-Series)篇中夯实理论基础。如果想了解更多实践操作，建议阅读[深度学习](https://github.com/wx-chevalier/DeepLearning-Series)、[自然语言处理](./自然语言处理)、[工具与工程化](https://github.com/wx-chevalier/AI-Toolkits-Series)（[TensorFlow Series](https://github.com/wx-chevalier/TensorFlow-Series)）等部分。
 
 # Preface | 前言
 
