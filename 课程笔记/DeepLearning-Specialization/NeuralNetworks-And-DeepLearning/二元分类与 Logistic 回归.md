@@ -4,8 +4,6 @@
 
 本部分将会介绍神经网格构建与训练的基础知识；一般来说，网络的计算过程由正向传播(Forward Propagation)与反向传播(Back Propagation)两部分组成。这里我们将会以简单的 Logistic 回归为例，讲解如何解决常见的二元分类(Binary Classification)问题。这里我们将会尝试训练出简单的神经网络以自动识别某个图片是否为猫，为猫则输出 1，否则输出 0。计算机中的图片往往表示为红、绿、蓝三个通道的像素值；如果我们的图像是 64 _ 64 像素值大小，我们的单张图片的特征维度即为 64 _ 64 \* 3 = 12288，即可以使用 $n_x = 12288$ 来表示特征向量的维度。
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/8/2/WX20170814-203645.png)
-
 # 深度学习的标准术语约定
 
 ## 神经网络的符号
@@ -45,8 +43,6 @@
 ## 深度学习的表示
 
 在深度学习中，使用结点代表输入、激活函数或者数据，边代表权重或者偏差，下图即是两个典型的神经网络：
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/8/2/WX20170814-211522.png)
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/8/2/WX20170814-211546.png)
 
 # Logistic 回归
 
