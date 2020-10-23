@@ -22,12 +22,13 @@
   - 课程笔记
     - [DeepLearning Specialization](/课程笔记/DeepLearning-Specialization/README.md)
       - NeuralNetworks And DeepLearning
-        - [二元分类与 Logistic 回归](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/二元分类与%20Logistic%20回归.md)
-        - [基于 Logistic 回归的图像分类实践](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/基于%20Logistic%20回归的图像分类实践.md)
-        - [基于 Numpy 的 Python 向量操作](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/基于%20Numpy%20的%20Python%20向量操作.md)
-        - [梯度下降与向量化操作](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/梯度下降与向量化操作.md)
-        - [浅层神经网络](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/浅层神经网络.md)
-        - [神经网络、有监督学习与深度学习](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/神经网络、有监督学习与深度学习.md)
+        - Week1
+          - [二元分类与 Logistic 回归](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/二元分类与%20Logistic%20回归.md)
+          - [基于 Logistic 回归的图像分类实践](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/基于%20Logistic%20回归的图像分类实践.md)
+          - [基于 Numpy 的 Python 向量操作](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/基于%20Numpy%20的%20Python%20向量操作.md)
+          - [梯度下降与向量化操作](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/梯度下降与向量化操作.md)
+          - [浅层神经网络](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/浅层神经网络.md)
+          - [神经网络、有监督学习与深度学习](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/神经网络、有监督学习与深度学习.md)
     - [FastAI](/课程笔记/FastAI/README.md)
       
     - [TensorFlow in Practice](/课程笔记/TensorFlow-in-Practice/README.md)

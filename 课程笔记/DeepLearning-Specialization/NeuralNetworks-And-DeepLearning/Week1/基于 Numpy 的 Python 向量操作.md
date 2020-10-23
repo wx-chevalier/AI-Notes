@@ -1,5 +1,3 @@
-![default](https://user-images.githubusercontent.com/5803001/44629091-c0c56180-a97c-11e8-8aff-52d51a8aec1f.jpg)
-
 # BroadCasting
 
 Numpy 会自动进行矩阵扩展操作以适应指定的矩阵运算
