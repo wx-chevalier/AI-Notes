@@ -1,8 +1,36 @@
-![default](https://user-images.githubusercontent.com/5803001/44629093-c753d900-a97c-11e8-8c16-9d0e96b149aa.png)
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![license: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey.svg)][license-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/wx-chevalier/AI-Series">
+    <img src="header.svg" alt="Logo" style="width: 100vw;height: 400px" />
+  </a>
+
+  <p align="center">
+    <a href="https://ng-tech.icu/AI-Series"><strong>在线阅读 >> </strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/wx-chevalier/Awesome-CheatSheets">速览手册</a>
+    ·
+    <a href="https://github.com/wx-chevalier">代码实践</a>
+    ·
+    <a href="https://github.com/wx-chevalier/Awesome-Lists">参考资料</a>
+
+  </p>
+</p>
+
+<!-- ABOUT THE PROJECT -->
 
 # AI Series | 人工智能与深度学习实战
 
 在本系列中，你可能会接触到数据挖掘、机器学习、深度学习、自然语言处理、人工智能等很多的概念。值得说明的是，鉴于很多的算法实现是以文字结合代码介绍为最佳，因此工具实践篇中的大部分内容是以 Juypter Notebook 的形式放在该仓库中，并且在 Colab 中进行浏览、编辑与实验。
+
+![default](https://user-images.githubusercontent.com/5803001/44629093-c753d900-a97c-11e8-8c16-9d0e96b149aa.png)
 
 # Nav | 导航
 
@@ -68,3 +96,17 @@
 
 - https://github.com/KeKe-Li/tutorial
 - https://github.com/fengdu78/Data-Science-Notes/blob/master/README.md
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/AI-Series.svg?style=flat-square
+[contributors-url]: https://github.com/wx-chevalier/AI-Series/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/AI-Series.svg?style=flat-square
+[forks-url]: https://github.com/wx-chevalier/AI-Series/network/members
+[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/AI-Series.svg?style=flat-square
+[stars-url]: https://github.com/wx-chevalier/AI-Series/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/AI-Series.svg?style=flat-square
+[issues-url]: https://github.com/wx-chevalier/AI-Series/issues
+[license-shield]: https://img.shields.io/github/license/wx-chevalier/AI-Series.svg?style=flat-square
+[license-url]: https://github.com/wx-chevalier/AI-Series/blob/master/LICENSE.txt
