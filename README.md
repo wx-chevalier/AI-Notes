@@ -32,7 +32,7 @@
 
 在本系列中，你可能会接触到数据挖掘、机器学习、深度学习、自然语言处理、人工智能等很多的概念。值得说明的是，鉴于很多的算法实现是以文字结合代码介绍为最佳，因此工具实践篇中的大部分内容是以 Juypter Notebook 的形式放在该仓库中，并且在 Colab 中进行浏览、编辑与实验。
 
-![default](https://user-images.githubusercontent.com/5803001/44629093-c753d900-a97c-11e8-8c16-9d0e96b149aa.png)
+![default](https://pic.imgdb.cn/item/611143c55132923bf8ccc10d.png)
 
 # Nav | 导航
 
