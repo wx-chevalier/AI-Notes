@@ -9,20 +9,20 @@
     
   - [6 自然语言处理](/自然语言处理/README.md)
     
-  - [7 行业应用](/行业应用/README.md)
+  - [7 行业应用 [4]](/行业应用/README.md)
     - [7.1 RPA](/行业应用/RPA/README.md)
       
     - [7.2 推荐系统](/行业应用/推荐系统/README.md)
       
-    - 7.3 无人驾驶
+    - 7.3 无人驾驶 [1]
       - [7.3.1 概述](/行业应用/无人驾驶/概述.md)
-    - [7.4 社会网络](/行业应用/社会网络/README.md)
+    - [7.4 社会网络 [1]](/行业应用/社会网络/README.md)
       - [7.4.1 社团发现](/行业应用/社会网络/社团发现/README.md)
         
-  - 8 课程笔记
-    - [8.1 DeepLearning Specialization](/课程笔记/DeepLearning-Specialization/README.md)
-      - 8.1.1 NeuralNetworks And DeepLearning
-        - 8.1.1.1 Week1
+  - 8 课程笔记 [4]
+    - [8.1 DeepLearning Specialization [1]](/课程笔记/DeepLearning-Specialization/README.md)
+      - 8.1.1 NeuralNetworks And DeepLearning [1]
+        - 8.1.1.1 Week1 [6]
           - [8.1.1.1.1 二元分类与 Logistic 回归](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/二元分类与%20Logistic%20回归.md)
           - [8.1.1.1.2 基于 Logistic 回归的图像分类实践](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/基于%20Logistic%20回归的图像分类实践.md)
           - [8.1.1.1.3 基于 Numpy 的 Python 向量操作](/课程笔记/DeepLearning-Specialization/NeuralNetworks-And-DeepLearning/Week1/基于%20Numpy%20的%20Python%20向量操作.md)
