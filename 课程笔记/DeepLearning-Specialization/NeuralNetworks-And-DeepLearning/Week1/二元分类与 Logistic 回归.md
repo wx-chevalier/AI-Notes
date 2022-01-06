@@ -22,7 +22,7 @@
 - $x^{(i)} \in R^{n_x}$：第 $i$ 个用例的特征向量，表示为列向量。
 - $Y \in R^{n_y \times m}$：标签矩阵。
 - $y^{(i)} \in R^{n_y}$：第 $i$ 个用例的输出标签。
-- $W^{[l]} \in R^{number \, of \, units \, in \, next \, layer \times number \, of \, unites \, in \, the \, previous \, layer}$：第 $l$ 层与第 $l+1$ 层之间的权重矩阵，在简单的二元分类且仅有输入层与输出层的情况下，其维度就是 $ 1 \times n_x$。
+- $W^{[l]} \in R^{number \, of \, units \, in \, next \, layer \times number \, of \, unites \, in \, the \, previous \, layer}$：第 $l$ 层与第 $l+1$ 层之间的权重矩阵，在简单的二元分类且仅有输入层与输出层的情况下，其维度就是 $ 1 \times n_x$。
 - $b^{[l]} \in R^{number \, of \, units \, in \, next \, layer}$：第 $l$ 层的偏差矩阵。
 - $\hat{y} \in R^{n_y}$：输出的预测向量，也可以表示为 $a^{[L]}$，其中 $L$ 表示网络中的总层数。
 
@@ -72,12 +72,12 @@ $$
 L(\hat{y},y) = -(ylog\hat{y} + (1-y)log(1-\hat{y}))
 $$
 
-我们的优化目标是希望损失函数值越小越好，这里我们考虑两个极端情况，当 $y = 1$ 时，损失函数值为 $-log\hat{y}$；此时如果 $\hat{y} = 1$，则损失函数为 0。反之如果 $\hat{y} = 0$，则损失函数值趋近于无穷大。当 $y = 0$ 时，损失函数值为 $-log(1-\hat{y})$；如果  $\hat{y} = 1$，则损失函数值也变得无穷大。这样我们可以将 Logistic 回归中总的代价函数定义为：
+我们的优化目标是希望损失函数值越小越好，这里我们考虑两个极端情况，当 $y = 1$ 时，损失函数值为 $-log\hat{y}$；此时如果 $\hat{y} = 1$，则损失函数为 0。反之如果 $\hat{y} = 0$，则损失函数值趋近于无穷大。当 $y = 0$ 时，损失函数值为 $-log(1-\hat{y})$；如果 $\hat{y} = 1$，则损失函数值也变得无穷大。这样我们可以将 Logistic 回归中总的代价函数定义为：
 
 $$
 J(w,b) =
 \frac{1}{m}\sum*{i=1}^mL(\hat{y}^{(i)} - y^{(i)}) =
--\frac{1}{m} \sum*{i=1}^m [y^{(i)}log\hat{y}^{(i)} + (1-y^{(i)})log(1-\hat{y}^{(i)})]
+-\frac{1}{m} \sum*{i=1}^m [y^{(i)}log\hat{y}^{(i)} + (1-y^{(i)})log(1-\hat{y}^{(i)})]
 $$
 
 在深度学习的模型训练中我们常常会接触到损失函数(Loss Function)与代价函数(Cost Function)的概念，其中损失函数代指单个训练用例的错误程度，而代价函数往往是整个训练集中所有训练用例的损失函数值的平均。
