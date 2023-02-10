@@ -36,4 +36,3 @@
       
     - [7.5 周志华 机器学习](/999.参考资料/周志华-机器学习/README.md)
       
-  - [8 INTRODUCTION](/INTRODUCTION.md)
