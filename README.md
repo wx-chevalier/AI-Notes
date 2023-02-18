@@ -12,7 +12,7 @@
   </a>
 
   <p align="center">
-    <a href="https://wx-chevalier.github.io/AI-Series"><strong>在线阅读 >> </strong></a>
+    <a href="https://ng-tech.icu/books/AI-Series"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
     <a href="https://github.com/wx-chevalier/Awesome-CheatSheets">速览手册</a>
@@ -90,7 +90,7 @@
 
 ![技术视野](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/yTSKdH.png)
 
-您还可以前往 [NGTE Books](https://wx-chevalier.github.io/books/) 主页浏览包含知识体系、编程语言、软件工程、模式与架构、Web 与大前端、服务端开发实践与工程架构、分布式基础架构、人工智能与深度学习、产品运营与创业等多类目的书籍列表：
+您还可以前往 [NGTE Books](https://ng-tech.icu/books-gallery/) 主页浏览包含知识体系、编程语言、软件工程、模式与架构、Web 与大前端、服务端开发实践与工程架构、分布式基础架构、人工智能与深度学习、产品运营与创业等多类目的书籍列表：
 
 ![NGTE Books](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/19uXtI.png)
 
