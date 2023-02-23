@@ -9,6 +9,7 @@
 <p align="center">
   <a href="https://github.com/wx-chevalier/AI-Series">
     <img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/header.svg" alt="Logo" style="width: 100vw;height: 400px" />
+    <img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230222101814.png" alt="Logo" style="height: 400px" />
   </a>
 
   <p align="center">
