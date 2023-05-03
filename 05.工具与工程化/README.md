@@ -1,1 +1,1 @@
-> 该部分迁移到了独立仓库 [AI-Toolkits-Series](https://github.com/wx-chevalier/AI-Toolkits-Series)。
+> 该部分迁移到了独立仓库 [AI-Toolkits-Notes](https://github.com/wx-chevalier/AI-Toolkits-Notes)。

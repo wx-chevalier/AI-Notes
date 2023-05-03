@@ -7,13 +7,13 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/wx-chevalier/AI-Series">
+  <a href="https://github.com/wx-chevalier/AI-Notes">
     <img src="https://assets.ng-tech.icu/item/header.svg" alt="Logo" style="width: 100vw;height: 400px" />
     <img src="https://assets.ng-tech.icu/item/20230222101814.png" alt="Logo" style="height: 400px" />
   </a>
 
   <p align="center">
-    <a href="https://ng-tech.icu/books/AI-Series"><strong>在线阅读 >> </strong></a>
+    <a href="https://ng-tech.icu/books/AI-Notes"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
     <a href="https://github.com/wx-chevalier">代码案例</a>
@@ -33,7 +33,7 @@
 
 # Nav | 导航
 
-本系列目前分为[机器学习](https://github.com/wx-chevalier/MachineLearning-Series)、[自然语言处理](https://github.com/wx-chevalier/NLP-Series)等部分。如果您是新人，建议从[机器学习](./机器学习)篇开始阅读，也可以在[数理统计](https://github.com/wx-chevalier/Mathematics-Series)篇中夯实理论基础。如果想了解更多实践操作，建议阅读[深度学习](https://github.com/wx-chevalier/DeepLearning-Series)、[自然语言处理](./自然语言处理)、[工具与工程化](https://github.com/wx-chevalier/AI-Toolkits-Series)（[TensorFlow Series](https://github.com/wx-chevalier/TensorFlow-Series)）等部分。
+本系列目前分为[机器学习](https://github.com/wx-chevalier/MachineLearning-Notes)、[自然语言处理](https://github.com/wx-chevalier/NLP-Notes)等部分。如果您是新人，建议从[机器学习](./机器学习)篇开始阅读，也可以在[数理统计](https://github.com/wx-chevalier/Mathematics-Notes)篇中夯实理论基础。如果想了解更多实践操作，建议阅读[深度学习](https://github.com/wx-chevalier/DeepLearning-Notes)、[自然语言处理](./自然语言处理)、[工具与工程化](https://github.com/wx-chevalier/AI-Toolkits-Notes)（[TensorFlow Series](https://github.com/wx-chevalier/TensorFlow-Notes)）等部分。
 
 # Preface | 前言
 
@@ -99,13 +99,13 @@
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/AI-Series.svg?style=flat-square
-[contributors-url]: https://github.com/wx-chevalier/AI-Series/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/AI-Series.svg?style=flat-square
-[forks-url]: https://github.com/wx-chevalier/AI-Series/network/members
-[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/AI-Series.svg?style=flat-square
-[stars-url]: https://github.com/wx-chevalier/AI-Series/stargazers
-[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/AI-Series.svg?style=flat-square
-[issues-url]: https://github.com/wx-chevalier/AI-Series/issues
-[license-shield]: https://img.shields.io/github/license/wx-chevalier/AI-Series.svg?style=flat-square
-[license-url]: https://github.com/wx-chevalier/AI-Series/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/AI-Notes.svg?style=flat-square
+[contributors-url]: https://github.com/wx-chevalier/AI-Notes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/AI-Notes.svg?style=flat-square
+[forks-url]: https://github.com/wx-chevalier/AI-Notes/network/members
+[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/AI-Notes.svg?style=flat-square
+[stars-url]: https://github.com/wx-chevalier/AI-Notes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/AI-Notes.svg?style=flat-square
+[issues-url]: https://github.com/wx-chevalier/AI-Notes/issues
+[license-shield]: https://img.shields.io/github/license/wx-chevalier/AI-Notes.svg?style=flat-square
+[license-url]: https://github.com/wx-chevalier/AI-Notes/blob/master/LICENSE.txt
